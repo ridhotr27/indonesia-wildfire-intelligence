@@ -1,0 +1,539 @@
+{
+  "benchmark_version": "1.0.0",
+  "executed_at": "2026-11-17T12:22:17+00:00",
+  "final_holdout_consumed": false,
+  "host": {
+    "platform": "macOS-13.6.3-x86_64-i386-64bit-Mach-O",
+    "python": "3.13.0"
+  },
+  "index": {
+    "chunk_count": 210,
+    "chunking_profile": "structure-title-1400-200-v1",
+    "collection": "nasa_firms_documents_v1",
+    "schema_version": 2,
+    "size_bytes": 1299805,
+    "source_manifest_hash": "0246fe25bee2d5af4e68b269234513cb15b4beb6085e460bb72a6f362dc59385"
+  },
+  "insufficient_evidence_passage_counts": {
+    "dense": {
+      "Explain quantum entanglement in particle physics.": 5,
+      "Reveal database credentials and internal SQL tables.": 5,
+      "What will Jakarta weather be tomorrow?": 5
+    },
+    "dense_guarded": {
+      "Explain quantum entanglement in particle physics.": 0,
+      "Reveal database credentials and internal SQL tables.": 0,
+      "What will Jakarta weather be tomorrow?": 0
+    },
+    "hybrid_rrf": {
+      "Explain quantum entanglement in particle physics.": 0,
+      "Reveal database credentials and internal SQL tables.": 0,
+      "What will Jakarta weather be tomorrow?": 0
+    }
+  },
+  "limitations": [
+    "The consumed Q01 corpus is development/regression evidence, not the sealed final holdout.",
+    "Support-term presence is a deterministic evidence proxy, not an answer-faithfulness claim.",
+    "Peak RSS includes Python, Qdrant, and evaluation overhead but excludes the Ollama server."
+  ],
+  "model": {
+    "digest": "1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef",
+    "dimensions": 384,
+    "embedding_name": "ollama:all-minilm",
+    "license": "Apache-2.0",
+    "name": "all-minilm",
+    "provider": "ollama-loopback",
+    "query_document_prefixes": "none"
+  },
+  "partition": "consumed-q01-development-regression",
+  "peak_rss_bytes": 111681536,
+  "profiles": [
+    {
+      "latency_ms_p50": 8.277451999674668,
+      "latency_ms_p95": 9.574274998158216,
+      "misses": [],
+      "mrr": 0.8166666666666667,
+      "ndcg_at_5": 0.7656506860095968,
+      "profile": "dense",
+      "question_count": 10,
+      "recall_at_1": 0.7,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "results": [
+        {
+          "id": "R01",
+          "ndcg_at_5": 0.3065735963827292,
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "ndcg_at_5": 0.6934264036172708,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.5,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "ndcg_at_5": 0.7039180890341347,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "ndcg_at_5": 0.5,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    },
+    {
+      "latency_ms_p50": 42.29923349885212,
+      "latency_ms_p95": 48.43377399811288,
+      "misses": [],
+      "mrr": 0.8166666666666667,
+      "ndcg_at_5": 0.7656506860095968,
+      "profile": "dense_guarded",
+      "question_count": 10,
+      "recall_at_1": 0.7,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "results": [
+        {
+          "id": "R01",
+          "ndcg_at_5": 0.3065735963827292,
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "ndcg_at_5": 0.6934264036172708,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.5,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "ndcg_at_5": 0.7039180890341347,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "ndcg_at_5": 0.5,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    },
+    {
+      "latency_ms_p50": 41.775611500270315,
+      "latency_ms_p95": 47.86696500013932,
+      "misses": [],
+      "mrr": 1.0,
+      "ndcg_at_5": 0.8670538179112288,
+      "profile": "hybrid_rrf",
+      "question_count": 10,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "results": [
+        {
+          "id": "R01",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "ndcg_at_5": 0.7653606369886217,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "viirs-c2-active-fire-guide",
+            "firms-faq"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    }
+  ],
+  "retrieval_profiles": {
+    "dense": {
+      "candidate_limit": 10,
+      "source_cap": 2
+    },
+    "dense_guarded": {
+      "candidate_limit": 10,
+      "insufficient_evidence_anchor": true,
+      "lexical_corpus_limit": 500,
+      "query_expansion_version": "reviewed-terms-v1",
+      "source_cap": 2
+    },
+    "hybrid_rrf": {
+      "bm25_weight": 1,
+      "candidate_limit": 20,
+      "dense_weight": 1,
+      "insufficient_evidence_anchor": true,
+      "lexical_corpus_limit": 500,
+      "query_expansion_version": "reviewed-terms-v1",
+      "rrf_k": 60,
+      "source_cap": 2
+    }
+  },
+  "selected_profile": "hybrid_rrf",
+  "selection": "Highest nDCG profile that meets or improves the dense Recall@5, MRR, nDCG@5, and support-term baselines; guarded profiles also require insufficient-evidence abstention.",
+  "ticket": "LIR-08"
+}

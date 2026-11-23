@@ -1,0 +1,96 @@
+{
+  "baseline_supported_fallbacks": 203,
+  "cases": 290,
+  "clarification_precision": 0.2,
+  "confusion_matrix": {
+    "combined_analytics_documentation->documentation_semantics": 2,
+    "combined_analytics_documentation->rejected": 16,
+    "documentation_semantics->documentation_semantics": 12,
+    "documentation_semantics->rejected": 3,
+    "map_locations->map_locations": 4,
+    "map_locations->province_ranking": 3,
+    "map_locations->rejected": 20,
+    "monthly_trend->monthly_trend": 1,
+    "monthly_trend->rejected": 26,
+    "multi_province_summary->rejected": 27,
+    "province_comparison->province_comparison": 5,
+    "province_comparison->rejected": 25,
+    "province_ranking->map_locations": 2,
+    "province_ranking->province_ranking": 12,
+    "province_ranking->rejected": 16,
+    "single_province_count->rejected": 27,
+    "unsupported->rejected": 40
+  },
+  "fallback_recovery_rate": 0.2019704433497537,
+  "per_intent_precision_recall_f1": {
+    "combined_analytics_documentation": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "documentation_semantics": {
+      "f1": 0.8275862068965518,
+      "precision": 0.8571428571428571,
+      "recall": 0.8
+    },
+    "map_locations": {
+      "f1": 0.24242424242424243,
+      "precision": 0.6666666666666666,
+      "recall": 0.14814814814814814
+    },
+    "monthly_trend": {
+      "f1": 0.07142857142857142,
+      "precision": 1.0,
+      "recall": 0.037037037037037035
+    },
+    "multi_province_summary": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    },
+    "province_comparison": {
+      "f1": 0.2857142857142857,
+      "precision": 1.0,
+      "recall": 0.16666666666666666
+    },
+    "province_ranking": {
+      "f1": 0.5333333333333333,
+      "precision": 0.8,
+      "recall": 0.4
+    },
+    "single_province_count": {
+      "f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0
+    }
+  },
+  "per_intent_recall": {
+    "combined_analytics_documentation": 0.0,
+    "documentation_semantics": 0.8,
+    "map_locations": 0.14814814814814814,
+    "monthly_trend": 0.037037037037037035,
+    "multi_province_summary": 0.0,
+    "province_comparison": 0.16666666666666666,
+    "province_ranking": 0.4,
+    "single_province_count": 0.0
+  },
+  "per_language_route_accuracy": {
+    "en": 0.45,
+    "id": 0.38
+  },
+  "profile": "ollama:all-minilm",
+  "route_accuracy": 0.41379310344827586,
+  "route_share": {
+    "deterministic": 0.16896551724137931,
+    "semantic_accepted": 0.1413793103448276,
+    "semantic_rejected": 0.6896551724137931
+  },
+  "semantic_eligible": 241,
+  "semantic_intent_accuracy_on_eligible_supported": 0.1691542288557214,
+  "semantic_latency_ms": {
+    "count": 241,
+    "p50": 15.193453000392765,
+    "p95": 28.572046998306178
+  },
+  "unsupported_false_accept_rate": 0.0
+}

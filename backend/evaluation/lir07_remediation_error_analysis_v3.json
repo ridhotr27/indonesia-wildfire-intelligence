@@ -1,0 +1,208 @@
+{
+  "partitions": [
+    "development",
+    "shadow_validation"
+  ],
+  "final_holdout_consumed": false,
+  "case_count": 800,
+  "exact_route_and_operation_count": 680,
+  "confusion_matrix": {
+    "analytics->analytics": 240,
+    "analytics->clarification": 120,
+    "clarification->clarification": 100,
+    "combined->combined": 120,
+    "rag->rag": 120,
+    "unsupported->unsupported": 100
+  },
+  "errors_by_intent": {
+    "single_province_count": 40,
+    "monthly_trend": 40,
+    "multi_province_summary": 40
+  },
+  "errors_by_operation": {
+    "hotspot_summary_v1->none": 40,
+    "hotspot_trend_v1->none": 40,
+    "hotspot_multi_province_summary_v1->none": 40
+  },
+  "errors_by_language": {
+    "en": 45,
+    "id": 45,
+    "mixed": 30
+  },
+  "errors_by_source": {
+    "semantic_rejected": 120
+  },
+  "representative_errors": {
+    "monthly_trend:semantic_rejected": [
+      {
+        "case_id": "lir01.multi_turn.005.0",
+        "language": "id",
+        "message": "Tampilkan hasil itu per bulan.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.005.1",
+        "language": "id",
+        "message": "Tampilkan hasil itu per bulan.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.005.2",
+        "language": "en",
+        "message": "Show that result month by month instead.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.005.3",
+        "language": "mixed",
+        "message": "Show hasil itu month by month.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.006.0",
+        "language": "en",
+        "message": "Show that result month by month instead.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "multi_province_summary:semantic_rejected": [
+      {
+        "case_id": "lir01.multi_turn.010.0",
+        "language": "en",
+        "message": "Keep those provinces but include their combined total too.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.010.1",
+        "language": "en",
+        "message": "Keep those provinces but include their combined total too.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.010.2",
+        "language": "id",
+        "message": "Pertahankan provinsi itu dan sertakan juga total gabungannya.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.010.3",
+        "language": "mixed",
+        "message": "Keep provinsi itu dan include total gabungannya juga.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.011.0",
+        "language": "id",
+        "message": "Pertahankan provinsi itu dan sertakan juga total gabungannya.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "single_province_count:semantic_rejected": [
+      {
+        "case_id": "lir01.multi_turn.000.0",
+        "language": "en",
+        "message": "Use Aceh instead for that same period.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.000.1",
+        "language": "en",
+        "message": "Use Aceh instead for that same period.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.000.2",
+        "language": "id",
+        "message": "Gunakan Aceh untuk periode yang sama.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.000.3",
+        "language": "mixed",
+        "message": "Use Aceh saja untuk periode yang sama.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.multi_turn.001.0",
+        "language": "id",
+        "message": "Gunakan Aceh untuk periode yang sama.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      }
+    ]
+  }
+}

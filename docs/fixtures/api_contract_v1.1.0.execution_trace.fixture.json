@@ -1,0 +1,50 @@
+{
+  "fixture_classification": "synthetic_api_contract_example",
+  "api_version": "1.1.0",
+  "chat_analytics": {
+    "request_id": "fixture-trace-analytics", "answer": "Synthetic result: 414 hotspot detections.", "mode": "analytics",
+    "filters": {"province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30"},
+    "metrics": [{"name": "satellite_hotspot_detections", "value": 414, "unit": "detections"}], "chart": null, "map": null, "citations": [],
+    "limitations": ["Synthetic trace fixture; not an execution result."], "usage": {"llm_calls": 0},
+    "execution_trace": {"trace_version": "1.0", "route": "analytics", "status": "complete", "steps": [
+      {"sequence": 1, "kind": "route_selection", "status": "complete", "label": "Selected hotspot analytics.", "duration_ms": 1, "details": {"kind": "route_selection", "route": "analytics"}},
+      {"sequence": 2, "kind": "filter_resolution", "status": "complete", "label": "Resolved Sumatera Barat and September 2023 from the message.", "duration_ms": 2, "details": {"kind": "filter_resolution", "province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30", "province_source": "message", "date_from_source": "message", "date_to_source": "message", "reason_codes": [], "outcome": "resolved"}},
+      {"sequence": 3, "kind": "analytics_query", "status": "complete", "label": "Read 414 detections using a read-only analytics operation.", "duration_ms": 12, "details": {"kind": "analytics_query", "operation_id": "hotspot_summary_v1", "parameters": {"province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30"}, "read_only": true, "returned_rows": 1, "metric_name": "satellite_hotspot_detections", "metric_value": 414}}
+    ]}
+  },
+  "chat_rag": {
+    "request_id": "fixture-trace-rag", "answer": "Synthetic grounded explanation.", "mode": "rag", "filters": null, "metrics": null, "chart": null, "map": null,
+    "citations": [{"title": "NASA FIRMS FAQ", "url": "https://firms.modaps.eosdis.nasa.gov/faq/", "chunk_id": "nasa-faq-frp"}],
+    "limitations": ["Synthetic trace fixture; no retrieval or model call occurred."], "usage": {"llm_calls": 1},
+    "execution_trace": {"trace_version": "1.0", "route": "rag", "status": "complete", "steps": [
+      {"sequence": 1, "kind": "route_selection", "status": "complete", "label": "Selected documentation retrieval.", "details": {"kind": "route_selection", "route": "rag"}},
+      {"sequence": 2, "kind": "vector_retrieval", "status": "complete", "label": "Retrieved one approved NASA passage locally.", "duration_ms": 8, "details": {"kind": "vector_retrieval", "provider": "local", "embedding_model": "all-minilm", "collection": "nasa-firms-docs", "top_k": 5, "returned_count": 1, "items": [{"chunk_id": "nasa-faq-frp", "title": "NASA FIRMS FAQ", "url": "https://firms.modaps.eosdis.nasa.gov/faq/", "rank": 1}]}},
+      {"sequence": 3, "kind": "local_generation", "status": "complete", "label": "Generated an answer locally.", "duration_ms": 20, "details": {"kind": "local_generation", "provider": "ollama", "model": "qwen2.5:1.5b", "input_passage_count": 1, "model_calls": 1}},
+      {"sequence": 4, "kind": "citation_validation", "status": "complete", "label": "Validated one citation.", "duration_ms": 1, "details": {"kind": "citation_validation", "candidate_count": 1, "accepted_count": 1, "outcome": "passed"}}
+    ]}
+  },
+  "chat_combined": {
+    "request_id": "fixture-trace-combined", "answer": "Synthetic combined answer.", "mode": "combined",
+    "filters": {"province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30"},
+    "metrics": [{"name": "satellite_hotspot_detections", "value": 414, "unit": "detections"}], "chart": null, "map": null,
+    "citations": [{"title": "NASA FIRMS FAQ", "url": "https://firms.modaps.eosdis.nasa.gov/faq/", "chunk_id": "nasa-faq-frp"}],
+    "limitations": ["Synthetic trace fixture; no dependencies were called."], "usage": {"llm_calls": 1},
+    "execution_trace": {"trace_version": "1.0", "route": "combined", "status": "complete", "steps": [
+      {"sequence": 1, "kind": "route_selection", "status": "complete", "label": "Selected combined analytics and documentation.", "details": {"kind": "route_selection", "route": "combined"}},
+      {"sequence": 2, "kind": "filter_resolution", "status": "complete", "label": "Resolved filters from the message.", "details": {"kind": "filter_resolution", "province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30", "province_source": "message", "date_from_source": "message", "date_to_source": "message", "reason_codes": [], "outcome": "resolved"}},
+      {"sequence": 3, "kind": "analytics_query", "status": "complete", "label": "Read 414 detections using a read-only analytics operation.", "duration_ms": 12, "details": {"kind": "analytics_query", "operation_id": "hotspot_summary_v1", "parameters": {"province_codes": ["13"], "date_from": "2023-09-01", "date_to": "2023-09-30"}, "read_only": true, "returned_rows": 1, "metric_name": "satellite_hotspot_detections", "metric_value": 414}},
+      {"sequence": 4, "kind": "vector_retrieval", "status": "complete", "label": "Retrieved one approved NASA passage locally.", "duration_ms": 8, "details": {"kind": "vector_retrieval", "provider": "local", "embedding_model": "all-minilm", "collection": "nasa-firms-docs", "top_k": 5, "returned_count": 1, "items": [{"chunk_id": "nasa-faq-frp", "title": "NASA FIRMS FAQ", "url": "https://firms.modaps.eosdis.nasa.gov/faq/", "rank": 1}]}},
+      {"sequence": 5, "kind": "local_generation", "status": "complete", "label": "Generated an answer locally.", "duration_ms": 20, "details": {"kind": "local_generation", "provider": "ollama", "model": "qwen2.5:1.5b", "input_passage_count": 1, "model_calls": 1}},
+      {"sequence": 6, "kind": "citation_validation", "status": "complete", "label": "Validated one citation.", "details": {"kind": "citation_validation", "candidate_count": 1, "accepted_count": 1, "outcome": "passed"}}
+    ]}
+  },
+  "chat_abstention": {
+    "request_id": "fixture-trace-abstention", "answer": "Please provide a province and date range.", "mode": "unsupported", "filters": null, "metrics": null, "chart": null, "map": null, "citations": [],
+    "limitations": ["Hotspot detections are not confirmed wildfires."], "usage": {"llm_calls": 0},
+    "execution_trace": {"trace_version": "1.0", "route": "unsupported", "status": "abstained", "steps": [
+      {"sequence": 1, "kind": "route_selection", "status": "abstained", "label": "Analytics needs additional filters.", "details": {"kind": "route_selection", "route": "unsupported"}},
+      {"sequence": 2, "kind": "filter_resolution", "status": "abstained", "label": "Province and date range were absent.", "details": {"kind": "filter_resolution", "province_codes": [], "date_from": null, "date_to": null, "province_source": "absent", "date_from_source": "absent", "date_to_source": "absent", "reason_codes": ["missing_province", "missing_date_range"], "outcome": "needs_clarification"}},
+      {"sequence": 3, "kind": "abstention", "status": "abstained", "label": "No analytics operation was run.", "details": {"kind": "abstention", "reason_code": "missing_province"}}
+    ]}
+  }
+}

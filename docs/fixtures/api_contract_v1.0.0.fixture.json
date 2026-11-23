@@ -1,0 +1,307 @@
+{
+  "fixture_classification": "synthetic_api_contract_example",
+  "api_version": "1.0.0",
+  "metadata": {
+    "request_id": "fixture-metadata-001",
+    "api_version": "1.0.0",
+    "products": [
+      {
+        "product_id": "DEMO_VIIRS",
+        "display_name": "Synthetic VIIRS-shaped fixture"
+      }
+    ],
+    "provinces": [
+      {
+        "province_code": "14",
+        "display_name": "Riau"
+      }
+    ],
+    "coverage": {
+      "date_min": "2023-01-01",
+      "date_max": "2023-12-31",
+      "known_unavailable_dates": ["2023-07-26", "2023-07-27"]
+    },
+    "source": {
+      "provider": "Synthetic fixture",
+      "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+      "data_status": "mock",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "attribution": "Synthetic contract fixture; not NASA observations"
+    },
+    "data_freshness_at": null,
+    "data_status": "mock"
+  },
+  "summary_complete": {
+    "request_id": "fixture-summary-complete-001",
+    "metric": "satellite_hotspot_detections",
+    "product_id": "DEMO_VIIRS",
+    "filters": {
+      "province_codes": ["14"],
+      "date_from": "2023-09-01",
+      "date_to": "2023-09-30"
+    },
+    "total": 2,
+    "is_complete": true,
+    "coverage_issues": [],
+    "warnings": [],
+    "series": [
+      {
+        "period": "2023-09",
+        "count": 2,
+        "is_complete": true,
+        "coverage_issues": []
+      }
+    ],
+    "source": {
+      "provider": "Synthetic fixture",
+      "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+      "data_status": "mock",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "attribution": "Synthetic contract fixture; not NASA observations"
+    },
+    "caveat": "Hotspot detections are not confirmed wildfires."
+  },
+  "summary_empty": {
+    "request_id": "fixture-summary-empty-001",
+    "metric": "satellite_hotspot_detections",
+    "product_id": "DEMO_VIIRS",
+    "filters": {
+      "province_codes": ["14"],
+      "date_from": "2023-11-01",
+      "date_to": "2023-11-30"
+    },
+    "total": 0,
+    "is_complete": true,
+    "coverage_issues": [],
+    "warnings": [],
+    "series": [
+      {
+        "period": "2023-11",
+        "count": 0,
+        "is_complete": true,
+        "coverage_issues": []
+      }
+    ],
+    "source": {
+      "provider": "Synthetic fixture",
+      "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+      "data_status": "mock",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "attribution": "Synthetic contract fixture; not NASA observations"
+    },
+    "caveat": "Hotspot detections are not confirmed wildfires."
+  },
+  "summary_partial": {
+    "request_id": "fixture-summary-partial-001",
+    "metric": "satellite_hotspot_detections",
+    "product_id": "DEMO_VIIRS",
+    "filters": {
+      "province_codes": ["14"],
+      "date_from": "2023-07-25",
+      "date_to": "2023-07-27"
+    },
+    "total": 1,
+    "is_complete": false,
+    "coverage_issues": [
+      {
+        "date_utc": "2023-07-26",
+        "coverage_status": "known_satellite_gap",
+        "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+        "note": "Unavailable coverage; never a zero-detection day."
+      },
+      {
+        "date_utc": "2023-07-27",
+        "coverage_status": "known_satellite_gap",
+        "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+        "note": "Unavailable coverage; never a zero-detection day."
+      }
+    ],
+    "warnings": ["The total includes available dates only; the requested range is incomplete."],
+    "series": [
+      {
+        "period": "2023-07",
+        "count": 1,
+        "is_complete": false,
+        "coverage_issues": [
+          {
+            "date_utc": "2023-07-26",
+            "coverage_status": "known_satellite_gap",
+            "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+            "note": "Unavailable coverage; never a zero-detection day."
+          },
+          {
+            "date_utc": "2023-07-27",
+            "coverage_status": "known_satellite_gap",
+            "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+            "note": "Unavailable coverage; never a zero-detection day."
+          }
+        ]
+      }
+    ],
+    "source": {
+      "provider": "Synthetic fixture",
+      "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+      "data_status": "mock",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "attribution": "Synthetic contract fixture; not NASA observations"
+    },
+    "caveat": "Hotspot detections are not confirmed wildfires."
+  },
+  "summary_unavailable": {
+    "request_id": "fixture-summary-unavailable-001",
+    "metric": "satellite_hotspot_detections",
+    "product_id": "DEMO_VIIRS",
+    "filters": {
+      "province_codes": ["14"],
+      "date_from": "2023-07-26",
+      "date_to": "2023-07-27"
+    },
+    "total": null,
+    "is_complete": false,
+    "coverage_issues": [
+      {
+        "date_utc": "2023-07-26",
+        "coverage_status": "known_satellite_gap",
+        "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+        "note": "Unavailable coverage; never a zero-detection day."
+      },
+      {
+        "date_utc": "2023-07-27",
+        "coverage_status": "known_satellite_gap",
+        "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+        "note": "Unavailable coverage; never a zero-detection day."
+      }
+    ],
+    "warnings": ["No numeric total is available because the entire requested range is unavailable."],
+    "series": [
+      {
+        "period": "2023-07",
+        "count": null,
+        "is_complete": false,
+        "coverage_issues": [
+          {
+            "date_utc": "2023-07-26",
+            "coverage_status": "known_satellite_gap",
+            "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+            "note": "Unavailable coverage; never a zero-detection day."
+          },
+          {
+            "date_utc": "2023-07-27",
+            "coverage_status": "known_satellite_gap",
+            "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+            "note": "Unavailable coverage; never a zero-detection day."
+          }
+        ]
+      }
+    ],
+    "source": {
+      "provider": "Synthetic fixture",
+      "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+      "data_status": "mock",
+      "url": "https://firms.modaps.eosdis.nasa.gov/",
+      "attribution": "Synthetic contract fixture; not NASA observations"
+    },
+    "caveat": "Hotspot detections are not confirmed wildfires."
+  },
+  "geojson": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [101.5, 0.5]
+        },
+        "properties": {
+          "observation_id": "synthetic-api-fixture-001",
+          "acquired_at_utc": "2023-09-01T01:02:00Z",
+          "product_id": "DEMO_VIIRS",
+          "province_code": "14",
+          "confidence_code": "n",
+          "frp_mw": 0.0,
+          "daynight_code": "D"
+        }
+      }
+    ],
+    "metadata": {
+      "request_id": "fixture-map-001",
+      "product_id": "DEMO_VIIRS",
+      "filters": {
+        "province_codes": ["14"],
+        "date_from": "2023-09-01",
+        "date_to": "2023-09-30"
+      },
+      "truncated": true,
+      "returned": 1,
+      "limit": 1,
+      "is_complete": true,
+      "coverage_issues": [],
+      "source": {
+        "provider": "Synthetic fixture",
+        "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+        "data_status": "mock",
+        "url": "https://firms.modaps.eosdis.nasa.gov/",
+        "attribution": "Synthetic contract fixture; not NASA observations"
+      },
+      "caveat": "Hotspot detections are not confirmed wildfires."
+    }
+  },
+  "geojson_empty": {
+    "type": "FeatureCollection",
+    "features": [],
+    "metadata": {
+      "request_id": "fixture-map-empty-001",
+      "product_id": "DEMO_VIIRS",
+      "filters": {
+        "province_codes": ["14"],
+        "date_from": "2023-11-01",
+        "date_to": "2023-11-30"
+      },
+      "truncated": false,
+      "returned": 0,
+      "limit": 500,
+      "is_complete": true,
+      "coverage_issues": [],
+      "source": {
+        "provider": "Synthetic fixture",
+        "dataset_version": "DEMO-FIXTURE-v1-NOT-NASA-DATA",
+        "data_status": "mock",
+        "url": "https://firms.modaps.eosdis.nasa.gov/",
+        "attribution": "Synthetic contract fixture; not NASA observations"
+      },
+      "caveat": "Hotspot detections are not confirmed wildfires."
+    }
+  },
+  "chat": {
+    "request_id": "fixture-chat-001",
+    "answer": "Synthetic contract response; no live model or retrieval was used.",
+    "mode": "unsupported",
+    "filters": null,
+    "metrics": null,
+    "chart": null,
+    "map": null,
+    "citations": [],
+    "limitations": ["Synthetic fixture only."],
+    "usage": {
+      "llm_calls": 0
+    }
+  },
+  "errors": {
+    "invalid_filter": {
+      "request_id": "fixture-error-400",
+      "error": {
+        "code": "INVALID_FILTER",
+        "message": "The selected filter is unsupported.",
+        "retry_after_seconds": null
+      }
+    },
+    "rate_limited": {
+      "request_id": "fixture-error-429",
+      "error": {
+        "code": "RATE_LIMITED",
+        "message": "Try again later.",
+        "retry_after_seconds": 60
+      }
+    }
+  }
+}

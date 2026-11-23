@@ -1,0 +1,821 @@
+{
+  "method": "Server-side point intersection against the official BIG source geometry; attributes only, returnGeometry=false",
+  "outcome_counts": {
+    "assignment_changed": 1,
+    "assignment_confirmed": 30,
+    "full_resolution_new_assignment": 3,
+    "full_resolution_unassigned": 2,
+    "unchanged_unassigned": 9
+  },
+  "preservation_policy": "This review does not rewrite the D02 enriched artifact. All 34 original unassigned observations remain preserved, and no ambiguous point is silently forced into a province.",
+  "records": [
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.17152,
+      "longitude": 118.14832,
+      "review_index": 1,
+      "review_outcome": "full_resolution_new_assignment",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.17695,
+      "longitude": 118.14906,
+      "review_index": 2,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.1828,
+      "longitude": 118.14654,
+      "review_index": 3,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.49759,
+      "longitude": 117.62549,
+      "review_index": 4,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -9.1068,
+      "longitude": 117.01938,
+      "review_index": 5,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "81",
+          "province_name": "Maluku"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "81",
+        "province_name": "Maluku",
+        "status": "assigned"
+      },
+      "latitude": -6.82727,
+      "longitude": 134.35922,
+      "review_index": 6,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "81",
+          "province_name": "Maluku"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "81",
+        "province_name": "Maluku",
+        "status": "assigned"
+      },
+      "latitude": -7.67499,
+      "longitude": 131.01176,
+      "review_index": 7,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-01T05:01:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -9.18464,
+      "longitude": 125.00324,
+      "review_index": 8,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T06:42:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "33",
+          "province_name": "Jawa Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -7.54144,
+      "longitude": 110.44366,
+      "review_index": 9,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-01T06:42:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "33",
+          "province_name": "Jawa Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -7.54104,
+      "longitude": 110.44598,
+      "review_index": 10,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-01T06:44:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "17",
+          "province_name": "Bengkulu"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "17",
+        "province_name": "Bengkulu",
+        "status": "assigned"
+      },
+      "latitude": -3.48763,
+      "longitude": 102.99425,
+      "review_index": 11,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T06:45:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": "21",
+        "province_name": "Kepulauan Riau",
+        "status": "assigned"
+      },
+      "latitude": 0.85697,
+      "longitude": 104.61076,
+      "review_index": 12,
+      "review_outcome": "full_resolution_unassigned",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-01T17:46:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "36",
+          "province_name": "Banten"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "36",
+        "province_name": "Banten",
+        "status": "assigned"
+      },
+      "latitude": -6.60759,
+      "longitude": 105.61787,
+      "review_index": 13,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-01T17:47:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "33",
+          "province_name": "Jawa Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -7.54224,
+      "longitude": 110.44405,
+      "review_index": 14,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-01T17:47:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "51",
+          "province_name": "Bali"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "51",
+        "province_name": "Bali",
+        "status": "assigned"
+      },
+      "latitude": -8.57463,
+      "longitude": 115.43172,
+      "review_index": 15,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-02T04:42:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "81",
+          "province_name": "Maluku"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "81",
+        "province_name": "Maluku",
+        "status": "assigned"
+      },
+      "latitude": -7.22987,
+      "longitude": 131.91438,
+      "review_index": 16,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-02T04:45:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": "64",
+        "province_name": "Kalimantan Timur",
+        "status": "assigned"
+      },
+      "latitude": 0.09449,
+      "longitude": 117.47556,
+      "review_index": 17,
+      "review_outcome": "full_resolution_unassigned",
+      "source_type": 2
+    },
+    {
+      "acquired_at_utc": "2023-09-02T06:25:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -1.71073,
+      "longitude": 106.05486,
+      "review_index": 18,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-03T04:23:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "81",
+          "province_name": "Maluku"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "81",
+        "province_name": "Maluku",
+        "status": "assigned"
+      },
+      "latitude": -8.24429,
+      "longitude": 130.8457,
+      "review_index": 19,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:04:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.3165,
+      "longitude": 112.11731,
+      "review_index": 20,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:05:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "36",
+          "province_name": "Banten"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "36",
+        "province_name": "Banten",
+        "status": "assigned"
+      },
+      "latitude": -6.4729,
+      "longitude": 105.67043,
+      "review_index": 21,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:06:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "62",
+          "province_name": "Kalimantan Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "62",
+        "province_name": "Kalimantan Tengah",
+        "status": "assigned"
+      },
+      "latitude": -2.76996,
+      "longitude": 111.09746,
+      "review_index": 22,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:06:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "19",
+          "province_name": "Kepulauan Bangka Belitung"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "19",
+        "province_name": "Kepulauan Bangka Belitung",
+        "status": "assigned"
+      },
+      "latitude": -2.9579,
+      "longitude": 106.90744,
+      "review_index": 23,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:06:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "19",
+          "province_name": "Kepulauan Bangka Belitung"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -2.95602,
+      "longitude": 106.90816,
+      "review_index": 24,
+      "review_outcome": "full_resolution_new_assignment",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-03T06:07:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "21",
+          "province_name": "Kepulauan Riau"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "21",
+        "province_name": "Kepulauan Riau",
+        "status": "assigned"
+      },
+      "latitude": 0.76591,
+      "longitude": 104.53138,
+      "review_index": 25,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-04T05:45:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.58365,
+      "longitude": 122.48997,
+      "review_index": 26,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T05:45:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.24913,
+      "longitude": 117.60687,
+      "review_index": 27,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T05:45:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.85825,
+      "longitude": 116.54485,
+      "review_index": 28,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-04T05:46:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "35",
+          "province_name": "Jawa Timur"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -6.91334,
+      "longitude": 111.59374,
+      "review_index": 29,
+      "review_outcome": "assignment_changed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T05:48:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "64",
+          "province_name": "Kalimantan Timur"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "64",
+        "province_name": "Kalimantan Timur",
+        "status": "assigned"
+      },
+      "latitude": 2.51371,
+      "longitude": 117.55721,
+      "review_index": 30,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T18:28:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "14",
+          "province_name": "Riau"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "14",
+        "province_name": "Riau",
+        "status": "assigned"
+      },
+      "latitude": 1.3689,
+      "longitude": 102.22773,
+      "review_index": 31,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T18:29:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "19",
+          "province_name": "Kepulauan Bangka Belitung"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "19",
+        "province_name": "Kepulauan Bangka Belitung",
+        "status": "assigned"
+      },
+      "latitude": -1.77576,
+      "longitude": 105.77855,
+      "review_index": 32,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-04T18:30:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "34",
+          "province_name": "Daerah Istimewa Yogyakarta"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "34",
+        "province_name": "Daerah Istimewa Yogyakarta",
+        "status": "assigned"
+      },
+      "latitude": -7.54344,
+      "longitude": 110.44672,
+      "review_index": 33,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-04T18:30:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "34",
+          "province_name": "Daerah Istimewa Yogyakarta"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "34",
+        "province_name": "Daerah Istimewa Yogyakarta",
+        "status": "assigned"
+      },
+      "latitude": -7.54704,
+      "longitude": 110.44924,
+      "review_index": 34,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-04T18:30:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "33",
+          "province_name": "Jawa Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -7.54287,
+      "longitude": 110.44247,
+      "review_index": 35,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:26:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "81",
+          "province_name": "Maluku"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -7.34162,
+      "longitude": 131.39503,
+      "review_index": 36,
+      "review_outcome": "full_resolution_new_assignment",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:26:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.85359,
+      "longitude": 115.95201,
+      "review_index": 37,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:26:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.85548,
+      "longitude": 115.95593,
+      "review_index": 38,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:26:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "52",
+          "province_name": "Nusa Tenggara Barat"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "52",
+        "province_name": "Nusa Tenggara Barat",
+        "status": "assigned"
+      },
+      "latitude": -8.85192,
+      "longitude": 115.95137,
+      "review_index": 39,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:26:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": -8.8442,
+      "longitude": 115.94646,
+      "review_index": 40,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 3
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:29:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "64",
+          "province_name": "Kalimantan Timur"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "64",
+        "province_name": "Kalimantan Timur",
+        "status": "assigned"
+      },
+      "latitude": 2.20578,
+      "longitude": 118.0278,
+      "review_index": 41,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:29:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "64",
+          "province_name": "Kalimantan Timur"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "64",
+        "province_name": "Kalimantan Timur",
+        "status": "assigned"
+      },
+      "latitude": 2.158,
+      "longitude": 117.87042,
+      "review_index": 42,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T05:29:00Z",
+      "full_resolution_matches": [],
+      "generalized_assignment": {
+        "province_code": null,
+        "province_name": null,
+        "status": "unassigned"
+      },
+      "latitude": 2.15853,
+      "longitude": 117.87393,
+      "review_index": 43,
+      "review_outcome": "unchanged_unassigned",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T16:31:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "53",
+          "province_name": "Nusa Tenggara Timur"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "53",
+        "province_name": "Nusa Tenggara Timur",
+        "status": "assigned"
+      },
+      "latitude": -8.23738,
+      "longitude": 124.08596,
+      "review_index": 44,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 0
+    },
+    {
+      "acquired_at_utc": "2023-09-05T18:12:00Z",
+      "full_resolution_matches": [
+        {
+          "province_code": "33",
+          "province_name": "Jawa Tengah"
+        }
+      ],
+      "generalized_assignment": {
+        "province_code": "33",
+        "province_name": "Jawa Tengah",
+        "status": "assigned"
+      },
+      "latitude": -7.54233,
+      "longitude": 110.44345,
+      "review_index": 45,
+      "review_outcome": "assignment_confirmed",
+      "source_type": 1
+    }
+  ],
+  "redistribution_note": "No boundary geometry was downloaded. Public service access is not treated as evidence of a redistribution license.",
+  "reviewed_at_utc": "2026-10-21T08:15:17.382720Z",
+  "service_url": "https://geoservices.big.go.id/gis/rest/services/STIG/Batas_Provinsi/MapServer/0",
+  "source": {
+    "near_boundary_rows": 45,
+    "path": "data/derived/feasibility/viirs-snpp_sp_2023-09-01_2023-09-05_indonesia_adm1.csv",
+    "sha256": "73db2d5a1f9caa26df3a0ffa7cbeb098239e3d0d668f9c988694fd1e0bd713f6"
+  }
+}

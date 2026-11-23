@@ -1,0 +1,188 @@
+{
+  "fixture_classification": "synthetic_contract_example",
+  "contract_version": "1.0.0",
+  "observations": [
+    {
+      "contract_version": "1.0.0",
+      "observation_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "source_product": "VNP14IMG",
+      "collection_version": "2",
+      "processing_stream": "standard",
+      "satellite_code": "N",
+      "satellite_name": "Suomi NPP",
+      "instrument": "VIIRS",
+      "acquired_at_utc": "2023-07-25T03:20:00Z",
+      "latitude": 0.5,
+      "longitude": 101.5,
+      "brightness_i4_kelvin": 330.25,
+      "brightness_i5_kelvin": 295.5,
+      "scan_km": 0.5,
+      "track_km": 0.6,
+      "frp_mw": 5.25,
+      "confidence_code": "n",
+      "confidence_label": "nominal",
+      "daynight_code": "D",
+      "hotspot_type_code": 0,
+      "province_code": "14",
+      "province_name": "Riau",
+      "geo_assignment_status": "assigned",
+      "geo_assignment_method": "osm_snapshot_point_intersection",
+      "boundary_source_id": "osm-idn-adm1-2026-10-10b",
+      "ingestion_batch_id": "fixture-only-v1",
+      "source_row_number": 1,
+      "source_record_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "quality_flags": []
+    },
+    {
+      "contract_version": "1.0.0",
+      "observation_id": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "source_product": "VNP14IMG",
+      "collection_version": "2",
+      "processing_stream": "standard",
+      "satellite_code": "N",
+      "satellite_name": "Suomi NPP",
+      "instrument": "VIIRS",
+      "acquired_at_utc": "2023-07-25T03:21:00Z",
+      "latitude": -6.0,
+      "longitude": 105.0,
+      "brightness_i4_kelvin": 310.0,
+      "brightness_i5_kelvin": 290.0,
+      "scan_km": 0.5,
+      "track_km": 0.6,
+      "frp_mw": 0.0,
+      "confidence_code": "l",
+      "confidence_label": "low",
+      "daynight_code": "D",
+      "hotspot_type_code": 0,
+      "province_code": null,
+      "province_name": null,
+      "geo_assignment_status": "unassigned",
+      "geo_assignment_method": "none",
+      "boundary_source_id": null,
+      "ingestion_batch_id": "fixture-only-v1",
+      "source_row_number": 2,
+      "source_record_hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "quality_flags": ["geo_unassigned", "zero_frp"]
+    }
+  ],
+  "daily_coverage": [
+    {
+      "contract_version": "1.0.0",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "date_utc": "2023-07-25",
+      "coverage_status": "observations_present",
+      "observation_count": 2,
+      "evidence_url": null,
+      "note": "Synthetic fixture count; not a measured NASA result.",
+      "ingestion_batch_id": "fixture-only-v1"
+    },
+    {
+      "contract_version": "1.0.0",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "date_utc": "2023-07-26",
+      "coverage_status": "known_satellite_gap",
+      "observation_count": null,
+      "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+      "note": "Permanent S-NPP VIIRS data gap; unavailable, never zero.",
+      "ingestion_batch_id": null
+    },
+    {
+      "contract_version": "1.0.0",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "date_utc": "2023-07-27",
+      "coverage_status": "known_satellite_gap",
+      "observation_count": null,
+      "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+      "note": "Permanent S-NPP VIIRS data gap; unavailable, never zero.",
+      "ingestion_batch_id": null
+    }
+  ],
+  "provinces": [
+    {
+      "contract_version": "1.0.0",
+      "province_code": "14",
+      "province_name": "Riau",
+      "source_code": "ID_RI",
+      "source_name": "Riau",
+      "boundary_source_id": "osm-idn-adm1-2026-10-10b",
+      "snapshot": "2026-10-10b",
+      "commit": "c4d208a03a71553a1082f960ebdaa88c1d8e9389",
+      "crs": "OGC:CRS84",
+      "source_sha256": "9dd43439b284186c91a2443c9fb9e5eabb885f75597f1ab83221f43a7ef88de7",
+      "canonical_sha256": "e9bd1f1fb1ba39ea0e07a7ba71cbbb2f048e64d6b49316cad7e88689aade74dd",
+      "license": "ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "required_attribution": "© OpenStreetMap contributors",
+      "is_supported": true
+    },
+    {
+      "contract_version": "1.0.0",
+      "province_code": "62",
+      "province_name": "Kalimantan Tengah",
+      "source_code": "ID_KT",
+      "source_name": "Kalimantan Tengah",
+      "boundary_source_id": "osm-idn-adm1-2026-10-10b",
+      "snapshot": "2026-10-10b",
+      "commit": "c4d208a03a71553a1082f960ebdaa88c1d8e9389",
+      "crs": "OGC:CRS84",
+      "source_sha256": "9dd43439b284186c91a2443c9fb9e5eabb885f75597f1ab83221f43a7ef88de7",
+      "canonical_sha256": "e9bd1f1fb1ba39ea0e07a7ba71cbbb2f048e64d6b49316cad7e88689aade74dd",
+      "license": "ODbL-1.0",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "required_attribution": "© OpenStreetMap contributors",
+      "is_supported": true
+    }
+  ],
+  "ingestion_batches": [
+    {
+      "contract_version": "1.0.0",
+      "ingestion_batch_id": "fixture-only-v1",
+      "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+      "source_url": "https://example.invalid/synthetic-contract-fixture.csv",
+      "source_artifact_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "source_bytes": 0,
+      "retrieved_at_utc": "2026-10-22T00:00:00Z",
+      "provider_last_modified_utc": null,
+      "coverage_start_utc": "2023-07-25T03:20:00Z",
+      "coverage_end_utc": "2023-07-25T03:21:00Z",
+      "source_row_count": 2,
+      "canonical_row_count": 2,
+      "duplicate_excess_rows": 0,
+      "rejected_row_count": 0,
+      "transform_version": "synthetic-fixture-only",
+      "provenance_manifest_path": "synthetic://d04-contract-fixture",
+      "publication_status": "published",
+      "published_at_utc": "2026-10-22T00:00:01Z"
+    }
+  ],
+  "reference_queries": [
+    {
+      "query_id": "assigned-riau-spanning-known-gap",
+      "date_from": "2023-07-25",
+      "date_to": "2023-07-27",
+      "province_codes": ["14"],
+      "available_detection_total": 1,
+      "numeric_total_available": true,
+      "is_complete": false,
+      "coverage_issues": [
+        {"date_utc": "2023-07-26", "coverage_status": "known_satellite_gap"},
+        {"date_utc": "2023-07-27", "coverage_status": "known_satellite_gap"}
+      ]
+    },
+    {
+      "query_id": "range-wholly-unavailable",
+      "date_from": "2023-07-26",
+      "date_to": "2023-07-27",
+      "province_codes": ["14"],
+      "available_detection_total": null,
+      "numeric_total_available": false,
+      "is_complete": false,
+      "coverage_issues": [
+        {"date_utc": "2023-07-26", "coverage_status": "known_satellite_gap"},
+        {"date_utc": "2023-07-27", "coverage_status": "known_satellite_gap"}
+      ]
+    }
+  ]
+}

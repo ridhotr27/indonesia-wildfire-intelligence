@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_version": "lir01-intent-routing-corpus-v1.0.0",
+  "created_at": "2026-11-15",
+  "corpus_sha256": "148118c06de8cb9e007bc1767d1fc84a900c56d8cb90c9644fdb91da50ed8102",
+  "case_count": 1200,
+  "semantic_family_count": 300,
+  "source_categories": [
+    "ambiguous_clarification",
+    "analytics",
+    "combined",
+    "multi_turn",
+    "nasa_rag",
+    "unsupported_adversarial"
+  ],
+  "counts": {
+    "category": {
+      "ambiguous_clarification": 140,
+      "analytics": 400,
+      "combined": 160,
+      "multi_turn": 160,
+      "nasa_rag": 200,
+      "unsupported_adversarial": 140
+    },
+    "intent": {
+      "clarification": 140,
+      "combined_analytics_documentation": 160,
+      "documentation_semantics": 220,
+      "monthly_trend": 140,
+      "multi_province_summary": 140,
+      "province_ranking": 112,
+      "single_province_count": 148,
+      "unsupported": 140
+    },
+    "language": {
+      "en": 451,
+      "id": 449,
+      "mixed": 300
+    },
+    "partition": {
+      "development": 560,
+      "final_holdout": 400,
+      "shadow_validation": 240
+    }
+  },
+  "review": {
+    "backend_labels": "reviewed synthetic template families and generated-label invariants",
+    "data_truth": "independent Data Engineer review of D04 product, window, coverage, geography, metric, and reference-query boundaries",
+    "data_truth_limitations": [
+      "No synthetic fixture value is treated as a NASA numeric result.",
+      "No numeric result is claimed for Aceh versus Sumatera Barat, full rankings, ties, or zero-count provinces.",
+      "English province aliases remain Backend-owned pending LIR-02's DE semantic catalog.",
+      "The approved DE crosswalk uses 91=Papua and 92=Papua Barat; the existing Backend runtime mapping differs and is not changed by LIR-01."
+    ]
+  },
+  "privacy": "synthetic authored cases only; no production conversations",
+  "prohibited_content_scan": {
+    "status": "passed",
+    "production_chat_cases": 0,
+    "numeric_result_claims": 0
+  },
+  "final_holdout_status": "sealed; excluded from LIR-01 A/B baseline execution"
+}

@@ -1,0 +1,98 @@
+{
+  "baseline_supported_fallbacks": 203,
+  "cases": 290,
+  "clarification_precision": 0.2,
+  "confusion_matrix": {
+    "combined_analytics_documentation->combined_analytics_documentation": 1,
+    "combined_analytics_documentation->rejected": 17,
+    "documentation_semantics->documentation_semantics": 12,
+    "documentation_semantics->rejected": 3,
+    "map_locations->map_locations": 2,
+    "map_locations->rejected": 25,
+    "monthly_trend->monthly_trend": 5,
+    "monthly_trend->rejected": 22,
+    "multi_province_summary->multi_province_summary": 3,
+    "multi_province_summary->rejected": 24,
+    "province_comparison->province_comparison": 5,
+    "province_comparison->rejected": 25,
+    "province_ranking->province_ranking": 25,
+    "province_ranking->rejected": 5,
+    "single_province_count->multi_province_summary": 2,
+    "single_province_count->rejected": 23,
+    "single_province_count->single_province_count": 2,
+    "unsupported->province_ranking": 4,
+    "unsupported->rejected": 36
+  },
+  "fallback_recovery_rate": 0.28078817733990147,
+  "per_intent_precision_recall_f1": {
+    "combined_analytics_documentation": {
+      "f1": 0.10526315789473684,
+      "precision": 1.0,
+      "recall": 0.05555555555555555
+    },
+    "documentation_semantics": {
+      "f1": 0.888888888888889,
+      "precision": 1.0,
+      "recall": 0.8
+    },
+    "map_locations": {
+      "f1": 0.13793103448275862,
+      "precision": 1.0,
+      "recall": 0.07407407407407407
+    },
+    "monthly_trend": {
+      "f1": 0.3125,
+      "precision": 1.0,
+      "recall": 0.18518518518518517
+    },
+    "multi_province_summary": {
+      "f1": 0.18750000000000003,
+      "precision": 0.6,
+      "recall": 0.1111111111111111
+    },
+    "province_comparison": {
+      "f1": 0.2857142857142857,
+      "precision": 1.0,
+      "recall": 0.16666666666666666
+    },
+    "province_ranking": {
+      "f1": 0.847457627118644,
+      "precision": 0.8620689655172413,
+      "recall": 0.8333333333333334
+    },
+    "single_province_count": {
+      "f1": 0.13793103448275862,
+      "precision": 1.0,
+      "recall": 0.07407407407407407
+    }
+  },
+  "per_intent_recall": {
+    "combined_analytics_documentation": 0.05555555555555555,
+    "documentation_semantics": 0.8,
+    "map_locations": 0.07407407407407407,
+    "monthly_trend": 0.18518518518518517,
+    "multi_province_summary": 0.1111111111111111,
+    "province_comparison": 0.16666666666666666,
+    "province_ranking": 0.8333333333333334,
+    "single_province_count": 0.07407407407407407
+  },
+  "per_language_route_accuracy": {
+    "en": 0.5285714285714286,
+    "id": 0.4
+  },
+  "profile": "ollama:bge-m3",
+  "route_accuracy": 0.46206896551724136,
+  "route_share": {
+    "deterministic": 0.16896551724137931,
+    "semantic_accepted": 0.2103448275862069,
+    "semantic_rejected": 0.6206896551724138
+  },
+  "semantic_eligible": 241,
+  "semantic_intent_accuracy_on_eligible_supported": 0.2736318407960199,
+  "semantic_latency_ms": {
+    "count": 241,
+    "p50": 88.13174299939419,
+    "p95": 163.25332400083425
+  },
+  "unsupported_false_accept_rate": 0.08
+}

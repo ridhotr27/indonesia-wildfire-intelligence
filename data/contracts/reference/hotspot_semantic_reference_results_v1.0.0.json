@@ -1,0 +1,95 @@
+{
+  "results_version": "hotspot-semantic-reference-results-v1.0.0",
+  "catalog_version": "hotspot-semantic-catalog-v1.0.0",
+  "fixture_classification": "synthetic_semantic_edge_fixture",
+  "fixture_sha256": "1c0e8070116cb90a4b15bed3c526450c3adb9b6a9c3a2c740d921944211cd98c",
+  "synthetic_edge_results": [
+    {
+      "query_id": "highest_tie",
+      "coverage_state": "partial",
+      "rows": [
+        {
+          "province_code": "11",
+          "province_name": "Aceh",
+          "count": 10,
+          "dense_rank": 1
+        },
+        {
+          "province_code": "13",
+          "province_name": "Sumatera Barat",
+          "count": 10,
+          "dense_rank": 1
+        }
+      ],
+      "cutoff_tie_count": 2
+    },
+    {
+      "query_id": "covered_zero_tie",
+      "coverage_state": "partial",
+      "rows": [
+        {
+          "province_code": "14",
+          "province_name": "Riau",
+          "count": 0,
+          "dense_rank": 1
+        },
+        {
+          "province_code": "15",
+          "province_name": "Jambi",
+          "count": 0,
+          "dense_rank": 1
+        }
+      ],
+      "cutoff_tie_count": 2
+    },
+    {
+      "query_id": "partial_riau_total",
+      "coverage_state": "partial",
+      "numeric_total_available": true,
+      "total": 0,
+      "unavailable_dates": [
+        "2023-07-26",
+        "2023-07-27"
+      ]
+    },
+    {
+      "query_id": "wholly_unavailable",
+      "coverage_state": "unavailable",
+      "numeric_total_available": false,
+      "total": null,
+      "unavailable_dates": [
+        "2023-07-26",
+        "2023-07-27"
+      ]
+    },
+    {
+      "query_id": "national_geography_exclusion",
+      "not_assigned_to_exactly_one_province_count": 7,
+      "included_in_province_rows": false
+    }
+  ],
+  "verified_snapshot_results": {
+    "source": "data/reports/d06_clickhouse_validation.json",
+    "source_sha256": "68a9f4411ab834db453e60fb25b27abe7d53449e124bfbcdc3d92977f7bdde81",
+    "riau_september_2023": 687,
+    "country_monthly_counts_2023": [
+      1781,
+      1868,
+      2602,
+      3808,
+      5185,
+      7407,
+      13684,
+      42818,
+      71726,
+      78784,
+      19165,
+      4560
+    ],
+    "observations": 253388,
+    "assigned": 252582,
+    "unassigned": 796,
+    "multiple_match": 10,
+    "not_assigned_to_exactly_one_province": 806
+  }
+}

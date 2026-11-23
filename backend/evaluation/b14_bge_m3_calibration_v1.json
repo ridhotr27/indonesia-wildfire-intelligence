@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "calibration_id": "b14-bge-m3-b14-semantic-evaluation-v1.0.0",
+  "taxonomy_version": "wildfire-intents-v1",
+  "embedding_name": "ollama:bge-m3",
+  "corpus_version": "b14-semantic-evaluation-v1.0.0",
+  "corpus_hash": "0c3583e947ea6889b0a6c57491bbe7cc36ec1772b65ebf14e0bf061362c9dada",
+  "thresholds": {
+    "single_province_count": {
+      "score": 0.8,
+      "margin": 0.06,
+      "agreement": 0.4
+    },
+    "multi_province_summary": {
+      "score": 0.75,
+      "margin": 0.04,
+      "agreement": 0.6
+    },
+    "province_comparison": {
+      "score": 0.6,
+      "margin": 0.02,
+      "agreement": 0.6
+    },
+    "province_ranking": {
+      "score": 0.65,
+      "margin": 0.0,
+      "agreement": 0.4
+    },
+    "monthly_trend": {
+      "score": 0.85,
+      "margin": 0.0,
+      "agreement": 0.2
+    },
+    "map_locations": {
+      "score": 0.65,
+      "margin": 0.06,
+      "agreement": 0.4
+    },
+    "documentation_semantics": {
+      "score": 0.5,
+      "margin": 0.06,
+      "agreement": 0.6
+    },
+    "combined_analytics_documentation": {
+      "score": 0.65,
+      "margin": 0.06,
+      "agreement": 0.4
+    }
+  },
+  "measured_at": "2026-11-15T09:10:36.787796Z"
+}

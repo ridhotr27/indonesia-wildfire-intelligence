@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "document_id": "firms-active-fire-attributes",
+      "title": "NASA FIRMS Active Fire Data Attributes for MODIS and VIIRS",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms/active-fire-data-attributes-modis-viirs",
+      "media_type": "text/html",
+      "published_at": null,
+      "version": "retrieved-content"
+    },
+    {
+      "document_id": "firms-faq",
+      "title": "NASA FIRMS Frequently Asked Questions",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms/faq",
+      "media_type": "text/html",
+      "published_at": null,
+      "version": "retrieved-content"
+    },
+    {
+      "document_id": "firms-overview",
+      "title": "NASA Fire Information for Resource Management System",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms",
+      "media_type": "text/html",
+      "published_at": null,
+      "version": "retrieved-content"
+    },
+    {
+      "document_id": "viirs-c2-active-fire-guide",
+      "title": "VIIRS 375 m Active Fire Product User Guide, Collection 2",
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2024-07/VIIRS_C2_AF-375m_User_Guide_1.0.pdf",
+      "media_type": "application/pdf",
+      "published_at": "2024-07",
+      "version": "1.0"
+    }
+  ]
+}

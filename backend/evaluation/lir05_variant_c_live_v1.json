@@ -1,0 +1,4336 @@
+{
+  "profile": "lir05:qwen2.5:1.5b:prompt-v1",
+  "corpus_version": "lir01-intent-routing-corpus-v1.0.0",
+  "partition": "development",
+  "case_count": 480,
+  "route_accuracy": 0.16666666666666666,
+  "operation_exactness": 0.16666666666666666,
+  "model_calls": 480,
+  "latency_ms": {
+    "p50": 8003.330716001074,
+    "p95": 8005.8164759993815
+  },
+  "process_max_rss": 132755456,
+  "results": [
+    {
+      "case_id": "lir01.analytics.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8007.300921999558,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.000.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8009.749847999956,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8006.326200000331,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.923500000383,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.001.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.850713000247,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.001.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.146048999952,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.001.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.287694999926,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.001.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.572734999783,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.002.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.0663030004,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.002.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.500154000198,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.002.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.450729000178,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.002.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.927403000489,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.003.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.0697619997445,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.003.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.365581000253,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.003.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.987512999425,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.003.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.343483000208,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.004.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.330517000402,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.004.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.430268999589,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.004.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.637076000312,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.004.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.724436999619,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.005.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.086775999691,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.005.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.29009400068,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.005.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.371433999542,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.005.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.232392999962,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.006.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.633581000031,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.006.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.652431999602,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.006.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.856938000354,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.006.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.220047000468,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.007.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.74046599993,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.007.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.6139719995845,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.007.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8024.05435899982,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.007.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8008.690801999364,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.008.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.640516000814,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.008.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.047264999826,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.008.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.672236999795,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.008.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.609359999449,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.009.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.373558000021,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.009.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.6817139998675,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.009.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.538653000054,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.009.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8006.897109999954,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.025.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.434466999352,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.025.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7964.05389300071,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.025.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.489400000035,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.025.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.08994099962,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.026.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7912.0781579986215,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.026.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.511355999057,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.026.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8006.0260179998295,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.026.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.683531000206,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.027.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.094473000601,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.027.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7394.05198500026,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.027.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.672730000995,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.027.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.714675000083,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.028.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.136043998893,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.028.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.580340999179,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.028.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.823643999567,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.028.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7663.24157300005,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.029.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7732.932359000188,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.029.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7400.001234000229,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.029.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.595571999336,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.029.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.901607000647,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.030.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.231700000673,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.030.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.342684998846,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.030.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.88985300035,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.030.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.850454000916,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.031.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.9214699991135,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.031.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7764.118200000667,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.031.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.360429000168,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.031.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.956577999314,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.032.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8012.357161000182,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.032.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.5616930001415,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.032.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.368278999915,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.032.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.735386999324,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.033.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7718.949332000193,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.033.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6758.718183000383,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.033.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.558677000707,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.033.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.8846530005685,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.034.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8059.642250000252,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.034.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.417973000978,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.034.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.719581998666,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.034.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.665767000712,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.050.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.972488999556,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.050.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.470829000842,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.050.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.037923999727,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.050.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.899392000472,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.051.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.220076000114,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.051.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8007.205949999843,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.051.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.494050999914,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.051.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.112678998354,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.052.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.623635000622,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.052.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.186726999251,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.052.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.369904999796,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.052.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.691709998748,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.053.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.389747999085,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.053.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.102504000912,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.053.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.271515000961,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.053.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.722594999999,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.054.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.275936998762,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.054.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.944223999497,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.054.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.522431999954,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.054.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.49495699993,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.055.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8007.862599000873,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.055.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8010.4510210003355,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.055.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8006.162876999952,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.055.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8050.019419000819,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.056.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8009.141942999122,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.056.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.074770999068,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.056.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.36770199849,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.056.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.998710000611,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.057.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.571409999495,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.057.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7411.418515999685,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.057.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.081221999513,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.057.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.622455999401,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.058.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.211004001467,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.058.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.24677000026,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.058.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.330113999458,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.058.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.155131999141,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.059.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.974839000672,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.059.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.082032000952,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.059.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.188606999174,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.059.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7163.904281998839,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.075.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.987832000144,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.075.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.072211000675,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.075.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.800975999184,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.075.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.146135000861,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.076.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.065512999659,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.076.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.415746999963,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.076.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.987308000433,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.076.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.25734100079,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.077.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.685867999389,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.077.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.465683001603,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.077.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.80929100154,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.077.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.038748000108,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.078.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.69248599984,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.078.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.628815000411,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.078.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.262406000431,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.078.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7463.099738000892,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.079.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.283188000249,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.079.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8007.053384999381,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.079.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.045579999001,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.079.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8010.897610000029,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.080.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8010.538685000938,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.080.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.636441999537,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.080.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.382413000509,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.080.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.875673999573,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.081.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.7755419998575,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.081.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.494219999993,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.081.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.362380999737,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.081.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.3786909993505,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.082.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.980147999755,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.082.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.488549998816,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.082.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.611971998907,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.082.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.596468999807,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.083.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.082244000325,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.083.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.437348001171,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.083.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.137403999266,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.083.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.497599999217,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.084.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.035335999812,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.084.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.133489999527,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.084.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.823636999892,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.analytics.084.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.330716001074,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7737.605992000681,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.649824999025,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.569169999333,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.348300000449,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.001.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7039.735865000694,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.001.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6560.188760000528,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.001.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.436717999648,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.001.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7153.219968000485,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.002.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.19619900074,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.002.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7634.982128000047,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.002.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6554.714488000172,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.002.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6639.735602999281,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.003.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6906.480955000006,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.003.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.3218349999515,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.003.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.054647000681,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.003.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6931.715987999269,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.004.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.844730999641,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.004.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.5634230009455,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.004.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.770911000174,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.004.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6856.142210999678,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.005.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7309.251209000649,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.005.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6807.025090000025,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.005.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7165.923098000349,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.005.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6481.904148000467,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.006.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7344.186350999735,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.006.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7283.408205001251,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.006.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.535005000231,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.006.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6819.7433479999745,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.007.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6817.8372559996205,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.007.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6840.032289999726,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.007.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.272410000136,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.007.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6498.509277000267,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.008.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.155558999628,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.008.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.224452000926,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.008.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.425797000091,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.008.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7265.527671999735,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.009.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7025.519355000142,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.009.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6724.299524001253,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.009.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.29327300076,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.009.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6582.017903998349,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.025.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7920.8216320002975,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.025.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7062.354364999919,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.025.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.385235000678,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.025.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6782.147500000065,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.026.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6715.6847860005655,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.026.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6733.243451000817,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.026.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6918.631651999021,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.026.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6456.167128000743,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.027.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7216.539109000223,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.027.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7107.786258999113,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.027.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.655393998793,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.027.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6658.169869000631,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.028.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6759.404772999915,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.028.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7344.139103999623,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.028.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6878.809722998994,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.028.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6440.193569000257,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.029.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6802.217481999833,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.029.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7537.78032000082,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.029.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8006.978072000493,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.029.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6980.993926999872,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.030.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.375881000262,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.030.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.338414000609,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.030.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.079103998971,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.030.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.575775999911,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.031.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.022405999422,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.031.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.653903999497,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.031.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.892434999012,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.031.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.131232000669,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.032.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.418117001274,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.032.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.332353999416,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.032.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.953751000154,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.032.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.099449999354,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.033.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.082061999725,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.033.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.160767999565,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.033.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.977853999255,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.033.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.708316000484,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.034.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.236513999582,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.034.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.24855100007,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.034.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.713248999906,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.nasa_rag.034.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.532085000188,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.304639000111,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.000.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.574334999939,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.915199000199,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.363432999322,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.001.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.608205999626,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.001.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.693496999607,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.001.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.145033000896,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.001.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.752439000687,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.002.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.697460999116,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.002.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.003587000421,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.002.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.301360999307,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.002.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.730111999175,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.003.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.500089000227,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.003.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.271312000128,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.003.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.784564998365,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.003.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.82988299882,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.004.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8010.001722001107,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.004.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.304087000492,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.004.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.69387499975,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.004.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.889030998835,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.005.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.270419998444,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.005.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6947.054354001011,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.005.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.251293999507,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.005.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.648431000125,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.006.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.495008001162,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.006.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.765584000779,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.006.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.828707998968,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.006.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.501516999881,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.007.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.385350000826,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.007.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6780.359521999344,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.007.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.243368000767,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.007.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.101299999296,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.008.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.603639001085,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.008.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.918163000184,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.008.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.604261001281,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.008.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7027.438193999842,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.009.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7798.453912000696,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.009.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6966.107800000827,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.009.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.74328900034,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.009.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.478357999484,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.025.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.9788789999875,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.025.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.938200998367,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.025.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8008.124928999678,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.025.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.128557000309,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.026.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.497076000509,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.026.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.789397998844,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.026.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.635159000623,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.026.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.167439999743,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.027.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.033454000819,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.027.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.096374999586,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.027.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.065867999088,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.027.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.829661000258,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.028.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.487611998935,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.028.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.644918999475,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.028.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.26102900019,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.028.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.96314499974,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.029.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.385010999409,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.029.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.103163999389,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.029.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.674912000657,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.029.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7122.642189999169,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.030.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.423850999752,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.030.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.331576999699,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.030.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.901941001459,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.030.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.209025999444,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.031.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7303.7644760006515,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.031.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6658.736792000127,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.031.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.754470999207,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.031.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.724309000972,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.032.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.950016998715,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.032.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.09649600058,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.032.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.314507999676,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.032.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.420996999921,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.033.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 7211.98639800059,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.033.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6569.146969999565,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.033.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.270703000249,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.033.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.4128410006815,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.034.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.096874999959,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.034.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8009.381726998981,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.034.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.60345799911,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.combined.034.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.061879999223,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.000.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6579.806485000518,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.000.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4214.498385001207,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.000.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6150.860271000056,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.000.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 5330.006542999399,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.001.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3215.4408110000077,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.001.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3494.9639850001404,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.001.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4275.949101000151,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.001.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.689278999242,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.002.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4355.66933500013,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.002.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4197.474055999919,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.002.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3081.1131290010962,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.002.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.087502000199,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.003.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3159.9378259998048,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.003.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3072.286783999516,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.003.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4179.570334001255,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.003.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.59548699978,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.004.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4308.8860389998445,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.004.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4222.353526998631,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.004.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3470.4063660010434,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.004.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.587699000491,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.005.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6179.337344001397,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.005.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3573.8081409999722,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.005.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 5785.487966000801,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.005.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 6165.556997999374,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.006.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3106.0464969996247,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.006.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3141.8989740013785,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.006.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3115.685778000625,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.006.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3574.013182998897,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.007.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3143.5473960009404,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.007.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3109.2351120005333,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.007.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3099.9794759991346,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.007.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3581.34178399996,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.008.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3121.6847479990975,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.008.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3103.269679000732,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.008.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3099.6221320001496,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.008.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3580.4966739997326,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.009.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3089.085581999825,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.009.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3236.2474279998423,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.009.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3105.957910998768,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.009.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3572.4035240000376,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.025.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3092.870770000445,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.025.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3135.2812649984116,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.025.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4287.279359999957,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.025.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.447942999628,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.026.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4312.221176000094,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.026.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4309.925142999418,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.026.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3072.7407009999297,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.026.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.789713000515,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.027.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3376.3271419993544,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.027.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3414.588827999978,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.027.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4530.412784000873,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.027.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.189262001295,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.028.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4317.508444999476,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.028.1",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4200.59222600139,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.028.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3104.8919029999524,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.028.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.272206000271,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.029.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3144.5737180001743,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.029.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3068.3819349997066,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.029.2",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 4306.952746999741,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.029.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.136387998893,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.030.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3397.081793000325,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.030.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3624.5630080011324,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.030.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3156.262055001207,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.030.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3734.9458580010833,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.031.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3426.342126000236,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.031.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3331.264091000776,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.031.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3292.530196998996,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.031.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3716.713535999588,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.032.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3139.562147000106,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.032.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3109.7272779989,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.032.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3129.940139999235,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.032.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3547.160852000161,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.033.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3098.311407999063,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.033.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3061.246024000866,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.033.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3078.8478779995785,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.033.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3558.4017029996176,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.034.0",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3069.7453459997632,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.034.1",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3066.529415000332,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.034.2",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3360.260991999894,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.multi_turn.034.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 3737.5362740003766,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.235342001062,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.000.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.971327000021,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.847035000945,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.000.3",
+      "reason": "validation_rejected",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 6877.1548549993895,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.001.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.711430999625,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.001.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.412531999857,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.001.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8005.4864499998075,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.001.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.248004000852,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.002.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.292482000688,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.002.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.821248999884,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.002.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.716891998716,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.002.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.560312001355,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.003.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.30514199959,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.003.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.467821999948,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.003.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.888143999575,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.003.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.237964999949,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.004.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.302937999455,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.004.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.154726000706,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.004.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.3236809997325,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.004.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.005972999745,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.005.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.422412000669,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.005.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.950629001338,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.005.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8005.064770999525,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.005.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.155128999628,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.006.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.4207759999845,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.006.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.560896999261,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.006.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.243950001182,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.006.3",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 7927.235582999856,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.007.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.845035000268,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.007.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.612233000036,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.007.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.051390998939,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.007.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.430414999457,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.008.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.379576999578,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.008.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.280538001491,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.008.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.666762000648,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.008.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.802045999488,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.009.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.218406998712,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.009.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.59902800119,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.009.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.9297280002065,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.009.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.3508369997435,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.025.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 6693.439946000581,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.025.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.76382300035,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.025.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8005.8164759993815,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.025.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.767386000618,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.026.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.296622000562,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.026.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.936312001519,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.026.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.731284999754,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.026.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.261079000367,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.027.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.656019000322,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.027.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.72869199964,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.027.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.240923000703,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.027.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.79247200019,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.028.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.093576000538,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.028.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.733316998478,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.028.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.232033999666,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.028.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.112118000194,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.029.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.5555910000985,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.029.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.102455999397,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.029.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.243373999998,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.029.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.317815999457,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.030.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.935557000863,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.030.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8005.222202000368,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.030.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8005.849076000231,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.030.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.334308999911,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.031.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.549683000529,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.031.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.40056099958,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.031.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8002.698873999179,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.031.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.111047001061,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.032.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.0523069983465,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.032.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.746495000087,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.032.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.404484999919,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.032.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.023544001029,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.033.0",
+      "reason": "invalid_structured_output",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 7731.80013000092,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.033.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.502284000206,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.033.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.825492000033,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.033.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.515678001349,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.034.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8004.117181999391,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.034.1",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.201611001714,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.034.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.307134000352,
+      "model_calls": 1
+    },
+    {
+      "case_id": "lir01.ambiguous.034.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.234517000237,
+      "model_calls": 1
+    }
+  ]
+}

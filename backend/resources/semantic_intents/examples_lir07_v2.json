@@ -1,0 +1,5130 @@
+{
+  "dataset_version": "lir07-intent-examples-v2.0.0",
+  "taxonomy_version": "wildfire-intents-v1",
+  "examples": [
+    {
+      "id": "single.en.01",
+      "text": "Give me the hotspot detection count for Riau in September 2023",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "single.en.02",
+      "text": "September 2023 hotspot total for Aceh",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "single.id.01",
+      "text": "Berapa jumlah deteksi hotspot di Riau selama September 2023",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "single.id.02",
+      "text": "Total hotspot Aceh bulan September 2023",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "multi.en.01",
+      "text": "How many detections did Aceh and West Sumatra have together in September 2023",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "multi.en.02",
+      "text": "Add the September hotspot counts for Aceh and Sumatera Barat",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "multi.id.01",
+      "text": "Jumlahkan deteksi Aceh dan Sumatera Barat selama September 2023",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "multi.mixed.01",
+      "text": "Total hotspot gabungan Aceh plus West Sumatra September 2023",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "compare.en.01",
+      "text": "Between Aceh and West Sumatra who leads for September 2023",
+      "language": "en",
+      "intent": "province_comparison",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [
+        "comparison"
+      ],
+      "min_provinces": 2,
+      "max_provinces": 2,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "compare.en.02",
+      "text": "Aceh versus Sumatera Barat in September 2023 which recorded more detections",
+      "language": "en",
+      "intent": "province_comparison",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [
+        "comparison"
+      ],
+      "min_provinces": 2,
+      "max_provinces": 2,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "compare.id.01",
+      "text": "Mana lebih banyak pada September 2023 Aceh atau Sumatera Barat",
+      "language": "id",
+      "intent": "province_comparison",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [
+        "comparison"
+      ],
+      "min_provinces": 2,
+      "max_provinces": 2,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "compare.id.02",
+      "text": "Aceh lawan Sumatera Barat siapa lebih tinggi bulan September 2023",
+      "language": "id",
+      "intent": "province_comparison",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [
+        "comparison"
+      ],
+      "min_provinces": 2,
+      "max_provinces": 2,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "rank.en.01",
+      "text": "What province topped the hotspot list in September 2023",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "rank.en.02",
+      "text": "Rank the five busiest provinces for hotspot detections in September 2023",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "rank.id.01",
+      "text": "Provinsi dengan hotspot paling banyak September 2023 apa",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "rank.id.02",
+      "text": "Urutkan lima provinsi hotspot terbanyak bulan September 2023",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "trend.en.01",
+      "text": "Show Riau monthly hotspot pattern during 2023",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "trend.en.02",
+      "text": "How did Aceh hotspot detections vary month by month in 2023",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "trend.id.01",
+      "text": "Tren bulanan hotspot Riau selama tahun 2023",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "trend.id.02",
+      "text": "Pola deteksi hotspot Aceh per bulan pada 2023",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "map.en.01",
+      "text": "Where were hotspot detections located in Riau during September 2023",
+      "language": "en",
+      "intent": "map_locations",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "map.en.02",
+      "text": "Put Aceh September 2023 hotspot locations on the map",
+      "language": "en",
+      "intent": "map_locations",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "map.id.01",
+      "text": "Tampilkan lokasi hotspot Riau September 2023 di peta",
+      "language": "id",
+      "intent": "map_locations",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "map.id.02",
+      "text": "Di mana titik deteksi hotspot Aceh pada September 2023",
+      "language": "id",
+      "intent": "map_locations",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "docs.en.01",
+      "text": "Explain what a NASA FIRMS hotspot detection represents",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "docs.en.02",
+      "text": "What are the interpretation limitations of active fire detections",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "docs.id.01",
+      "text": "Jelaskan arti deteksi hotspot NASA FIRMS",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "docs.id.02",
+      "text": "Apa keterbatasan interpretasi data hotspot",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "combined.en.01",
+      "text": "Give Riau September 2023 detection count and explain what FRP means",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "combined.en.02",
+      "text": "Report Aceh hotspots for September 2023 plus describe detection confidence",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "combined.id.01",
+      "text": "Berikan jumlah hotspot Riau September 2023 dan jelaskan arti FRP",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "authored"
+    },
+    {
+      "id": "combined.mixed.01",
+      "text": "Total hotspot Aceh September 2023 lalu explain confidence NASA FIRMS",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "synthetic_paraphrase"
+    },
+    {
+      "id": "lir07.analytics.000.0",
+      "text": "What detection total belongs to Aceh in January 2023? Answer using the selected satellite product. Frame it for a research note. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.000.1",
+      "text": "What detection total belongs to West Sumatra in March 2023? Answer using the selected satellite product. Frame it for a research note. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.000.2",
+      "text": "Berapa total deteksi di Riau pada Mei 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.000.3",
+      "text": "Berapa detection total untuk Jambi in June 2023? Use produk satelit yang dipilih. Frame untuk note research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.001.0",
+      "text": "Berapa total deteksi di Sumatera Barat pada Mei 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.001.1",
+      "text": "Berapa total deteksi di Riau pada Juni 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.001.2",
+      "text": "What detection total belongs to Jambi in August 2023? Answer using the selected satellite product. Frame it for a classroom note. State the scope.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.001.3",
+      "text": "Berapa detection total untuk Jawa Tengah in September 2023? Use produk satelit yang dipilih. Frame untuk note kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.002.0",
+      "text": "What detection total belongs to Riau in August 2023? Answer using the selected satellite product. Frame it for a newsroom note. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.002.1",
+      "text": "What detection total belongs to Jambi in September 2023? Answer using the selected satellite product. Frame it for a newsroom note. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.002.2",
+      "text": "Berapa total deteksi di Jawa Tengah pada Oktober 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.002.3",
+      "text": "Berapa detection total untuk Kalimantan Tengah in December 2023? Use produk satelit yang dipilih. Frame untuk note newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.003.0",
+      "text": "Berapa total deteksi di Jambi pada Oktober 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.003.1",
+      "text": "Berapa total deteksi di Jawa Tengah pada Desember 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.003.2",
+      "text": "What detection total belongs to Central Kalimantan in January 2023? Answer using the selected satellite product. Frame it for a policy note. State the scope.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.003.3",
+      "text": "Berapa detection total untuk Sulawesi Selatan in March 2023? Use produk satelit yang dipilih. Frame untuk note kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.004.0",
+      "text": "What detection total belongs to Central Java in January 2023? Answer using the selected satellite product. Frame it for a regional note. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.004.1",
+      "text": "What detection total belongs to Central Kalimantan in March 2023? Answer using the selected satellite product. Frame it for a regional note. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.004.2",
+      "text": "Berapa total deteksi di Sulawesi Selatan pada Mei 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.004.3",
+      "text": "Berapa detection total untuk Papua Barat in June 2023? Use produk satelit yang dipilih. Frame untuk note regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.005.0",
+      "text": "Bagaimana jumlah hotspot Kalimantan Tengah berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.005.1",
+      "text": "Bagaimana jumlah hotspot Sulawesi Selatan berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.005.2",
+      "text": "How did West Papua's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a technical note. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.005.3",
+      "text": "Bagaimana hotspot count Aceh berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.006.0",
+      "text": "How did South Sulawesi's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a public note. Answer directly.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.006.1",
+      "text": "How did West Papua's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a public note. Keep it brief.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.006.2",
+      "text": "Bagaimana jumlah hotspot Aceh berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.006.3",
+      "text": "Bagaimana hotspot count West Sumatra berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.007.0",
+      "text": "Bagaimana jumlah hotspot Papua Barat berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.007.1",
+      "text": "Bagaimana jumlah hotspot Aceh berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.007.2",
+      "text": "How did West Sumatra's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a audit note. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.007.3",
+      "text": "Bagaimana hotspot count Riau berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.008.0",
+      "text": "How did Aceh's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a planning note. Answer directly.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.008.1",
+      "text": "How did West Sumatra's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a planning note. Keep it brief.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.008.2",
+      "text": "Bagaimana jumlah hotspot Riau berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.008.3",
+      "text": "Bagaimana hotspot count Jambi berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.009.0",
+      "text": "Bagaimana jumlah hotspot Sumatera Barat berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.009.1",
+      "text": "Bagaimana jumlah hotspot Riau berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.009.2",
+      "text": "How did Jambi's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a review note. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.009.3",
+      "text": "Bagaimana hotspot count Central Java berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.025.0",
+      "text": "Tampilkan tren deteksi bulanan Sumatera Barat selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.025.1",
+      "text": "Tampilkan tren deteksi bulanan Riau selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.025.2",
+      "text": "Show the month-by-month detection trend for Jambi in 2023. I am checking a regional briefing. Frame it for a technical worksheet. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.025.3",
+      "text": "Show tren deteksi per bulan untuk Jawa Tengah selama 2023. Ini untuk regional briefing. Frame untuk worksheet technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.026.0",
+      "text": "Show the month-by-month detection trend for Riau in 2023. I am checking a regional briefing. Frame it for a public worksheet. Answer directly.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.026.1",
+      "text": "Show the month-by-month detection trend for Jambi in 2023. I am checking a regional briefing. Frame it for a public worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.026.2",
+      "text": "Tampilkan tren deteksi bulanan Jawa Tengah selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.026.3",
+      "text": "Show tren deteksi per bulan untuk Kalimantan Tengah selama 2023. Ini untuk regional briefing. Frame untuk worksheet publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.027.0",
+      "text": "Tampilkan tren deteksi bulanan Jambi selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.027.1",
+      "text": "Tampilkan tren deteksi bulanan Jawa Tengah selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.027.2",
+      "text": "Show the month-by-month detection trend for Central Kalimantan in 2023. I am checking a regional briefing. Frame it for a audit worksheet. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.027.3",
+      "text": "Show tren deteksi per bulan untuk Sulawesi Selatan selama 2023. Ini untuk regional briefing. Frame untuk worksheet audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.028.0",
+      "text": "Show the month-by-month detection trend for Central Java in 2023. I am checking a regional briefing. Frame it for a planning worksheet. Answer directly.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.028.1",
+      "text": "Show the month-by-month detection trend for Central Kalimantan in 2023. I am checking a regional briefing. Frame it for a planning worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.028.2",
+      "text": "Tampilkan tren deteksi bulanan Sulawesi Selatan selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.028.3",
+      "text": "Show tren deteksi per bulan untuk Papua Barat selama 2023. Ini untuk regional briefing. Frame untuk worksheet planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.029.0",
+      "text": "Tampilkan tren deteksi bulanan Kalimantan Tengah selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.029.1",
+      "text": "Tampilkan tren deteksi bulanan Sulawesi Selatan selama 2023. Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.029.2",
+      "text": "Show the month-by-month detection trend for West Papua in 2023. I am checking a regional briefing. Frame it for a review worksheet. State the scope.",
+      "language": "en",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.029.3",
+      "text": "Show tren deteksi per bulan untuk Aceh selama 2023. Ini untuk regional briefing. Frame untuk worksheet tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "monthly_trend",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.030.0",
+      "text": "Give the separate and combined detection counts for South Sulawesi versus West Sumatra during August 2023. Please retain the satellite caveat. Frame it for a research check. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.030.1",
+      "text": "Give the separate and combined detection counts for West Papua versus Riau during September 2023. Please retain the satellite caveat. Frame it for a research check. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.030.2",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Aceh versus Jambi selama Oktober 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.030.3",
+      "text": "Berikan separate and combined counts West Sumatra versus Jawa Tengah pada Desember 2023. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.031.0",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Papua Barat versus Riau selama Oktober 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.031.1",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Aceh versus Jambi selama Desember 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.031.2",
+      "text": "Give the separate and combined detection counts for West Sumatra versus Central Java during January 2023. Please retain the satellite caveat. Frame it for a classroom check. State the scope.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.031.3",
+      "text": "Berikan separate and combined counts Riau versus Kalimantan Tengah pada Maret 2023. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.032.0",
+      "text": "Give the separate and combined detection counts for Aceh versus Jambi during January 2023. Please retain the satellite caveat. Frame it for a newsroom check. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.032.1",
+      "text": "Give the separate and combined detection counts for West Sumatra versus Central Java during March 2023. Please retain the satellite caveat. Frame it for a newsroom check. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.032.2",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Riau versus Kalimantan Tengah selama Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.032.3",
+      "text": "Berikan separate and combined counts Jambi versus Sulawesi Selatan pada Juni 2023. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.033.0",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Sumatera Barat versus Jawa Tengah selama Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.033.1",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Riau versus Kalimantan Tengah selama Juni 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.033.2",
+      "text": "Give the separate and combined detection counts for Jambi versus South Sulawesi during August 2023. Please retain the satellite caveat. Frame it for a policy check. State the scope.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.033.3",
+      "text": "Berikan separate and combined counts Central Java versus Papua Barat pada September 2023. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.034.0",
+      "text": "Give the separate and combined detection counts for Riau versus Central Kalimantan during August 2023. Please retain the satellite caveat. Frame it for a regional check. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.034.1",
+      "text": "Give the separate and combined detection counts for Jambi versus South Sulawesi during September 2023. Please retain the satellite caveat. Frame it for a regional check. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.034.2",
+      "text": "Berikan jumlah terpisah dan gabungan untuk Jawa Tengah versus Papua Barat selama Oktober 2023. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.034.3",
+      "text": "Berikan separate and combined counts Central Kalimantan versus Aceh pada Desember 2023. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.050.0",
+      "text": "Compare the hotspot totals for Riau and Central Kalimantan in August 2023. Answer using the selected satellite product. Frame it for a research comparison. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.050.1",
+      "text": "Compare the hotspot totals for Jambi and South Sulawesi in September 2023. Answer using the selected satellite product. Frame it for a research comparison. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.050.2",
+      "text": "Bandingkan total hotspot Jawa Tengah dan Papua Barat pada Oktober 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.050.3",
+      "text": "Compare total hotspot Kalimantan Tengah dan Aceh in December 2023. Use produk satelit yang dipilih. Frame untuk perbandingan research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.051.0",
+      "text": "Bandingkan total hotspot Jambi dan Sulawesi Selatan pada Oktober 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.051.1",
+      "text": "Bandingkan total hotspot Jawa Tengah dan Papua Barat pada Desember 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.051.2",
+      "text": "Compare the hotspot totals for Central Kalimantan and Aceh in January 2023. Answer using the selected satellite product. Frame it for a classroom comparison. State the scope.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.051.3",
+      "text": "Compare total hotspot Sulawesi Selatan dan Sumatera Barat in March 2023. Use produk satelit yang dipilih. Frame untuk perbandingan kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.052.0",
+      "text": "Compare the hotspot totals for Central Java and West Papua in January 2023. Answer using the selected satellite product. Frame it for a newsroom comparison. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.052.1",
+      "text": "Compare the hotspot totals for Central Kalimantan and Aceh in March 2023. Answer using the selected satellite product. Frame it for a newsroom comparison. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.052.2",
+      "text": "Bandingkan total hotspot Sulawesi Selatan dan Sumatera Barat pada Mei 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.052.3",
+      "text": "Compare total hotspot Papua Barat dan Riau in June 2023. Use produk satelit yang dipilih. Frame untuk perbandingan newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.053.0",
+      "text": "Bandingkan total hotspot Kalimantan Tengah dan Aceh pada Mei 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.053.1",
+      "text": "Bandingkan total hotspot Sulawesi Selatan dan Sumatera Barat pada Juni 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.053.2",
+      "text": "Compare the hotspot totals for West Papua and Riau in August 2023. Answer using the selected satellite product. Frame it for a policy comparison. State the scope.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.053.3",
+      "text": "Compare total hotspot Aceh dan Jambi in September 2023. Use produk satelit yang dipilih. Frame untuk perbandingan kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.054.0",
+      "text": "Compare the hotspot totals for South Sulawesi and West Sumatra in August 2023. Answer using the selected satellite product. Frame it for a regional comparison. Answer directly.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.054.1",
+      "text": "Compare the hotspot totals for West Papua and Riau in September 2023. Answer using the selected satellite product. Frame it for a regional comparison. Keep it brief.",
+      "language": "en",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.054.2",
+      "text": "Bandingkan total hotspot Aceh dan Jambi pada Oktober 2023. Gunakan produk satelit yang dipilih. Susun untuk perbandingan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.054.3",
+      "text": "Compare total hotspot Sumatera Barat dan Jawa Tengah in December 2023. Use produk satelit yang dipilih. Frame untuk perbandingan regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "multi_province_summary",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 2,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.055.0",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Oktober 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.055.1",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Desember 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan teknis. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.055.2",
+      "text": "List the top five provinces by detection count for January 2023. Keep the response concise and explicit. Frame it for a technical comparison. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.055.3",
+      "text": "List top five provinsi berdasarkan detection count March 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.056.0",
+      "text": "List the top five provinces by detection count for January 2023. Keep the response concise and explicit. Frame it for a public comparison. Answer directly.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.056.1",
+      "text": "List the top five provinces by detection count for March 2023. Keep the response concise and explicit. Frame it for a public comparison. Keep it brief.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.056.2",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Mei 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.056.3",
+      "text": "List top five provinsi berdasarkan detection count June 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.057.0",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Mei 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan audit. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.057.1",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Juni 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan audit. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.057.2",
+      "text": "List the top five provinces by detection count for August 2023. Keep the response concise and explicit. Frame it for a audit comparison. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.057.3",
+      "text": "List top five provinsi berdasarkan detection count September 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.058.0",
+      "text": "List the top five provinces by detection count for August 2023. Keep the response concise and explicit. Frame it for a planning comparison. Answer directly.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.058.1",
+      "text": "List the top five provinces by detection count for September 2023. Keep the response concise and explicit. Frame it for a planning comparison. Keep it brief.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.058.2",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Oktober 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.058.3",
+      "text": "List top five provinsi berdasarkan detection count December 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.059.0",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Oktober 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.059.1",
+      "text": "Daftarkan lima provinsi teratas berdasarkan jumlah deteksi Desember 2023. Buat jawaban singkat dan jelas. Susun untuk perbandingan tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.059.2",
+      "text": "List the top five provinces by detection count for January 2023. Keep the response concise and explicit. Frame it for a review comparison. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.059.3",
+      "text": "List top five provinsi berdasarkan detection count March 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.075.0",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Oktober 2023? Ini untuk ringkasan regional. Susun untuk rekaman teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.075.1",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Desember 2023? Ini untuk ringkasan regional. Susun untuk rekaman teknis. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.075.2",
+      "text": "Which province recorded the most hotspot detections in January 2023? I am checking a regional briefing. Frame it for a technical record. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.075.3",
+      "text": "Which province punya hotspot detections terbanyak pada Maret 2023? Ini untuk regional briefing. Frame untuk rekaman technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.076.0",
+      "text": "Which province recorded the most hotspot detections in January 2023? I am checking a regional briefing. Frame it for a public record. Answer directly.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.076.1",
+      "text": "Which province recorded the most hotspot detections in March 2023? I am checking a regional briefing. Frame it for a public record. Keep it brief.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.076.2",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Mei 2023? Ini untuk ringkasan regional. Susun untuk rekaman publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.076.3",
+      "text": "Which province punya hotspot detections terbanyak pada Juni 2023? Ini untuk regional briefing. Frame untuk rekaman publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.077.0",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Mei 2023? Ini untuk ringkasan regional. Susun untuk rekaman audit. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.077.1",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Juni 2023? Ini untuk ringkasan regional. Susun untuk rekaman audit. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.077.2",
+      "text": "Which province recorded the most hotspot detections in August 2023? I am checking a regional briefing. Frame it for a audit record. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.077.3",
+      "text": "Which province punya hotspot detections terbanyak pada September 2023? Ini untuk regional briefing. Frame untuk rekaman audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.078.0",
+      "text": "Which province recorded the most hotspot detections in August 2023? I am checking a regional briefing. Frame it for a planning record. Answer directly.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.078.1",
+      "text": "Which province recorded the most hotspot detections in September 2023? I am checking a regional briefing. Frame it for a planning record. Keep it brief.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.078.2",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Oktober 2023? Ini untuk ringkasan regional. Susun untuk rekaman perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.078.3",
+      "text": "Which province punya hotspot detections terbanyak pada Desember 2023? Ini untuk regional briefing. Frame untuk rekaman planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.079.0",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Oktober 2023? Ini untuk ringkasan regional. Susun untuk rekaman tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.079.1",
+      "text": "Provinsi mana mencatat deteksi hotspot terbanyak pada Desember 2023? Ini untuk ringkasan regional. Susun untuk rekaman tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.079.2",
+      "text": "Which province recorded the most hotspot detections in January 2023? I am checking a regional briefing. Frame it for a review record. State the scope.",
+      "language": "en",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.079.3",
+      "text": "Which province punya hotspot detections terbanyak pada Maret 2023? Ini untuk regional briefing. Frame untuk rekaman tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "province_ranking",
+      "required_slots": [
+        "date"
+      ],
+      "optional_slots": [
+        "direction",
+        "top_n"
+      ],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.080.0",
+      "text": "Give me the January 2023 hotspot tally for Aceh. Please retain the satellite caveat. Frame it for a research exercise. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.080.1",
+      "text": "Give me the March 2023 hotspot tally for West Sumatra. Please retain the satellite caveat. Frame it for a research exercise. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.080.2",
+      "text": "Berikan jumlah hotspot Riau untuk Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.080.3",
+      "text": "Give me jumlah hotspot Jambi pada Juni 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.081.0",
+      "text": "Berikan jumlah hotspot Sumatera Barat untuk Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.081.1",
+      "text": "Berikan jumlah hotspot Riau untuk Juni 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.081.2",
+      "text": "Give me the August 2023 hotspot tally for Jambi. Please retain the satellite caveat. Frame it for a classroom exercise. State the scope.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.081.3",
+      "text": "Give me jumlah hotspot Jawa Tengah pada September 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.082.0",
+      "text": "Give me the August 2023 hotspot tally for Riau. Please retain the satellite caveat. Frame it for a newsroom exercise. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.082.1",
+      "text": "Give me the September 2023 hotspot tally for Jambi. Please retain the satellite caveat. Frame it for a newsroom exercise. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.082.2",
+      "text": "Berikan jumlah hotspot Jawa Tengah untuk Oktober 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.082.3",
+      "text": "Give me jumlah hotspot Kalimantan Tengah pada Desember 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.083.0",
+      "text": "Berikan jumlah hotspot Jambi untuk Oktober 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.083.1",
+      "text": "Berikan jumlah hotspot Jawa Tengah untuk Desember 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.083.2",
+      "text": "Give me the January 2023 hotspot tally for Central Kalimantan. Please retain the satellite caveat. Frame it for a policy exercise. State the scope.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.083.3",
+      "text": "Give me jumlah hotspot Sulawesi Selatan pada Maret 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.084.0",
+      "text": "Give me the January 2023 hotspot tally for Central Java. Please retain the satellite caveat. Frame it for a regional exercise. Answer directly.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.084.1",
+      "text": "Give me the March 2023 hotspot tally for Central Kalimantan. Please retain the satellite caveat. Frame it for a regional exercise. Keep it brief.",
+      "language": "en",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.084.2",
+      "text": "Berikan jumlah hotspot Sulawesi Selatan untuk Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.analytics.084.3",
+      "text": "Give me jumlah hotspot Papua Barat pada Juni 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "single_province_count",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 1,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.000.0",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a research note. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.000.1",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a research note. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.000.2",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.000.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Use produk satelit yang dipilih. Frame untuk note research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.001.0",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.001.1",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.001.2",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a classroom note. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.001.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Use produk satelit yang dipilih. Frame untuk note kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.002.0",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a newsroom note. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.002.1",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a newsroom note. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.002.2",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.002.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Use produk satelit yang dipilih. Frame untuk note newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.003.0",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.003.1",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.003.2",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a policy note. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.003.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Use produk satelit yang dipilih. Frame untuk note kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.004.0",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a regional note. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.004.1",
+      "text": "What does fire radiative power mean in NASA FIRMS? Answer using the selected satellite product. Frame it for a regional note. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.004.2",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Gunakan produk satelit yang dipilih. Susun untuk catatan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.004.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Use produk satelit yang dipilih. Frame untuk note regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.005.0",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.005.1",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.005.2",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a technical note. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.005.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Keep jawaban singkat dan explicit. Frame untuk note technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.006.0",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a public note. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.006.1",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a public note. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.006.2",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.006.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Keep jawaban singkat dan explicit. Frame untuk note publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.007.0",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.007.1",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.007.2",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a audit note. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.007.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Keep jawaban singkat dan explicit. Frame untuk note audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.008.0",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a planning note. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.008.1",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a planning note. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.008.2",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.008.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Keep jawaban singkat dan explicit. Frame untuk note planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.009.0",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.009.1",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.009.2",
+      "text": "How should the VIIRS confidence field be interpreted? Keep the response concise and explicit. Frame it for a review note. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.009.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Keep jawaban singkat dan explicit. Frame untuk note tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.025.0",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.025.1",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.025.2",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a technical worksheet. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.025.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Ini untuk regional briefing. Frame untuk worksheet technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.026.0",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a public worksheet. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.026.1",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a public worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.026.2",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.026.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Ini untuk regional briefing. Frame untuk worksheet publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.027.0",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.027.1",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.027.2",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a audit worksheet. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.027.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Ini untuk regional briefing. Frame untuk worksheet audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.028.0",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a planning worksheet. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.028.1",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a planning worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.028.2",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.028.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Ini untuk regional briefing. Frame untuk worksheet planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.029.0",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.029.1",
+      "text": "Apa arti fire radiative power dalam NASA FIRMS? Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.029.2",
+      "text": "What does fire radiative power mean in NASA FIRMS? I am checking a regional briefing. Frame it for a review worksheet. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.029.3",
+      "text": "Apa meaning fire radiative power di NASA FIRMS? Ini untuk regional briefing. Frame untuk worksheet tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.030.0",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a research check. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.030.1",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a research check. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.030.2",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.030.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.031.0",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.031.1",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.031.2",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a classroom check. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.031.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.032.0",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a newsroom check. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.032.1",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a newsroom check. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.032.2",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.032.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.033.0",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.033.1",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.033.2",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a policy check. State the scope.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.033.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.034.0",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a regional check. Answer directly.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.034.1",
+      "text": "How should the VIIRS confidence field be interpreted? Please retain the satellite caveat. Frame it for a regional check. Keep it brief.",
+      "language": "en",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.034.2",
+      "text": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.nasa_rag.034.3",
+      "text": "How should kolom confidence VIIRS ditafsirkan? Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "documentation_semantics",
+      "required_slots": [],
+      "optional_slots": [],
+      "min_provinces": 0,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.000.0",
+      "text": "Give the January 2023 detection count for Aceh and explain FRP. Answer using the selected satellite product. Frame it for a research note. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.000.1",
+      "text": "Give the March 2023 detection count for West Sumatra and explain FRP. Answer using the selected satellite product. Frame it for a research note. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.000.2",
+      "text": "Berikan jumlah deteksi Riau Mei 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.000.3",
+      "text": "Give jumlah deteksi Jambi June 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.001.0",
+      "text": "Berikan jumlah deteksi Sumatera Barat Mei 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.001.1",
+      "text": "Berikan jumlah deteksi Riau Juni 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.001.2",
+      "text": "Give the August 2023 detection count for Jambi and explain FRP. Answer using the selected satellite product. Frame it for a classroom note. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.001.3",
+      "text": "Give jumlah deteksi Jawa Tengah September 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.002.0",
+      "text": "Give the August 2023 detection count for Riau and explain FRP. Answer using the selected satellite product. Frame it for a newsroom note. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.002.1",
+      "text": "Give the September 2023 detection count for Jambi and explain FRP. Answer using the selected satellite product. Frame it for a newsroom note. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.002.2",
+      "text": "Berikan jumlah deteksi Jawa Tengah Oktober 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.002.3",
+      "text": "Give jumlah deteksi Kalimantan Tengah December 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.003.0",
+      "text": "Berikan jumlah deteksi Jambi Oktober 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.003.1",
+      "text": "Berikan jumlah deteksi Jawa Tengah Desember 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.003.2",
+      "text": "Give the January 2023 detection count for Central Kalimantan and explain FRP. Answer using the selected satellite product. Frame it for a policy note. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.003.3",
+      "text": "Give jumlah deteksi Sulawesi Selatan March 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.004.0",
+      "text": "Give the January 2023 detection count for Central Java and explain FRP. Answer using the selected satellite product. Frame it for a regional note. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.004.1",
+      "text": "Give the March 2023 detection count for Central Kalimantan and explain FRP. Answer using the selected satellite product. Frame it for a regional note. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.004.2",
+      "text": "Berikan jumlah deteksi Sulawesi Selatan Mei 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.004.3",
+      "text": "Give jumlah deteksi Papua Barat June 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.005.0",
+      "text": "Laporkan total hotspot Kalimantan Tengah Mei 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.005.1",
+      "text": "Laporkan total hotspot Sulawesi Selatan Juni 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.005.2",
+      "text": "Report West Papua's August 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a technical note. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.005.3",
+      "text": "Report total hotspot Aceh September 2023 serta VIIRS confidence meaning. Keep jawaban singkat dan explicit. Frame untuk note technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.006.0",
+      "text": "Report South Sulawesi's August 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a public note. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.006.1",
+      "text": "Report West Papua's September 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a public note. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.006.2",
+      "text": "Laporkan total hotspot Aceh Oktober 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.006.3",
+      "text": "Report total hotspot West Sumatra Desember 2023 serta VIIRS confidence meaning. Keep jawaban singkat dan explicit. Frame untuk note publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.007.0",
+      "text": "Laporkan total hotspot Papua Barat Oktober 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan audit. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.007.1",
+      "text": "Laporkan total hotspot Aceh Desember 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan audit. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.007.2",
+      "text": "Report West Sumatra's January 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a audit note. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.007.3",
+      "text": "Report total hotspot Riau Maret 2023 serta VIIRS confidence meaning. Keep jawaban singkat dan explicit. Frame untuk note audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.008.0",
+      "text": "Report Aceh's January 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a planning note. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.008.1",
+      "text": "Report West Sumatra's March 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a planning note. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.008.2",
+      "text": "Laporkan total hotspot Riau Mei 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.008.3",
+      "text": "Report total hotspot Jambi Juni 2023 serta VIIRS confidence meaning. Keep jawaban singkat dan explicit. Frame untuk note planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.009.0",
+      "text": "Laporkan total hotspot Sumatera Barat Mei 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.009.1",
+      "text": "Laporkan total hotspot Riau Juni 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.009.2",
+      "text": "Report Jambi's August 2023 hotspot total and describe VIIRS confidence. Keep the response concise and explicit. Frame it for a review note. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.009.3",
+      "text": "Report total hotspot Central Java September 2023 serta VIIRS confidence meaning. Keep jawaban singkat dan explicit. Frame untuk note tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.025.0",
+      "text": "Berikan jumlah deteksi Sumatera Barat Mei 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.025.1",
+      "text": "Berikan jumlah deteksi Riau Juni 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja teknis. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.025.2",
+      "text": "Give the August 2023 detection count for Jambi and explain FRP. I am checking a regional briefing. Frame it for a technical worksheet. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.025.3",
+      "text": "Give jumlah deteksi Jawa Tengah September 2023 dan explain FRP. Ini untuk regional briefing. Frame untuk worksheet technical. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.026.0",
+      "text": "Give the August 2023 detection count for Riau and explain FRP. I am checking a regional briefing. Frame it for a public worksheet. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.026.1",
+      "text": "Give the September 2023 detection count for Jambi and explain FRP. I am checking a regional briefing. Frame it for a public worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.026.2",
+      "text": "Berikan jumlah deteksi Jawa Tengah Oktober 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja publik. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.026.3",
+      "text": "Give jumlah deteksi Kalimantan Tengah December 2023 dan explain FRP. Ini untuk regional briefing. Frame untuk worksheet publik. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.027.0",
+      "text": "Berikan jumlah deteksi Jambi Oktober 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.027.1",
+      "text": "Berikan jumlah deteksi Jawa Tengah Desember 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja audit. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.027.2",
+      "text": "Give the January 2023 detection count for Central Kalimantan and explain FRP. I am checking a regional briefing. Frame it for a audit worksheet. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.027.3",
+      "text": "Give jumlah deteksi Sulawesi Selatan March 2023 dan explain FRP. Ini untuk regional briefing. Frame untuk worksheet audit. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.028.0",
+      "text": "Give the January 2023 detection count for Central Java and explain FRP. I am checking a regional briefing. Frame it for a planning worksheet. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.028.1",
+      "text": "Give the March 2023 detection count for Central Kalimantan and explain FRP. I am checking a regional briefing. Frame it for a planning worksheet. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.028.2",
+      "text": "Berikan jumlah deteksi Sulawesi Selatan Mei 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja perencanaan. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.028.3",
+      "text": "Give jumlah deteksi Papua Barat June 2023 dan explain FRP. Ini untuk regional briefing. Frame untuk worksheet planning. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.029.0",
+      "text": "Berikan jumlah deteksi Kalimantan Tengah Mei 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.029.1",
+      "text": "Berikan jumlah deteksi Sulawesi Selatan Juni 2023 dan jelaskan FRP. Ini untuk ringkasan regional. Susun untuk lembar kerja tinjauan. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.029.2",
+      "text": "Give the August 2023 detection count for West Papua and explain FRP. I am checking a regional briefing. Frame it for a review worksheet. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.029.3",
+      "text": "Give jumlah deteksi Aceh September 2023 dan explain FRP. Ini untuk regional briefing. Frame untuk worksheet tinjauan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.030.0",
+      "text": "Report South Sulawesi's August 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a research check. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.030.1",
+      "text": "Report West Papua's September 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a research check. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.030.2",
+      "text": "Laporkan total hotspot Aceh Oktober 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan riset. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.030.3",
+      "text": "Report total hotspot West Sumatra Desember 2023 serta VIIRS confidence meaning. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan research. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.031.0",
+      "text": "Laporkan total hotspot Papua Barat Oktober 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.031.1",
+      "text": "Laporkan total hotspot Aceh Desember 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kelas. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.031.2",
+      "text": "Report West Sumatra's January 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a classroom check. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.031.3",
+      "text": "Report total hotspot Riau Maret 2023 serta VIIRS confidence meaning. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kelas. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.032.0",
+      "text": "Report Aceh's January 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a newsroom check. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.032.1",
+      "text": "Report West Sumatra's March 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a newsroom check. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.032.2",
+      "text": "Laporkan total hotspot Riau Mei 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan redaksi. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.032.3",
+      "text": "Report total hotspot Jambi Juni 2023 serta VIIRS confidence meaning. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan newsroom. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.033.0",
+      "text": "Laporkan total hotspot Sumatera Barat Mei 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Jawab langsung.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.033.1",
+      "text": "Laporkan total hotspot Riau Juni 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan kebijakan. Buat singkat.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.033.2",
+      "text": "Report Jambi's August 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a policy check. State the scope.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.033.3",
+      "text": "Report total hotspot Central Java September 2023 serta VIIRS confidence meaning. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan kebijakan. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.034.0",
+      "text": "Report Riau's August 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a regional check. Answer directly.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.034.1",
+      "text": "Report Jambi's September 2023 hotspot total and describe VIIRS confidence. Please retain the satellite caveat. Frame it for a regional check. Keep it brief.",
+      "language": "en",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.034.2",
+      "text": "Laporkan total hotspot Jawa Tengah Oktober 2023 serta arti confidence VIIRS. Pertahankan catatan keterbatasan satelit. Susun untuk pemeriksaan regional. Nyatakan cakupannya.",
+      "language": "id",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    },
+    {
+      "id": "lir07.combined.034.3",
+      "text": "Report total hotspot Central Kalimantan Desember 2023 serta VIIRS confidence meaning. Please retain catatan keterbatasan satelit. Frame untuk pemeriksaan regional. Use bahasa sederhana.",
+      "language": "mixed",
+      "intent": "combined_analytics_documentation",
+      "required_slots": [
+        "province",
+        "date"
+      ],
+      "optional_slots": [],
+      "min_provinces": 1,
+      "max_provinces": 38,
+      "review_status": "reviewed",
+      "source_category": "known_regression"
+    }
+  ]
+}

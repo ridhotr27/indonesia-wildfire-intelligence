@@ -1,0 +1,139 @@
+{
+  "profile": "lir05:qwen2.5:1.5b:prompt-v2",
+  "corpus_version": "lir01-intent-routing-corpus-v1.0.0",
+  "partition": "development",
+  "case_count": 12,
+  "route_accuracy": 0.25,
+  "operation_exactness": 0.25,
+  "model_calls": 12,
+  "valid_plan_rate": 0.0,
+  "timeout_rate": 1.0,
+  "rejection_code_counts": {},
+  "latency_ms": {
+    "p50": 8004.211989999021,
+    "p95": 8011.481930001537
+  },
+  "process_max_rss": 133287936,
+  "results": [
+    {
+      "case_id": "lir01.analytics.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8011.481930001537,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.analytics.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8005.693577000784,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.analytics.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.211989999021,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8003.643232001195,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8002.157723998607,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.nasa_rag.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.181250998954,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.combined.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.03666999955,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.combined.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8009.497379000095,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.combined.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 8004.46479600032,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.ambiguous.000.0",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.719713000464,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.ambiguous.000.2",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8003.439086000071,
+      "model_calls": 1,
+      "rejection_codes": []
+    },
+    {
+      "case_id": "lir01.ambiguous.000.3",
+      "reason": "timeout",
+      "predicted_route": "clarification",
+      "route_correct": true,
+      "operations_correct": true,
+      "duration_ms": 8032.112390999828,
+      "model_calls": 1,
+      "rejection_codes": []
+    }
+  ]
+}

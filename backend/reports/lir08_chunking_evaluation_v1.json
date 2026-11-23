@@ -1,0 +1,342 @@
+{
+  "ablation": "chunking-only",
+  "benchmark_version": "1.0.0",
+  "executed_at": "2026-11-17T09:08:00+00:00",
+  "final_holdout_consumed": false,
+  "limitations": [
+    "Live approved NASA pages can differ from the persisted B09 source snapshot.",
+    "This development ablation does not consume the sealed final holdout.",
+    "Retrieval metrics do not establish answer faithfulness by themselves."
+  ],
+  "model": {
+    "digest": "1b226e2802dbb772b5fc32a58f103ca1804ef7501331012de126ab22f67475ef",
+    "dimensions": 384,
+    "license": "Apache-2.0",
+    "name": "all-minilm",
+    "provider": "ollama-loopback"
+  },
+  "partition": "consumed-q01-development-regression",
+  "profiles": [
+    {
+      "chunk_count": 202,
+      "chunking_profile": "recursive-character-1400-200-v1",
+      "latency_ms_p50": 9.87117099975876,
+      "latency_ms_p95": 11.62270400163834,
+      "misses": [
+        "R08"
+      ],
+      "mrr": 0.7833333333333333,
+      "ndcg_at_5": 0.6543359667330509,
+      "profile": "dense",
+      "question_count": 10,
+      "recall_at_1": 0.7,
+      "recall_at_3": 0.9,
+      "recall_at_5": 0.9,
+      "results": [
+        {
+          "id": "R01",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "ndcg_at_5": 0.7039180890341347,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "ndcg_at_5": 0.38685280723454163,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-overview"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.5,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "ndcg_at_5": 0.3065735963827292,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "ndcg_at_5": 0.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-overview"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": false,
+          "recall_at_5": false,
+          "reciprocal_rank": 0.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    },
+    {
+      "chunk_count": 210,
+      "chunking_profile": "structure-title-1400-200-v1",
+      "latency_ms_p50": 10.008642999309814,
+      "latency_ms_p95": 11.296580996713601,
+      "misses": [],
+      "mrr": 0.8166666666666667,
+      "ndcg_at_5": 0.7656506860095968,
+      "profile": "dense",
+      "question_count": 10,
+      "recall_at_1": 0.7,
+      "recall_at_3": 1.0,
+      "recall_at_5": 1.0,
+      "results": [
+        {
+          "id": "R01",
+          "ndcg_at_5": 0.3065735963827292,
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "ndcg_at_5": 0.6934264036172708,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.5,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "ndcg_at_5": 0.7039180890341347,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "ndcg_at_5": 0.6131471927654584,
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "ndcg_at_5": 0.5,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recall_at_1": false,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 0.3333333333333333,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "ndcg_at_5": 0.9197207891481876,
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "ndcg_at_5": 1.0,
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview"
+          ],
+          "recall_at_1": true,
+          "recall_at_3": true,
+          "recall_at_5": true,
+          "reciprocal_rank": 1.0,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    }
+  ],
+  "sources": {
+    "firms-active-fire-attributes": "2ebab379003cf1a08787ec97a0b87983e3c339814d59f30fb664844e6f3bb150",
+    "firms-faq": "e156774159cfe616c0ff025994802ec5108ac5a6eb33e15a88270fd76c298a54",
+    "firms-overview": "1dfe313bc63865d807f19cfb23fd1c3fae8df7e0b50aa8d7b6ee80f1a04879cf",
+    "viirs-c2-active-fire-guide": "12d288191b6ad19a6f8b5f948b4412e4d95dbef9b8404404c7e8e311de7ad663"
+  },
+  "ticket": "LIR-08"
+}

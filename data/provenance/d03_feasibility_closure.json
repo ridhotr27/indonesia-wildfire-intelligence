@@ -1,0 +1,78 @@
+{
+  "validation_id": "d03-feasibility-closure-2023-snpp-sp",
+  "validated_at_utc": "2026-10-21T08:15:17.382720Z",
+  "gate_status": "G1_NOT_PASSED_PENDING_TECH_LEAD_APPROVAL",
+  "recommended_scope": {
+    "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "date_from_utc": "2023-01-01",
+    "date_to_utc": "2023-12-31",
+    "known_missing_observation_dates": [
+      "2023-07-26",
+      "2023-07-27"
+    ]
+  },
+  "coverage_resolution": {
+    "classification": "missing_satellite_observations_permanent_data_gap",
+    "affected_interval_utc": "2023-07-26T02:03:33Z/2023-07-27T16:50:00Z",
+    "official_reference": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+    "handling": "Do not represent either date as zero detections."
+  },
+  "geography": {
+    "provider": "Badan Informasi Geospasial (BIG)",
+    "service_layer": "https://geoservices.big.go.id/gis/rest/services/STIG/Batas_Provinsi/MapServer/0",
+    "license_metadata": null,
+    "redistribution_status": "unresolved",
+    "full_resolution_review_method": "server-side point intersection with returnGeometry=false",
+    "near_boundary_rows_reviewed": 45,
+    "outcomes": {
+      "assignment_changed": 1,
+      "assignment_confirmed": 30,
+      "full_resolution_new_assignment": 3,
+      "full_resolution_unassigned": 2,
+      "unchanged_unassigned": 9
+    },
+    "preservation": "The D02 enriched artifact and all 34 original unassigned observations remain unchanged."
+  },
+  "artifacts": {
+    "ten_question_report": {
+      "path": "data/reports/d03_ten_question_validation.json",
+      "bytes": 7511,
+      "sha256": "052e9d28764fcd1b5f4de59cd59d217f5154961612d9d94f72b6eab14c89dff9"
+    },
+    "boundary_review": {
+      "path": "data/reports/d03_big_full_resolution_point_review.json",
+      "bytes": 22498,
+      "sha256": "baeec16a1bdce10c40a600a7045b01af25ad38b8aef38b45b7bae4b6e5714353"
+    },
+    "contract_document": {
+      "path": "data/contracts/hotspot_observation_contract_v0.1.0-proposal.md",
+      "sha256": "882f7ebf3648ceed952db6335af02e011cfca5a6380257d9c75f70c24be69e9a"
+    },
+    "contract_schema": {
+      "path": "data/contracts/hotspot_observation_contract_v0.1.0-proposal.schema.json",
+      "sha256": "7a92a911c5f815dc4cca30478d100132f5f439627fb5a11cc336e1e0096150ce"
+    }
+  },
+  "source_artifacts": {
+    "nasa_firms": {
+      "path": "data/raw/nasa_firms/viirs-snpp_2023_Indonesia.csv",
+      "bytes": 20067598,
+      "rows": 253388,
+      "sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a"
+    },
+    "big_generalized_boundary": {
+      "path": "data/raw/reference/idn_adm1_big_2026_generalized.geojson",
+      "bytes": 7069852,
+      "features": 38,
+      "sha256": "1c0db9d378d66eba7bce50c04c4d145ef2f1d312f7652b170ebf9f0e03eb4f9f",
+      "external_redistribution_allowed": false
+    }
+  },
+  "limitations": [
+    "Province results use unapproved reference-geometry terms and are provisional.",
+    "Only calendar 2023 has been validated for the recommended product.",
+    "The two documented gap dates make annual coverage incomplete.",
+    "Hotspot detections are not confirmed wildfire incidents or burned hectares.",
+    "The proposed contract is not approved and no production ingestion was implemented."
+  ]
+}

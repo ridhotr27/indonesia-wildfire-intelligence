@@ -1,0 +1,52 @@
+{
+  "ticket": "D07",
+  "status": "technical_evidence_complete_pending_tech_lead_approval",
+  "executed_at_utc": "2026-10-26",
+  "isolated_full_backfill": {
+    "source_sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a",
+    "ingestion_batch_id": "firms-v1-2dba3b772b5a3a2cc0fe-d05-ingestion-v1",
+    "source_rows": 253388,
+    "canonical_rows": 253388,
+    "duplicate_excess_rows": 0,
+    "rejected_rows": 0,
+    "coverage_days": 365,
+    "provinces": 38,
+    "offline_preflight_safe_to_load": true,
+    "database_contacted": false,
+    "database_changed": false,
+    "disposition": "disposable generated batch removed after verification"
+  },
+  "recovery_verification": {
+    "database": "disposable clickhouse-local instance",
+    "scenario": "two observation rows inserted without a publication marker",
+    "published_rows_visible_before_recovery": 0,
+    "recovery_plan_reported": {
+      "observations": 2,
+      "coverage": 0,
+      "provinces": 0
+    },
+    "post_cleanup_orphans": 0,
+    "clean_retry_status": "loaded",
+    "same_host_lock_contention_verified": true,
+    "lock_scope_matches_loader": "credential-free URL|database|batch ID",
+    "orphan_detection": "NOT EXISTS anti-join"
+  },
+  "automation_failure_behavior": {
+    "cli_failed_audit_exit_code": 1,
+    "sql_failed_assertion_exit": "verified through ClickHouse throwIf"
+  },
+  "tests": {
+    "d07_unit": {"passed": 9, "failed": 0},
+    "d07_live_local_recovery": {"passed": 1, "failed": 0},
+    "unchanged_data_tests_excluding_d06_d07": {"passed": 41, "failed": 0},
+    "d06_unit": {"passed": 8, "failed": 0},
+    "d06_local_integration": {"passed": 2, "failed": 0},
+    "total": {"passed": 61, "failed": 0}
+  },
+  "limitations": [
+    "v1 is an immutable historical snapshot; no recurring live refresh schedule is claimed",
+    "no production scheduler, alert destination, backup service, or serving database was changed",
+    "multi-host ingestion writers remain prohibited",
+    "published-batch rollback requires approved backup/restore or a reviewed versioned migration"
+  ]
+}

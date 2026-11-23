@@ -1,0 +1,230 @@
+{
+  "coverage": {
+    "gap_classification": "missing_satellite_observations_permanent_data_gap",
+    "gap_interval_utc": "2023-07-26T02:03:33Z/2023-07-27T16:50:00Z",
+    "known_missing_observation_dates": [
+      "2023-07-26",
+      "2023-07-27"
+    ],
+    "official_gap_reference": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480",
+    "validated_date_from": "2023-01-01",
+    "validated_date_to": "2023-12-31"
+  },
+  "inputs": {
+    "boundary": {
+      "path": "data/derived/reference/idn_adm1_osm_2026-10-10b_canonical.geojson",
+      "sha256": "e9bd1f1fb1ba39ea0e07a7ba71cbbb2f048e64d6b49316cad7e88689aade74dd",
+      "warning": "Pinned OSM-derived 2026-10-10b province geometry under ODbL 1.0; community-maintained, nationally simplified by at most 0.0005 degree, and pending Tech Lead approval."
+    },
+    "firms": {
+      "path": "data/raw/nasa_firms/viirs-snpp_2023_Indonesia.csv",
+      "sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a"
+    }
+  },
+  "product": {
+    "collection": "2",
+    "instrument": "VIIRS",
+    "processing": "standard processing",
+    "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "satellite": "Suomi NPP",
+    "source_rows": 253388
+  },
+  "province_boundary_sensitivity": {
+    "near_boundary_assigned_by_province": {
+      "14": 13,
+      "62": 23
+    },
+    "policy": "Generalized near-boundary assignments are not silently treated as final canonical assignments."
+  },
+  "questions": [
+    {
+      "calculation": "count rows where province_code='14' and acq_date in 2023-09",
+      "id": 1,
+      "limitations": [
+        "Uses generalized BIG geometry; near-boundary rows require full-resolution policy.",
+        "Counts satellite detections, not confirmed fires."
+      ],
+      "question": "VIIRS hotspots in Riau during September 2023?",
+      "result": {
+        "detection_count": 687
+      },
+      "support": "provisional"
+    },
+    {
+      "calculation": "group province_code='62' by UTC acquisition month",
+      "id": 2,
+      "limitations": [
+        "July includes two dates with a permanent S-NPP VIIRS data gap.",
+        "Uses generalized BIG geometry."
+      ],
+      "question": "Monthly VIIRS detections in Central Kalimantan in 2023?",
+      "result": {
+        "2023-01": 136,
+        "2023-02": 51,
+        "2023-03": 18,
+        "2023-04": 111,
+        "2023-05": 237,
+        "2023-06": 221,
+        "2023-07": 350,
+        "2023-08": 3712,
+        "2023-09": 13491,
+        "2023-10": 14206,
+        "2023-11": 764,
+        "2023-12": 62
+      },
+      "support": "provisional"
+    },
+    {
+      "calculation": "count assigned rows by province_code for one product and UTC year",
+      "id": 3,
+      "limitations": [
+        "Same coverage and generalized-boundary limitations as questions 1-2."
+      ],
+      "question": "Compare Riau and Central Kalimantan for 2023 using the same product?",
+      "result": {
+        "Kalimantan_Tengah_62": 33359,
+        "Riau_14": 3327,
+        "difference_62_minus_14": 30032
+      },
+      "support": "provisional"
+    },
+    {
+      "calculation": "group all source rows by UTC acquisition month; select maximum",
+      "id": 4,
+      "limitations": [
+        "July is affected by the documented two-day satellite gap."
+      ],
+      "question": "Which months had the most observations in the selected dataset?",
+      "result": {
+        "maximum_count": 78784,
+        "maximum_months": [
+          "2023-10"
+        ],
+        "monthly_counts": {
+          "2023-01": 1781,
+          "2023-02": 1868,
+          "2023-03": 2602,
+          "2023-04": 3808,
+          "2023-05": 5185,
+          "2023-06": 7407,
+          "2023-07": 13684,
+          "2023-08": 42818,
+          "2023-09": 71726,
+          "2023-10": 78784,
+          "2023-11": 19165,
+          "2023-12": 4560
+        }
+      },
+      "support": "supported_for_country_file"
+    },
+    {
+      "calculation": "filter assigned rows by province_code and inclusive UTC dates",
+      "id": 5,
+      "limitations": [
+        "Map output must exclude or visibly distinguish ambiguous/unassigned points.",
+        "A bounded response must be applied by Backend."
+      ],
+      "question": "Show observation points for a specified province/date range?",
+      "result": {
+        "example_filter": {
+          "date_from": "2023-09-01",
+          "date_to": "2023-09-05",
+          "province_code": "14"
+        },
+        "point_count": 61
+      },
+      "support": "provisional"
+    },
+    {
+      "calculation": "validate FRP field domain; retrieve meaning from NASA documentation",
+      "id": 6,
+      "limitations": [
+        "FRP is not burned area and zero values are retained and flagged."
+      ],
+      "question": "What does FRP mean according to NASA?",
+      "result": {
+        "maximum": 943.38,
+        "meaning": "pixel-integrated fire radiative power",
+        "minimum": 0.0,
+        "unit": "MW",
+        "zero_value_rows": 8
+      },
+      "support": "supported_with_nasa_documentation"
+    },
+    {
+      "calculation": "none; answer through the approved NASA-document RAG corpus",
+      "id": 7,
+      "limitations": [
+        "The detections CSV cannot quantify missed fires, cloud obscuration, or false alarms by itself."
+      ],
+      "question": "What are VIIRS detection limitations?",
+      "result": null,
+      "support": "supported_by_nasa_documentation_not_calculated_from_csv"
+    },
+    {
+      "calculation": "group the selected product by categorical confidence code",
+      "id": 8,
+      "limitations": [
+        "l/n/h are categorical algorithm classes, not numeric probabilities.",
+        "Cross-product comparison is unsupported because only one product is validated."
+      ],
+      "question": "How does confidence vary by selected product?",
+      "result": {
+        "h": {
+          "count": 8416,
+          "percent": 3.321389
+        },
+        "l": {
+          "count": 19071,
+          "percent": 7.526402
+        },
+        "n": {
+          "count": 225901,
+          "percent": 89.152209
+        }
+      },
+      "support": "supported_for_selected_product_only"
+    },
+    {
+      "calculation": "compare requested UTC date with validated range and known gap dates",
+      "id": 9,
+      "limitations": [
+        "Do not return a numeric zero for known missing-data dates."
+      ],
+      "question": "What happens when a user requests an unavailable date?",
+      "result": {
+        "2022-12-31": "unsupported_outside_validated_range",
+        "2023-07-26": "unavailable_known_satellite_data_gap",
+        "2023-09-01": "within_validated_range",
+        "2024-01-01": "unsupported_outside_validated_range"
+      },
+      "support": "supported_as_validation_behavior"
+    },
+    {
+      "calculation": "none",
+      "id": 10,
+      "limitations": [
+        "Point detections and FRP do not provide a burned-area estimate; use a validated burned-area product for that measure."
+      ],
+      "question": "Can burned hectares be inferred from these detections?",
+      "result": null,
+      "support": "unsupported_must_abstain"
+    }
+  ],
+  "targeted_geographic_calculation": {
+    "province_codes": [
+      "14",
+      "62"
+    ],
+    "relation_counts": {
+      "14": {
+        "assigned": 3327
+      },
+      "62": {
+        "assigned": 33359
+      }
+    },
+    "warning": "Only the two provinces required by the minimum questions were joined across the annual file. Results are feasibility estimates until boundary terms and a production assignment method are approved."
+  },
+  "validation_id": "d03-ten-question-validation-v1"
+}

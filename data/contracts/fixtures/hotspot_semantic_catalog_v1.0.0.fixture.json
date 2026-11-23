@@ -1,0 +1,210 @@
+{
+  "fixture_classification": "synthetic_semantic_edge_fixture",
+  "catalog_version": "hotspot-semantic-catalog-v1.0.0",
+  "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+  "metric_id": "satellite_hotspot_detections",
+  "scenario": {
+    "date_from": "2023-07-25",
+    "date_to": "2023-07-27",
+    "province_counts_on_available_days": {
+      "11": 10,
+      "12": 1,
+      "13": 10,
+      "14": 0,
+      "15": 0,
+      "16": 1,
+      "17": 1,
+      "18": 1,
+      "19": 1,
+      "21": 1,
+      "31": 1,
+      "32": 1,
+      "33": 1,
+      "34": 1,
+      "35": 1,
+      "36": 1,
+      "51": 1,
+      "52": 1,
+      "53": 1,
+      "61": 1,
+      "62": 1,
+      "63": 1,
+      "64": 1,
+      "65": 1,
+      "71": 1,
+      "72": 1,
+      "73": 1,
+      "74": 1,
+      "75": 1,
+      "76": 1,
+      "81": 1,
+      "82": 1,
+      "91": 1,
+      "92": 1,
+      "93": 1,
+      "94": 1,
+      "95": 1,
+      "96": 1
+    },
+    "not_assigned_to_exactly_one_province_count": 7,
+    "coverage": [
+      {
+        "date": "2023-07-25",
+        "status": "observations_present"
+      },
+      {
+        "date": "2023-07-26",
+        "status": "known_satellite_gap"
+      },
+      {
+        "date": "2023-07-27",
+        "status": "known_satellite_gap"
+      }
+    ]
+  },
+  "semantic_cases": [
+    {
+      "id": "metric_identity.positive",
+      "rule_id": "metric_identity",
+      "expected_valid": true,
+      "input": {
+        "metric_id": "satellite_hotspot_detections"
+      }
+    },
+    {
+      "id": "metric_identity.negative",
+      "rule_id": "metric_identity",
+      "expected_valid": false,
+      "input": {
+        "metric_id": "burned_area_hectares"
+      }
+    },
+    {
+      "id": "product_compatibility.positive",
+      "rule_id": "product_compatibility",
+      "expected_valid": true,
+      "input": {
+        "product_id": "VNP14IMG.002_SNPP_FIRMS_SP"
+      }
+    },
+    {
+      "id": "product_compatibility.negative",
+      "rule_id": "product_compatibility",
+      "expected_valid": false,
+      "input": {
+        "product_id": "MODIS"
+      }
+    },
+    {
+      "id": "coverage_null_zero.positive",
+      "rule_id": "coverage_null_zero",
+      "expected_valid": true,
+      "input": {
+        "coverage_state": "complete",
+        "value": 0
+      }
+    },
+    {
+      "id": "coverage_null_zero.negative",
+      "rule_id": "coverage_null_zero",
+      "expected_valid": false,
+      "input": {
+        "coverage_state": "unavailable",
+        "value": 0
+      }
+    },
+    {
+      "id": "province_canonicalization.positive",
+      "rule_id": "province_canonicalization",
+      "expected_valid": true,
+      "input": {
+        "term": "West Sumatra",
+        "province_code": "13"
+      }
+    },
+    {
+      "id": "province_canonicalization.negative",
+      "rule_id": "province_canonicalization",
+      "expected_valid": false,
+      "input": {
+        "term": "Kalimantan",
+        "province_code": null
+      }
+    },
+    {
+      "id": "ranking_bounds.positive",
+      "rule_id": "ranking_bounds",
+      "expected_valid": true,
+      "input": {
+        "selection": "top_n",
+        "top_n": 5
+      }
+    },
+    {
+      "id": "ranking_bounds.negative",
+      "rule_id": "ranking_bounds",
+      "expected_valid": false,
+      "input": {
+        "selection": "top_n",
+        "top_n": 100
+      }
+    },
+    {
+      "id": "geography_assignment.positive",
+      "rule_id": "geography_assignment",
+      "expected_valid": true,
+      "input": {
+        "status": "unassigned",
+        "province_code": null
+      }
+    },
+    {
+      "id": "geography_assignment.negative",
+      "rule_id": "geography_assignment",
+      "expected_valid": false,
+      "input": {
+        "status": "unassigned",
+        "province_code": "14"
+      }
+    },
+    {
+      "id": "safe_filtering.positive",
+      "rule_id": "safe_filtering",
+      "expected_valid": true,
+      "input": {
+        "field": "province_codes",
+        "value": [
+          "11",
+          "13"
+        ]
+      }
+    },
+    {
+      "id": "safe_filtering.negative",
+      "rule_id": "safe_filtering",
+      "expected_valid": false,
+      "input": {
+        "field": "raw_table",
+        "value": "de_hotspot_observations_v1"
+      }
+    },
+    {
+      "id": "operation_slots.positive",
+      "rule_id": "operation_slots",
+      "expected_valid": true,
+      "input": {
+        "operation": "hotspot_summary_v1",
+        "province_count": 1
+      }
+    },
+    {
+      "id": "operation_slots.negative",
+      "rule_id": "operation_slots",
+      "expected_valid": false,
+      "input": {
+        "operation": "hotspot_summary_v1",
+        "province_count": 2
+      }
+    }
+  ]
+}

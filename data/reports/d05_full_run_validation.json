@@ -1,0 +1,66 @@
+{
+  "ticket": "D05",
+  "status": "technical_evidence_complete_pending_tech_lead_approval",
+  "executed_at_utc": "2026-10-23T13:16:03Z",
+  "source": {
+    "path": "data/raw/nasa_firms/viirs-snpp_2023_Indonesia.csv",
+    "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp_2023_Indonesia.csv",
+    "bytes": 20067598,
+    "sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a",
+    "retrieved_at_utc": "2026-10-21T07:15:26Z",
+    "provider_last_modified_utc": "2025-06-24T17:07:37Z"
+  },
+  "batch": {
+    "ingestion_batch_id": "firms-v1-2dba3b772b5a3a2cc0fe-d05-ingestion-v1",
+    "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "transform_version": "d05-ingestion-v1",
+    "source_rows": 253388,
+    "canonical_rows": 253388,
+    "duplicate_excess_rows": 0,
+    "rejected_rows": 0,
+    "coverage_start_utc": "2023-01-01T05:59:00Z",
+    "coverage_end_utc": "2023-12-31T18:17:00Z",
+    "publication": "temporary full-run output verified and not committed"
+  },
+  "geography": {
+    "boundary_source_id": "osm-idn-adm1-2026-10-10b",
+    "boundary_canonical_sha256": "e9bd1f1fb1ba39ea0e07a7ba71cbbb2f048e64d6b49316cad7e88689aade74dd",
+    "assigned": 252582,
+    "unassigned": 796,
+    "multiple_match": 10,
+    "policy": "No nearest-province coercion; non-assigned rows retain null province fields."
+  },
+  "quality_flags": {
+    "zero_frp": 8,
+    "geo_unassigned": 796,
+    "geo_multiple_match": 10
+  },
+  "coverage": {
+    "calendar_rows": 365,
+    "known_gap_dates": [
+      "2023-07-26",
+      "2023-07-27"
+    ],
+    "known_gap_status": "known_satellite_gap",
+    "known_gap_observation_count": null,
+    "evidence_url": "https://landweb.modaps.eosdis.nasa.gov/displayissue?id=480"
+  },
+  "artifact_checksums": {
+    "observations.ndjson": "2a8b07fd7d9d91747a07541dc97247c6bd099257afbf88787bddf9ba014e2b3f",
+    "daily_coverage.ndjson": "c45167e1d4097a7f7f4f87e4e0d4df4bd8c6d745651c733c4aaaab3e5514a516",
+    "provinces.ndjson": "76e0ba294a0873f083db415438185fba360c520166edde46dad52f089c1c54d3",
+    "ingestion_batch.ndjson": "a202b7c3079a8a4cc5776599ab3f7104a16e9bb8372b67fefd34f5fa51c922fc"
+  },
+  "review_fixes_verified": {
+    "known_gap_observation_policy": "fail closed before publication",
+    "boundary_provenance": "validated before both new publication and idempotent reuse: pinned source identity, snapshot, commit, source/canonical checksums, ODbL license, attribution, exact 38-province crosswalk, and canonical geometry",
+    "request_identity": "credential-free source URL is bound to and rechecked against an existing immutable batch",
+    "acquisition_retries": "bounded to 1-5 attempts; only transient network/timeout/HTTP 429 or 5xx/response-read errors retry; local filesystem and other HTTP 4xx errors use one attempt; exhaustion preserves prior destination and removes temporary files"
+  },
+  "limitations": [
+    "The generated 241 MiB batch was created under /tmp for verification and is not a repository artifact.",
+    "D05 emits logical contract artifacts only; ClickHouse DDL, loading, grants, and serving views belong to D06.",
+    "Multiple polygon intersections remain explicit multiple_match records with null province fields.",
+    "Hotspots are satellite detections, not confirmed wildfire incidents or burned-area estimates."
+  ]
+}

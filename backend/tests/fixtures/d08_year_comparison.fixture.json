@@ -1,0 +1,40 @@
+{
+  "request": {
+    "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "province_code": "14",
+    "years": [2023, 2024, 2025]
+  },
+  "response": {
+    "request_id": "d08-contract-fixture",
+    "operation_id": "hotspot_year_comparison_v1",
+    "metric": "satellite_hotspot_detections",
+    "product_id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "province_code": "14",
+    "years": [2023, 2024, 2025],
+    "points": [
+      {"year": 2023, "count": 10, "is_complete": true, "coverage_issues": []},
+      {
+        "year": 2024,
+        "count": 20,
+        "is_complete": false,
+        "coverage_issues": [
+          {
+            "date_utc": "2024-01-02",
+            "coverage_status": "unknown",
+            "evidence_url": null,
+            "note": "Annual artifact has no row for this date."
+          }
+        ]
+      },
+      {"year": 2025, "count": 30, "is_complete": true, "coverage_issues": []}
+    ],
+    "source": {
+      "provider": "NASA FIRMS",
+      "dataset_version": "hotspot-data-contract-v1.1.0",
+      "data_status": "verified",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/",
+      "attribution": "NASA FIRMS; province boundaries: © OpenStreetMap contributors"
+    },
+    "caveat": "Hotspot detections are not confirmed wildfires."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "fixture_status": "synthetic_not_nasa_observations",
+  "trace_version": "1.0",
+  "supported_step_order": {
+    "analytics": ["route_selection", "filter_resolution", "analytics_query"],
+    "rag": ["route_selection", "vector_retrieval", "citation_validation"],
+    "combined": ["route_selection", "filter_resolution", "analytics_query", "vector_retrieval", "citation_validation"],
+    "unsupported": ["route_selection", "abstention"]
+  },
+  "display_rules": {
+    "operation_id": "hotspot_summary_v1",
+    "read_only": true,
+    "retrieval_provider": "local",
+    "generation_provider": "ollama"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://indonesia-wildfire.example/contracts/hotspot_semantic_catalog_v1.0.0.schema.json",
+  "title": "Indonesia Wildfire structured analytics semantic catalog v1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "catalog_version", "data_contract_version", "created_at",
+    "metric", "product", "coverage", "geography", "operations", "ranking",
+    "safe_retrieval_filter_fields", "deprecations", "provenance"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "catalog_version": {"const": "hotspot-semantic-catalog-v1.0.0"},
+    "data_contract_version": {"const": "1.0.0"},
+    "created_at": {"type": "string", "format": "date"},
+    "metric": {"$ref": "#/$defs/metric"},
+    "product": {"$ref": "#/$defs/product"},
+    "coverage": {"$ref": "#/$defs/coverage"},
+    "geography": {"$ref": "#/$defs/geography"},
+    "operations": {"type": "array", "items": {"$ref": "#/$defs/operation"}},
+    "ranking": {"$ref": "#/$defs/ranking"},
+    "safe_retrieval_filter_fields": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/filter_field"}
+    },
+    "deprecations": {"type": "array", "items": {"type": "object"}},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "labels": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "id"],
+      "properties": {
+        "en": {"type": "string", "minLength": 1},
+        "id": {"type": "string", "minLength": 1}
+      }
+    },
+    "language_alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "language"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "language": {"enum": ["en", "id", "mixed"]},
+        "status": {"const": "approved"}
+      }
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "labels", "aliases", "definition", "unit", "aggregation", "grain",
+        "valid_dimensions", "valid_operations", "unsupported_interpretations"
+      ],
+      "properties": {
+        "id": {"const": "satellite_hotspot_detections"},
+        "labels": {"$ref": "#/$defs/labels"},
+        "aliases": {"type": "array", "items": {"$ref": "#/$defs/language_alias"}},
+        "definition": {"type": "string", "minLength": 40},
+        "unit": {"const": "detections"},
+        "aggregation": {"const": "count"},
+        "grain": {"type": "string", "minLength": 10},
+        "valid_dimensions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "valid_operations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "unsupported_interpretations": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "product": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "labels", "source_product", "collection_version", "processing_stream",
+        "satellite", "instrument", "compatible_product_ids", "incompatible_product_examples",
+        "cross_product_aggregation"
+      ],
+      "properties": {
+        "id": {"const": "VNP14IMG.002_SNPP_FIRMS_SP"},
+        "labels": {"$ref": "#/$defs/labels"},
+        "source_product": {"const": "VNP14IMG"},
+        "collection_version": {"const": "2"},
+        "processing_stream": {"const": "standard"},
+        "satellite": {"const": "Suomi NPP"},
+        "instrument": {"const": "VIIRS"},
+        "compatible_product_ids": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "incompatible_product_examples": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "cross_product_aggregation": {"const": "prohibited"}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["timezone", "date_bounds", "known_unavailable_dates", "states", "zero_rule"],
+      "properties": {
+        "timezone": {"const": "UTC"},
+        "date_bounds": {
+          "type": "object", "additionalProperties": false,
+          "required": ["from", "to", "inclusive"],
+          "properties": {
+            "from": {"const": "2023-01-01"}, "to": {"const": "2023-12-31"},
+            "inclusive": {"const": true}
+          }
+        },
+        "known_unavailable_dates": {"type": "array", "items": {"type": "string", "format": "date"}, "uniqueItems": true},
+        "states": {"type": "object"},
+        "zero_rule": {"type": "string", "minLength": 20}
+      }
+    },
+    "province": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "canonical_name", "canonical_order", "labels", "aliases", "administrative_level", "boundary_source_id"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^[0-9]{2}$"},
+        "canonical_name": {"type": "string", "minLength": 2},
+        "canonical_order": {"type": "integer", "minimum": 1, "maximum": 38},
+        "labels": {"$ref": "#/$defs/labels"},
+        "aliases": {"type": "array", "items": {"$ref": "#/$defs/language_alias"}},
+        "administrative_level": {"const": 1},
+        "boundary_source_id": {"const": "osm-idn-adm1-2026-10-10b"}
+      }
+    },
+    "geography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["universe_size", "assignment_rule", "not_assigned_rule", "provinces", "ambiguous_scopes"],
+      "properties": {
+        "universe_size": {"const": 38},
+        "assignment_rule": {"type": "string", "minLength": 20},
+        "not_assigned_rule": {"type": "string", "minLength": 20},
+        "provinces": {"type": "array", "items": {"$ref": "#/$defs/province"}},
+        "ambiguous_scopes": {"type": "array", "items": {"type": "object"}}
+      }
+    },
+    "operation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "required_slots", "forbidden_slots", "result_semantics"],
+      "properties": {
+        "id": {"type": "string"},
+        "required_slots": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "forbidden_slots": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "result_semantics": {"type": "string", "minLength": 10}
+      }
+    },
+    "ranking": {
+      "type": "object", "additionalProperties": false,
+      "required": ["directions", "selection_kinds", "top_n_bounds", "tie_policy", "tie_order", "zero_count_rule"],
+      "properties": {
+        "directions": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "selection_kinds": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "top_n_bounds": {"type": "object"},
+        "tie_policy": {"const": "dense_rank_include_cutoff_ties"},
+        "tie_order": {"const": "canonical_order ascending"},
+        "zero_count_rule": {"type": "string", "minLength": 20}
+      }
+    },
+    "filter_field": {
+      "type": "object", "additionalProperties": false,
+      "required": ["field", "type", "cardinality", "allowed_values", "missing"],
+      "properties": {
+        "field": {"type": "string"}, "type": {"type": "string"},
+        "cardinality": {"type": "integer", "minimum": 1},
+        "allowed_values": {}, "missing": {"type": "string"}
+      }
+    },
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["data_contract", "province_crosswalk", "api_contract", "source_snapshot_sha256"],
+      "properties": {
+        "data_contract": {"type": "string"}, "province_crosswalk": {"type": "string"},
+        "api_contract": {"type": "string"},
+        "source_snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}

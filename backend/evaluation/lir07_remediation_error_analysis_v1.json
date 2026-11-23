@@ -1,0 +1,997 @@
+{
+  "partitions": [
+    "development",
+    "shadow_validation"
+  ],
+  "final_holdout_consumed": false,
+  "case_count": 800,
+  "exact_route_and_operation_count": 275,
+  "confusion_matrix": {
+    "analytics->analytics": 38,
+    "analytics->clarification": 248,
+    "analytics->combined": 9,
+    "analytics->rag": 19,
+    "analytics->unsupported": 46,
+    "clarification->clarification": 92,
+    "clarification->unsupported": 8,
+    "combined->clarification": 8,
+    "combined->combined": 20,
+    "combined->rag": 47,
+    "combined->unsupported": 45,
+    "rag->clarification": 23,
+    "rag->rag": 72,
+    "rag->unsupported": 25,
+    "unsupported->clarification": 47,
+    "unsupported->unsupported": 53
+  },
+  "errors_by_intent": {
+    "monthly_trend": 100,
+    "combined_analytics_documentation": 100,
+    "single_province_count": 88,
+    "multi_province_summary": 88,
+    "documentation_semantics": 48,
+    "unsupported": 47,
+    "province_ranking": 46,
+    "clarification": 8
+  },
+  "errors_by_operation": {
+    "hotspot_trend_v1->none": 98,
+    "hotspot_multi_province_summary_v1->none": 76,
+    "hotspot_summary_v1->none": 74,
+    "none->none": 55,
+    "nasa_documentation_v1->none": 48,
+    "hotspot_province_ranking_v1->none": 46,
+    "hotspot_summary_v1+nasa_documentation_v1->none": 38,
+    "hotspot_summary_v1+nasa_documentation_v1->nasa_documentation_v1": 32,
+    "hotspot_multi_province_summary_v1+nasa_documentation_v1->none": 15,
+    "hotspot_multi_province_summary_v1+nasa_documentation_v1->nasa_documentation_v1": 15,
+    "hotspot_multi_province_summary_v1->nasa_documentation_v1": 12,
+    "hotspot_summary_v1->hotspot_summary_v1+nasa_documentation_v1": 7,
+    "hotspot_summary_v1->nasa_documentation_v1": 7,
+    "hotspot_trend_v1->hotspot_summary_v1+nasa_documentation_v1": 2
+  },
+  "errors_by_language": {
+    "id": 226,
+    "en": 195,
+    "mixed": 104
+  },
+  "errors_by_source": {
+    "semantic_rejected": 314,
+    "deterministic": 195,
+    "semantic_validation_rejected": 12,
+    "semantic_accepted": 4
+  },
+  "representative_errors": {
+    "clarification:deterministic": [
+      {
+        "case_id": "lir01.ambiguous.010.0",
+        "language": "en",
+        "message": "Compare Riau and Central Kalimantan for hotspots. Reference 11-1.",
+        "expected_route": "clarification",
+        "actual_route": "unsupported",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.ambiguous.010.1",
+        "language": "en",
+        "message": "Compare Jambi and South Sulawesi for hotspots. Reference 11-2.",
+        "expected_route": "clarification",
+        "actual_route": "unsupported",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.ambiguous.011.2",
+        "language": "en",
+        "message": "Compare Central Kalimantan and Aceh for hotspots. Reference 12-3.",
+        "expected_route": "clarification",
+        "actual_route": "unsupported",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.ambiguous.012.0",
+        "language": "en",
+        "message": "Compare Central Java and West Papua for hotspots. Reference 13-1.",
+        "expected_route": "clarification",
+        "actual_route": "unsupported",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.ambiguous.012.1",
+        "language": "en",
+        "message": "Compare Central Kalimantan and Aceh for hotspots. Reference 13-2.",
+        "expected_route": "clarification",
+        "actual_route": "unsupported",
+        "expected_operations": [],
+        "actual_operations": []
+      }
+    ],
+    "combined_analytics_documentation:deterministic": [
+      {
+        "case_id": "lir01.combined.000.0",
+        "language": "en",
+        "message": "Give the January 2023 detection count for Aceh and explain FRP. Answer using the selected satellite product. Frame it for a research note. Answer directly.",
+        "expected_route": "combined",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.000.1",
+        "language": "en",
+        "message": "Give the March 2023 detection count for West Sumatra and explain FRP. Answer using the selected satellite product. Frame it for a research note. Keep it brief.",
+        "expected_route": "combined",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.000.2",
+        "language": "id",
+        "message": "Berikan jumlah deteksi Riau Mei 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan riset. Nyatakan cakupannya.",
+        "expected_route": "combined",
+        "actual_route": "rag",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": [
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.combined.000.3",
+        "language": "mixed",
+        "message": "Give jumlah deteksi Jambi June 2023 dan explain FRP. Use produk satelit yang dipilih. Frame untuk note research. Use bahasa sederhana.",
+        "expected_route": "combined",
+        "actual_route": "rag",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": [
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.combined.001.0",
+        "language": "id",
+        "message": "Berikan jumlah deteksi Sumatera Barat Mei 2023 dan jelaskan FRP. Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Jawab langsung.",
+        "expected_route": "combined",
+        "actual_route": "rag",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": [
+          "nasa_documentation_v1"
+        ]
+      }
+    ],
+    "combined_analytics_documentation:semantic_rejected": [
+      {
+        "case_id": "lir01.combined.005.0",
+        "language": "id",
+        "message": "Laporkan total hotspot Kalimantan Tengah Mei 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+        "expected_route": "combined",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.005.1",
+        "language": "id",
+        "message": "Laporkan total hotspot Sulawesi Selatan Juni 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+        "expected_route": "combined",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.006.2",
+        "language": "id",
+        "message": "Laporkan total hotspot Aceh Oktober 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan publik. Nyatakan cakupannya.",
+        "expected_route": "combined",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.007.0",
+        "language": "id",
+        "message": "Laporkan total hotspot Papua Barat Oktober 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan audit. Jawab langsung.",
+        "expected_route": "combined",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.combined.007.1",
+        "language": "id",
+        "message": "Laporkan total hotspot Aceh Desember 2023 serta arti confidence VIIRS. Buat jawaban singkat dan jelas. Susun untuk catatan audit. Buat singkat.",
+        "expected_route": "combined",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "documentation_semantics:deterministic": [
+      {
+        "case_id": "lir01.nasa_rag.010.0",
+        "language": "en",
+        "message": "Why is a hotspot detection not the same as a confirmed wildfire? Treat detections as observations, not incidents. Frame it for a research brief. Answer directly.",
+        "expected_route": "rag",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.010.1",
+        "language": "en",
+        "message": "Why is a hotspot detection not the same as a confirmed wildfire? Treat detections as observations, not incidents. Frame it for a research brief. Keep it brief.",
+        "expected_route": "rag",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.010.3",
+        "language": "mixed",
+        "message": "Mengapa hotspot detection bukan confirmed wildfire? Treat deteksi as observations, bukan incidents. Frame untuk ringkasan research. Use bahasa sederhana.",
+        "expected_route": "rag",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.011.2",
+        "language": "en",
+        "message": "Why is a hotspot detection not the same as a confirmed wildfire? Treat detections as observations, not incidents. Frame it for a classroom brief. State the scope.",
+        "expected_route": "rag",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.011.3",
+        "language": "mixed",
+        "message": "Mengapa hotspot detection bukan confirmed wildfire? Treat deteksi as observations, bukan incidents. Frame untuk ringkasan kelas. Use bahasa sederhana.",
+        "expected_route": "rag",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "documentation_semantics:semantic_rejected": [
+      {
+        "case_id": "lir01.nasa_rag.005.0",
+        "language": "id",
+        "message": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+        "expected_route": "rag",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.005.1",
+        "language": "id",
+        "message": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+        "expected_route": "rag",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.006.2",
+        "language": "id",
+        "message": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan publik. Nyatakan cakupannya.",
+        "expected_route": "rag",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.007.0",
+        "language": "id",
+        "message": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Jawab langsung.",
+        "expected_route": "rag",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.nasa_rag.007.1",
+        "language": "id",
+        "message": "Bagaimana kolom confidence VIIRS harus ditafsirkan? Buat jawaban singkat dan jelas. Susun untuk catatan audit. Buat singkat.",
+        "expected_route": "rag",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "nasa_documentation_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "monthly_trend:deterministic": [
+      {
+        "case_id": "lir01.analytics.025.2",
+        "language": "en",
+        "message": "Show the month-by-month detection trend for Jambi in 2023. I am checking a regional briefing. Frame it for a technical worksheet. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.026.0",
+        "language": "en",
+        "message": "Show the month-by-month detection trend for Riau in 2023. I am checking a regional briefing. Frame it for a public worksheet. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.026.1",
+        "language": "en",
+        "message": "Show the month-by-month detection trend for Jambi in 2023. I am checking a regional briefing. Frame it for a public worksheet. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.027.2",
+        "language": "en",
+        "message": "Show the month-by-month detection trend for Central Kalimantan in 2023. I am checking a regional briefing. Frame it for a audit worksheet. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.028.0",
+        "language": "en",
+        "message": "Show the month-by-month detection trend for Central Java in 2023. I am checking a regional briefing. Frame it for a planning worksheet. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "monthly_trend:semantic_accepted": [
+      {
+        "case_id": "lir01.analytics.085.2",
+        "language": "en",
+        "message": "Break the 2023 detections in West Papua down by month. I need a transparent evidence-backed response. Frame it for a technical exercise. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "combined",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.analytics.089.2",
+        "language": "en",
+        "message": "Break the 2023 detections in Jambi down by month. I need a transparent evidence-backed response. Frame it for a review exercise. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "combined",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ]
+      }
+    ],
+    "monthly_trend:semantic_rejected": [
+      {
+        "case_id": "lir01.analytics.005.0",
+        "language": "id",
+        "message": "Bagaimana jumlah hotspot Kalimantan Tengah berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.005.1",
+        "language": "id",
+        "message": "Bagaimana jumlah hotspot Sulawesi Selatan berubah setiap bulan pada 2023? Buat jawaban singkat dan jelas. Susun untuk catatan teknis. Buat singkat.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.005.2",
+        "language": "en",
+        "message": "How did West Papua's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a technical note. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.006.0",
+        "language": "en",
+        "message": "How did South Sulawesi's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a public note. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.006.1",
+        "language": "en",
+        "message": "How did West Papua's hotspot count change across the months of 2023? Keep the response concise and explicit. Frame it for a public note. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "monthly_trend:semantic_validation_rejected": [
+      {
+        "case_id": "lir01.analytics.005.3",
+        "language": "mixed",
+        "message": "Bagaimana hotspot count Aceh berubah month by month pada 2023? Keep jawaban singkat dan explicit. Frame untuk note technical. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_trend_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "multi_province_summary:deterministic": [
+      {
+        "case_id": "lir01.analytics.010.0",
+        "language": "en",
+        "message": "Which had more detections in August 2023, Riau or Central Kalimantan? Treat detections as observations, not incidents. Frame it for a research brief. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.010.1",
+        "language": "en",
+        "message": "Which had more detections in September 2023, Jambi or South Sulawesi? Treat detections as observations, not incidents. Frame it for a research brief. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.011.2",
+        "language": "en",
+        "message": "Which had more detections in January 2023, Central Kalimantan or Aceh? Treat detections as observations, not incidents. Frame it for a classroom brief. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.012.0",
+        "language": "en",
+        "message": "Which had more detections in January 2023, Central Java or West Papua? Treat detections as observations, not incidents. Frame it for a newsroom brief. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.012.1",
+        "language": "en",
+        "message": "Which had more detections in March 2023, Central Kalimantan or Aceh? Treat detections as observations, not incidents. Frame it for a newsroom brief. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "multi_province_summary:semantic_rejected": [
+      {
+        "case_id": "lir01.analytics.010.2",
+        "language": "id",
+        "message": "Mana yang memiliki lebih banyak deteksi pada Oktober 2023, Jawa Tengah atau Papua Barat? Perlakukan deteksi sebagai observasi, bukan insiden. Susun untuk ringkasan riset. Nyatakan cakupannya.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.010.3",
+        "language": "mixed",
+        "message": "Which had lebih banyak deteksi di Desember 2023, Kalimantan Tengah atau Aceh? Treat deteksi as observations, bukan incidents. Frame untuk ringkasan research. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.011.0",
+        "language": "id",
+        "message": "Mana yang memiliki lebih banyak deteksi pada Oktober 2023, Jambi atau Sulawesi Selatan? Perlakukan deteksi sebagai observasi, bukan insiden. Susun untuk ringkasan kelas. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.011.1",
+        "language": "id",
+        "message": "Mana yang memiliki lebih banyak deteksi pada Desember 2023, Jawa Tengah atau Papua Barat? Perlakukan deteksi sebagai observasi, bukan insiden. Susun untuk ringkasan kelas. Buat singkat.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.011.3",
+        "language": "mixed",
+        "message": "Which had lebih banyak deteksi di Maret 2023, Sulawesi Selatan atau West Sumatra? Treat deteksi as observations, bukan incidents. Frame untuk ringkasan kelas. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_multi_province_summary_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "province_ranking:deterministic": [
+      {
+        "case_id": "lir01.analytics.075.2",
+        "language": "en",
+        "message": "Which province recorded the most hotspot detections in January 2023? I am checking a regional briefing. Frame it for a technical record. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.076.0",
+        "language": "en",
+        "message": "Which province recorded the most hotspot detections in January 2023? I am checking a regional briefing. Frame it for a public record. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.076.1",
+        "language": "en",
+        "message": "Which province recorded the most hotspot detections in March 2023? I am checking a regional briefing. Frame it for a public record. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.077.2",
+        "language": "en",
+        "message": "Which province recorded the most hotspot detections in August 2023? I am checking a regional briefing. Frame it for a audit record. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.078.0",
+        "language": "en",
+        "message": "Which province recorded the most hotspot detections in August 2023? I am checking a regional briefing. Frame it for a planning record. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "province_ranking:semantic_rejected": [
+      {
+        "case_id": "lir01.analytics.035.0",
+        "language": "id",
+        "message": "Sebutkan provinsi dengan total hotspot terendah selama Oktober 2023. Saya perlu jawaban transparan berbasis bukti. Susun untuk pemeriksaan teknis. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.035.1",
+        "language": "id",
+        "message": "Sebutkan provinsi dengan total hotspot terendah selama Desember 2023. Saya perlu jawaban transparan berbasis bukti. Susun untuk pemeriksaan teknis. Buat singkat.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.035.3",
+        "language": "mixed",
+        "message": "Sebutkan province dengan lowest hotspot total selama Maret 2023. Saya perlu transparent evidence-backed response. Frame untuk pemeriksaan technical. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.036.2",
+        "language": "id",
+        "message": "Sebutkan provinsi dengan total hotspot terendah selama Mei 2023. Saya perlu jawaban transparan berbasis bukti. Susun untuk pemeriksaan publik. Nyatakan cakupannya.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.036.3",
+        "language": "mixed",
+        "message": "Sebutkan province dengan lowest hotspot total selama Juni 2023. Saya perlu transparent evidence-backed response. Frame untuk pemeriksaan publik. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "province_ranking:semantic_validation_rejected": [
+      {
+        "case_id": "lir01.analytics.055.3",
+        "language": "mixed",
+        "message": "List top five provinsi berdasarkan detection count March 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan technical. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.056.3",
+        "language": "mixed",
+        "message": "List top five provinsi berdasarkan detection count June 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan publik. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.059.3",
+        "language": "mixed",
+        "message": "List top five provinsi berdasarkan detection count March 2023. Keep jawaban singkat dan explicit. Frame untuk perbandingan tinjauan. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.075.0",
+        "language": "id",
+        "message": "Provinsi mana mencatat deteksi hotspot terbanyak pada Oktober 2023? Ini untuk ringkasan regional. Susun untuk rekaman teknis. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.075.1",
+        "language": "id",
+        "message": "Provinsi mana mencatat deteksi hotspot terbanyak pada Desember 2023? Ini untuk ringkasan regional. Susun untuk rekaman teknis. Buat singkat.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_province_ranking_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "single_province_count:deterministic": [
+      {
+        "case_id": "lir01.analytics.080.0",
+        "language": "en",
+        "message": "Give me the January 2023 hotspot tally for Aceh. Please retain the satellite caveat. Frame it for a research exercise. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.080.1",
+        "language": "en",
+        "message": "Give me the March 2023 hotspot tally for West Sumatra. Please retain the satellite caveat. Frame it for a research exercise. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "unsupported",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.080.2",
+        "language": "id",
+        "message": "Berikan jumlah hotspot Riau untuk Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan riset. Nyatakan cakupannya.",
+        "expected_route": "analytics",
+        "actual_route": "rag",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": [
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.analytics.080.3",
+        "language": "mixed",
+        "message": "Give me jumlah hotspot Jambi pada Juni 2023. Please retain catatan keterbatasan satelit. Frame untuk exercise research. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "combined",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.analytics.081.0",
+        "language": "id",
+        "message": "Berikan jumlah hotspot Sumatera Barat untuk Mei 2023. Pertahankan catatan keterbatasan satelit. Susun untuk latihan kelas. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "rag",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": [
+          "nasa_documentation_v1"
+        ]
+      }
+    ],
+    "single_province_count:semantic_accepted": [
+      {
+        "case_id": "lir01.analytics.061.2",
+        "language": "en",
+        "message": "For West Papua, how large was the detection count during August 2023? Treat detections as observations, not incidents. Frame it for a classroom review. State the scope.",
+        "expected_route": "analytics",
+        "actual_route": "combined",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ]
+      },
+      {
+        "case_id": "lir01.analytics.062.1",
+        "language": "en",
+        "message": "For West Papua, how large was the detection count during September 2023? Treat detections as observations, not incidents. Frame it for a newsroom review. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "combined",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": [
+          "hotspot_summary_v1",
+          "nasa_documentation_v1"
+        ]
+      }
+    ],
+    "single_province_count:semantic_rejected": [
+      {
+        "case_id": "lir01.analytics.000.0",
+        "language": "en",
+        "message": "What detection total belongs to Aceh in January 2023? Answer using the selected satellite product. Frame it for a research note. Answer directly.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.000.1",
+        "language": "en",
+        "message": "What detection total belongs to West Sumatra in March 2023? Answer using the selected satellite product. Frame it for a research note. Keep it brief.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.000.2",
+        "language": "id",
+        "message": "Berapa total deteksi di Riau pada Mei 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan riset. Nyatakan cakupannya.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.000.3",
+        "language": "mixed",
+        "message": "Berapa detection total untuk Jambi in June 2023? Use produk satelit yang dipilih. Frame untuk note research. Use bahasa sederhana.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.analytics.001.0",
+        "language": "id",
+        "message": "Berapa total deteksi di Sumatera Barat pada Mei 2023? Gunakan produk satelit yang dipilih. Susun untuk catatan kelas. Jawab langsung.",
+        "expected_route": "analytics",
+        "actual_route": "clarification",
+        "expected_operations": [
+          "hotspot_summary_v1"
+        ],
+        "actual_operations": []
+      }
+    ],
+    "unsupported:semantic_rejected": [
+      {
+        "case_id": "lir01.unsupported.000.2",
+        "language": "id",
+        "message": "Berikan hektare terbakar di Riau pada Mei 2023. Control case 1-3.",
+        "expected_route": "unsupported",
+        "actual_route": "clarification",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.unsupported.000.3",
+        "language": "mixed",
+        "message": "Give hektare terbakar untuk Jambi in June 2023. Control case 1-4.",
+        "expected_route": "unsupported",
+        "actual_route": "clarification",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.unsupported.001.0",
+        "language": "id",
+        "message": "Berikan hektare terbakar di Sumatera Barat pada Mei 2023. Control case 2-1.",
+        "expected_route": "unsupported",
+        "actual_route": "clarification",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.unsupported.001.1",
+        "language": "id",
+        "message": "Berikan hektare terbakar di Riau pada Juni 2023. Control case 2-2.",
+        "expected_route": "unsupported",
+        "actual_route": "clarification",
+        "expected_operations": [],
+        "actual_operations": []
+      },
+      {
+        "case_id": "lir01.unsupported.001.3",
+        "language": "mixed",
+        "message": "Give hektare terbakar untuk Jawa Tengah in September 2023. Control case 2-4.",
+        "expected_route": "unsupported",
+        "actual_route": "clarification",
+        "expected_operations": [],
+        "actual_operations": []
+      }
+    ]
+  }
+}

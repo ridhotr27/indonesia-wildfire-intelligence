@@ -1,0 +1,285 @@
+{
+  "artifacts": {
+    "canonical": {
+      "bytes": 9394914,
+      "path": "data/derived/reference/idn_adm1_osm_2026-10-10b_canonical.geojson",
+      "sha256": "e9bd1f1fb1ba39ea0e07a7ba71cbbb2f048e64d6b49316cad7e88689aade74dd"
+    },
+    "source": {
+      "bytes": 9388600,
+      "path": "data/raw/reference/idn_adm1_osm_2026-10-10b.geojson",
+      "sha256": "9dd43439b284186c91a2443c9fb9e5eabb885f75597f1ab83221f43a7ef88de7"
+    }
+  },
+  "crosswalk": [
+    {
+      "canonical_code": "11",
+      "canonical_name": "Aceh",
+      "source_code": "ID_AC",
+      "source_name": "Aceh"
+    },
+    {
+      "canonical_code": "12",
+      "canonical_name": "Sumatera Utara",
+      "source_code": "ID_SU",
+      "source_name": "Sumatera Utara"
+    },
+    {
+      "canonical_code": "13",
+      "canonical_name": "Sumatera Barat",
+      "source_code": "ID_SB",
+      "source_name": "Sumatera Barat"
+    },
+    {
+      "canonical_code": "14",
+      "canonical_name": "Riau",
+      "source_code": "ID_RI",
+      "source_name": "Riau"
+    },
+    {
+      "canonical_code": "15",
+      "canonical_name": "Jambi",
+      "source_code": "ID_JA",
+      "source_name": "Jambi"
+    },
+    {
+      "canonical_code": "16",
+      "canonical_name": "Sumatera Selatan",
+      "source_code": "ID_SS",
+      "source_name": "Sumatera Selatan"
+    },
+    {
+      "canonical_code": "17",
+      "canonical_name": "Bengkulu",
+      "source_code": "ID_BE",
+      "source_name": "Bengkulu"
+    },
+    {
+      "canonical_code": "18",
+      "canonical_name": "Lampung",
+      "source_code": "ID_LA",
+      "source_name": "Lampung"
+    },
+    {
+      "canonical_code": "19",
+      "canonical_name": "Kepulauan Bangka Belitung",
+      "source_code": "ID_BB",
+      "source_name": "Kepulauan Bangka Belitung"
+    },
+    {
+      "canonical_code": "21",
+      "canonical_name": "Kepulauan Riau",
+      "source_code": "ID_KR",
+      "source_name": "Kepulauan Riau"
+    },
+    {
+      "canonical_code": "31",
+      "canonical_name": "Daerah Khusus Jakarta",
+      "source_code": "ID_JK",
+      "source_name": "Daerah Khusus Jakarta"
+    },
+    {
+      "canonical_code": "32",
+      "canonical_name": "Jawa Barat",
+      "source_code": "ID_JB",
+      "source_name": "Jawa Barat"
+    },
+    {
+      "canonical_code": "33",
+      "canonical_name": "Jawa Tengah",
+      "source_code": "ID_JT",
+      "source_name": "Jawa Tengah"
+    },
+    {
+      "canonical_code": "34",
+      "canonical_name": "Daerah Istimewa Yogyakarta",
+      "source_code": "ID_YO",
+      "source_name": "Daerah Istimewa Yogyakarta"
+    },
+    {
+      "canonical_code": "35",
+      "canonical_name": "Jawa Timur",
+      "source_code": "ID_JI",
+      "source_name": "Jawa Timur"
+    },
+    {
+      "canonical_code": "36",
+      "canonical_name": "Banten",
+      "source_code": "ID_BT",
+      "source_name": "Banten"
+    },
+    {
+      "canonical_code": "51",
+      "canonical_name": "Bali",
+      "source_code": "ID_BA",
+      "source_name": "Bali"
+    },
+    {
+      "canonical_code": "52",
+      "canonical_name": "Nusa Tenggara Barat",
+      "source_code": "ID_NB",
+      "source_name": "Nusa Tenggara Barat"
+    },
+    {
+      "canonical_code": "53",
+      "canonical_name": "Nusa Tenggara Timur",
+      "source_code": "ID_NT",
+      "source_name": "Nusa Tenggara Timur"
+    },
+    {
+      "canonical_code": "61",
+      "canonical_name": "Kalimantan Barat",
+      "source_code": "ID_KB",
+      "source_name": "Kalimantan Barat"
+    },
+    {
+      "canonical_code": "62",
+      "canonical_name": "Kalimantan Tengah",
+      "source_code": "ID_KT",
+      "source_name": "Kalimantan Tengah"
+    },
+    {
+      "canonical_code": "63",
+      "canonical_name": "Kalimantan Selatan",
+      "source_code": "ID_KS",
+      "source_name": "Kalimantan Selatan"
+    },
+    {
+      "canonical_code": "64",
+      "canonical_name": "Kalimantan Timur",
+      "source_code": "ID_KI",
+      "source_name": "Kalimantan Timur"
+    },
+    {
+      "canonical_code": "65",
+      "canonical_name": "Kalimantan Utara",
+      "source_code": "ID_KU",
+      "source_name": "Kalimantan Utara"
+    },
+    {
+      "canonical_code": "71",
+      "canonical_name": "Sulawesi Utara",
+      "source_code": "ID_SA",
+      "source_name": "Sulawesi Utara"
+    },
+    {
+      "canonical_code": "72",
+      "canonical_name": "Sulawesi Tengah",
+      "source_code": "ID_ST",
+      "source_name": "Sulawesi Tengah"
+    },
+    {
+      "canonical_code": "73",
+      "canonical_name": "Sulawesi Selatan",
+      "source_code": "ID_SN",
+      "source_name": "Sulawesi Selatan"
+    },
+    {
+      "canonical_code": "74",
+      "canonical_name": "Sulawesi Tenggara",
+      "source_code": "ID_SG",
+      "source_name": "Sulawesi Tenggara"
+    },
+    {
+      "canonical_code": "75",
+      "canonical_name": "Gorontalo",
+      "source_code": "ID_GO",
+      "source_name": "Gorontalo"
+    },
+    {
+      "canonical_code": "76",
+      "canonical_name": "Sulawesi Barat",
+      "source_code": "ID_SR",
+      "source_name": "Sulawesi Barat"
+    },
+    {
+      "canonical_code": "81",
+      "canonical_name": "Maluku",
+      "source_code": "ID_MA",
+      "source_name": "Maluku"
+    },
+    {
+      "canonical_code": "82",
+      "canonical_name": "Maluku Utara",
+      "source_code": "ID_MU",
+      "source_name": "Maluku Utara"
+    },
+    {
+      "canonical_code": "91",
+      "canonical_name": "Papua",
+      "source_code": "ID_PA",
+      "source_name": "Papua"
+    },
+    {
+      "canonical_code": "92",
+      "canonical_name": "Papua Barat",
+      "source_code": "ID_PB",
+      "source_name": "Papua Barat"
+    },
+    {
+      "canonical_code": "93",
+      "canonical_name": "Papua Selatan",
+      "source_code": "ID_PS",
+      "source_name": "Papua Selatan"
+    },
+    {
+      "canonical_code": "94",
+      "canonical_name": "Papua Tengah",
+      "source_code": "ID_PT",
+      "source_name": "Papua Tengah"
+    },
+    {
+      "canonical_code": "95",
+      "canonical_name": "Papua Pegunungan",
+      "source_code": "ID_PE",
+      "source_name": "Papua Pegunungan"
+    },
+    {
+      "canonical_code": "96",
+      "canonical_name": "Papua Barat Daya",
+      "source_code": "ID_PD",
+      "source_name": "Papua Barat Daya"
+    }
+  ],
+  "geometry_profile": {
+    "bbox": [
+      94.9719492,
+      -11.0076711,
+      141.019444,
+      6.076744
+    ],
+    "features": 38,
+    "polygons": 12028,
+    "positions": 380953,
+    "rings": 12033,
+    "structural_checks": "passed",
+    "topological_checks": {
+      "empty_or_nonpositive_area": 0,
+      "engine": "Shapely/GEOS",
+      "features_checked": 38,
+      "invalid": 0,
+      "status": "passed"
+    }
+  },
+  "limitations": [
+    "This is a community-maintained OSM-derived reference, not an official BIG boundary.",
+    "The national geometry is derived from district unions and simplified by at most 0.0005 degree (0.0001 for Southwest Papua).",
+    "Structural GeoJSON checks and point comparisons were run locally; legal suitability and canonical adoption require Tech Lead review."
+  ],
+  "retrieved_at_utc": "2026-10-21T13:30:00+00:00",
+  "source": {
+    "commit": "c4d208a03a71553a1082f960ebdaa88c1d8e9389",
+    "crs": "OGC:CRS84 / WGS84 longitude-latitude",
+    "license": "Open Data Commons Open Database License 1.0",
+    "license_evidence_url": "https://raw.githubusercontent.com/ahsa29/kpu-osm-boundaries-2026/c4d208a03a71553a1082f960ebdaa88c1d8e9389/DATA_LICENSE.md",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+    "manifest_url": "https://raw.githubusercontent.com/ahsa29/kpu-osm-boundaries-2026/c4d208a03a71553a1082f960ebdaa88c1d8e9389/data/2026-10-10b/MapManifest.json",
+    "provider": "OpenStreetMap contributors via ahsa29/kpu-osm-boundaries-2026",
+    "redistribution": "Permitted subject to ODbL attribution and share-alike obligations.",
+    "required_attribution": "© OpenStreetMap contributors",
+    "snapshot": "2026-10-10b",
+    "source_url": "https://raw.githubusercontent.com/ahsa29/kpu-osm-boundaries-2026/c4d208a03a71553a1082f960ebdaa88c1d8e9389/data/2026-10-10b/MapNational.geojson",
+    "underlying_extract": "Geofabrik Indonesia OSM PBF 2026-10-09"
+  },
+  "ticket": "D03B"
+}

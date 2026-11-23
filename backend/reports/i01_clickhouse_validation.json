@@ -1,0 +1,28 @@
+{
+  "api_data_status": "verified",
+  "database_version": "hotspot-data-contract-v1.0.0",
+  "elapsed_seconds": 1.25,
+  "executed_at_utc": "2026-10-26T03:44:32.754964+00:00",
+  "known_gap_dates": [
+    "2023-07-26",
+    "2023-07-27"
+  ],
+  "known_gap_total": null,
+  "map_rows_returned": 2,
+  "map_truncated": true,
+  "parity": {
+    "coverage_days": 365,
+    "known_gap_null_days": 2,
+    "multiple_match": 10,
+    "observations": 253388,
+    "provinces": 38,
+    "riau_september_2023": 687,
+    "unassigned": 796
+  },
+  "permissions": {
+    "ddl": "ACCESS_DENIED",
+    "raw_insert": "ACCESS_DENIED",
+    "raw_select": "ACCESS_DENIED"
+  },
+  "ticket": "I01"
+}

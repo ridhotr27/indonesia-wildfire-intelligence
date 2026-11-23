@@ -1,0 +1,25 @@
+{
+  "profile": "lir05:qwen2.5:1.5b:prompt-v1",
+  "corpus_version": "lir01-intent-routing-corpus-v1.0.0",
+  "partition": "development",
+  "case_count": 1,
+  "route_accuracy": 0.0,
+  "operation_exactness": 0.0,
+  "model_calls": 1,
+  "latency_ms": {
+    "p50": 32.495120000021416,
+    "p95": 32.495120000021416
+  },
+  "process_max_rss": 132341760,
+  "results": [
+    {
+      "case_id": "lir01.analytics.000.0",
+      "reason": "model_unavailable",
+      "predicted_route": "clarification",
+      "route_correct": false,
+      "operations_correct": false,
+      "duration_ms": 32.495120000021416,
+      "model_calls": 1
+    }
+  ]
+}

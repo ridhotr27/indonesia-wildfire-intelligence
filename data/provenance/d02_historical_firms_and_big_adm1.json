@@ -1,0 +1,94 @@
+{
+  "validation_id": "d02-viirs-snpp-sp-2023-indonesia-big-adm1",
+  "validated_at_utc": "2026-10-21T07:30:06Z",
+  "nasa_firms": {
+    "access": {
+      "api_credential_env": "NASA_FIRMS_MAP_KEY",
+      "api_credential_present_during_validation": false,
+      "authenticated_api_exercised": false,
+      "historical_access_verified": true,
+      "historical_access_method": "public yearly country summary HTTPS",
+      "retrieved_at_utc": "2026-10-21T07:15:26.716826Z",
+      "source_index_url": "https://firms.modaps.eosdis.nasa.gov/data/country/yearly_summary_files.txt",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp_2023_Indonesia.csv"
+    },
+    "artifact": {
+      "bytes": 20067598,
+      "path": "data/raw/nasa_firms/viirs-snpp_2023_Indonesia.csv",
+      "server_etag_md5": "b8099243f9f067d687d59927e4fb04f3",
+      "server_last_modified": "2025-06-24T17:07:37Z",
+      "server_sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a",
+      "sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a"
+    },
+    "attributes_readme": {
+      "bytes": 3178,
+      "path": "data/raw/nasa_firms/AttributesReadme.txt",
+      "retrieved_at_utc": "2026-10-21T07:15:28.006789Z",
+      "sha256": "803256e72246bb045952eda540aa704c5eb318ce3b7a9b8a178ea6425d127735",
+      "source_url": "https://firms.modaps.eosdis.nasa.gov/data/country/AttributesReadme.txt"
+    },
+    "identity": {
+      "instrument": "VIIRS",
+      "platform": "Suomi National Polar-orbiting Partnership (S-NPP)",
+      "processing": "standard processing",
+      "provider": "NASA LANCE FIRMS",
+      "version_value": "2"
+    },
+    "terms": {
+      "attribution_required_by_readme": true,
+      "data_use_url": "https://www.earthdata.nasa.gov/data/tools/firms",
+      "disclaimer_present": true,
+      "summary": "NASA FIRMS requests citation and reproduction of or a link to its disclaimer when redistributing LANCE/FIRMS data."
+    }
+  },
+  "bounded_sample": {
+    "date_from": "2023-09-01",
+    "date_to": "2023-09-05",
+    "enriched_artifact": {
+      "bytes": 1791493,
+      "path": "data/derived/feasibility/viirs-snpp_sp_2023-09-01_2023-09-05_indonesia_adm1.csv",
+      "sha256": "73db2d5a1f9caa26df3a0ffa7cbeb098239e3d0d668f9c988694fd1e0bd713f6"
+    },
+    "raw_artifact": {
+      "bytes": 1251203,
+      "path": "data/derived/feasibility/viirs-snpp_sp_2023-09-01_2023-09-05_indonesia.csv",
+      "sha256": "eafbb1ebefe1702d2a980b1a36fe4d96471ee42282d5b4e9b1299465142b8401"
+    },
+    "row_count": 15804
+  },
+  "province_boundary": {
+    "access": {
+      "full_resolution_export_result": "HTTP 500",
+      "retrieved_at_utc": "2026-10-21T07:22:38.742467Z",
+      "source_query_url": "https://geoservices.big.go.id/gis/rest/services/STIG/Batas_Provinsi/MapServer/0/query?where=1%3D1&outFields=KDPPUM%2CWADMPR&returnGeometry=true&returnZ=false&returnM=false&outSR=4326&maxAllowableOffset=0.001&geometryPrecision=6&f=geojson",
+      "source_service_url": "https://geoservices.big.go.id/gis/rest/services/STIG/Batas_Provinsi/MapServer/0"
+    },
+    "artifact": {
+      "bytes": 7069852,
+      "path": "data/raw/reference/idn_adm1_big_2026_generalized.geojson",
+      "sha256": "1c0db9d378d66eba7bce50c04c4d145ef2f1d312f7652b170ebf9f0e03eb4f9f"
+    },
+    "identity": {
+      "attribution": "Badan Informasi Geospasial (BIG)",
+      "crs": "EPSG:4326",
+      "feature_count": 38,
+      "geometry_generalization_degrees": 0.001,
+      "item_created_utc": "2024-09-11T11:26:26.559Z",
+      "item_id": "0b64041ca8e54d6092b652f11ce16c7e",
+      "item_modified_utc": "2024-09-11T11:31:10.604Z",
+      "provider": "Badan Informasi Geospasial, Republic of Indonesia"
+    },
+    "terms": {
+      "access": "public",
+      "license_info_in_service_metadata": null,
+      "redistribution_status": "unresolved; do not publish boundary artifact externally until terms are confirmed"
+    }
+  },
+  "limitations": [
+    "Authenticated FIRMS area-API access was not exercised because NASA_FIRMS_MAP_KEY was unset.",
+    "The yearly country file has zero rows for 2023-07-26 and 2023-07-27; this alone cannot distinguish no detections from missing satellite data.",
+    "The BIG artifact is generalized by 0.001 degree and 45 sample detections fall within that approximate boundary-distance threshold.",
+    "The BIG service metadata exposes no explicit license text, so external redistribution remains blocked pending clarification.",
+    "Satellite hotspots are detections, not confirmed wildfire incidents or burned hectares."
+  ]
+}

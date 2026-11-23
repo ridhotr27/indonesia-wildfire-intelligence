@@ -1,0 +1,2096 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Indonesia Wildfire Intelligence API",
+    "description": "Historical hotspot exploration API. Current default data is an explicitly synthetic mock; approved real-data integration remains gated behind later tickets.",
+    "version": "1.1.0"
+  },
+  "paths": {
+    "/api/v1/health": {
+      "get": {
+        "tags": [
+          "health"
+        ],
+        "summary": "Health",
+        "operationId": "health_api_v1_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter combination",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data or resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Malformed input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request quota reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Required dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Bounded processing time exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/metadata": {
+      "get": {
+        "tags": [
+          "metadata"
+        ],
+        "summary": "Metadata",
+        "operationId": "metadata_api_v1_metadata_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MetadataResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter combination",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data or resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Malformed input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request quota reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Required dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Bounded processing time exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotspots/summary": {
+      "post": {
+        "tags": [
+          "hotspots"
+        ],
+        "summary": "Summary",
+        "operationId": "summary_api_v1_hotspots_summary_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SummaryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SummaryResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter combination",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data or resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Malformed input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request quota reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Required dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Bounded processing time exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/hotspots/geojson": {
+      "get": {
+        "tags": [
+          "hotspots"
+        ],
+        "summary": "Geojson",
+        "operationId": "geojson_api_v1_hotspots_geojson_get",
+        "parameters": [
+          {
+            "name": "product_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "pattern": "^[A-Za-z0-9_.-]+$",
+              "title": "Product Id"
+            }
+          },
+          {
+            "name": "province_code",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "pattern": "^[A-Za-z0-9_.-]+$",
+              "title": "Province Code"
+            }
+          },
+          {
+            "name": "date_from",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "title": "Date From"
+            }
+          },
+          {
+            "name": "date_to",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "title": "Date To"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 5000,
+              "minimum": 1,
+              "default": 500,
+              "title": "Limit"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GeoJsonResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter combination",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data or resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Malformed input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request quota reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Required dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Bounded processing time exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/chat": {
+      "post": {
+        "tags": [
+          "chat"
+        ],
+        "summary": "Chat",
+        "operationId": "chat_api_v1_chat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter combination",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No data or resource not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Malformed input",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Request quota reached",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Required dependency unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Bounded processing time exceeded",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AbstentionDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "abstention",
+            "title": "Kind",
+            "default": "abstention"
+          },
+          "reason_code": {
+            "type": "string",
+            "enum": [
+              "missing_province",
+              "missing_date_range",
+              "unsupported_intent",
+              "insufficient_evidence"
+            ],
+            "title": "Reason Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "reason_code"
+        ],
+        "title": "AbstentionDetails"
+      },
+      "AnalyticsParameters": {
+        "properties": {
+          "province_codes": {
+            "items": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.-]+$"
+            },
+            "type": "array",
+            "maxItems": 38,
+            "minItems": 1,
+            "title": "Province Codes"
+          },
+          "date_from": {
+            "type": "string",
+            "format": "date",
+            "title": "Date From"
+          },
+          "date_to": {
+            "type": "string",
+            "format": "date",
+            "title": "Date To"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "province_codes",
+          "date_from",
+          "date_to"
+        ],
+        "title": "AnalyticsParameters"
+      },
+      "AnalyticsQueryDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "analytics_query",
+            "title": "Kind",
+            "default": "analytics_query"
+          },
+          "operation_id": {
+            "type": "string",
+            "enum": [
+              "hotspot_summary_v1",
+              "hotspot_trend_v1",
+              "hotspot_map_v1"
+            ],
+            "title": "Operation Id"
+          },
+          "parameters": {
+            "$ref": "#/components/schemas/AnalyticsParameters"
+          },
+          "read_only": {
+            "type": "boolean",
+            "const": true,
+            "title": "Read Only"
+          },
+          "returned_rows": {
+            "type": "integer",
+            "maximum": 5000.0,
+            "minimum": 0.0,
+            "title": "Returned Rows"
+          },
+          "metric_name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "satellite_hotspot_detections"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metric Name"
+          },
+          "metric_value": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metric Value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "operation_id",
+          "parameters",
+          "read_only",
+          "returned_rows"
+        ],
+        "title": "AnalyticsQueryDetails"
+      },
+      "ChatChart": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "line",
+              "bar"
+            ],
+            "title": "Type"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/SummaryPoint"
+            },
+            "type": "array",
+            "title": "Series"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "series"
+        ],
+        "title": "ChatChart"
+      },
+      "ChatContext": {
+        "properties": {
+          "province_code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 50,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_.-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Province Code"
+          },
+          "date_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date From"
+          },
+          "date_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date To"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ChatContext"
+      },
+      "ChatMap": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "FeatureCollection",
+            "title": "Type",
+            "default": "FeatureCollection"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/GeoJsonFeature"
+            },
+            "type": "array",
+            "title": "Features"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "features"
+        ],
+        "title": "ChatMap"
+      },
+      "ChatMetric": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "value": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Value"
+          },
+          "unit": {
+            "type": "string",
+            "title": "Unit"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "value",
+          "unit"
+        ],
+        "title": "ChatMetric"
+      },
+      "ChatRequest": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Message"
+          },
+          "product_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Product Id"
+          },
+          "context": {
+            "$ref": "#/components/schemas/ChatContext"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message",
+          "product_id",
+          "context"
+        ],
+        "title": "ChatRequest"
+      },
+      "ChatResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "answer": {
+            "type": "string",
+            "title": "Answer"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "analytics",
+              "rag",
+              "combined",
+              "unsupported"
+            ],
+            "title": "Mode"
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Filters"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "metrics": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ChatMetric"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metrics"
+          },
+          "chart": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChatChart"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "map": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ChatMap"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "citations": {
+            "items": {
+              "$ref": "#/components/schemas/Citation"
+            },
+            "type": "array",
+            "title": "Citations"
+          },
+          "limitations": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Limitations"
+          },
+          "usage": {
+            "$ref": "#/components/schemas/Usage"
+          },
+          "execution_trace": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ExecutionTrace"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "answer",
+          "mode",
+          "filters",
+          "metrics",
+          "chart",
+          "map",
+          "citations",
+          "limitations",
+          "usage"
+        ],
+        "title": "ChatResponse"
+      },
+      "Citation": {
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Url"
+          },
+          "chunk_id": {
+            "type": "string",
+            "title": "Chunk Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "title",
+          "url",
+          "chunk_id"
+        ],
+        "title": "Citation"
+      },
+      "CitationValidationDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "citation_validation",
+            "title": "Kind",
+            "default": "citation_validation"
+          },
+          "candidate_count": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 0.0,
+            "title": "Candidate Count"
+          },
+          "accepted_count": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 0.0,
+            "title": "Accepted Count"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "passed",
+              "abstained",
+              "failed"
+            ],
+            "title": "Outcome"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "candidate_count",
+          "accepted_count",
+          "outcome"
+        ],
+        "title": "CitationValidationDetails"
+      },
+      "CoverageIssue": {
+        "properties": {
+          "date_utc": {
+            "type": "string",
+            "format": "date",
+            "title": "Date Utc"
+          },
+          "coverage_status": {
+            "type": "string",
+            "enum": [
+              "known_satellite_gap",
+              "unknown"
+            ],
+            "title": "Coverage Status"
+          },
+          "evidence_url": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 2083,
+                "minLength": 1,
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence Url"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "date_utc",
+          "coverage_status"
+        ],
+        "title": "CoverageIssue"
+      },
+      "CoverageWindow": {
+        "properties": {
+          "date_min": {
+            "type": "string",
+            "format": "date",
+            "title": "Date Min"
+          },
+          "date_max": {
+            "type": "string",
+            "format": "date",
+            "title": "Date Max"
+          },
+          "known_unavailable_dates": {
+            "items": {
+              "type": "string",
+              "format": "date"
+            },
+            "type": "array",
+            "title": "Known Unavailable Dates"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "date_min",
+          "date_max",
+          "known_unavailable_dates"
+        ],
+        "title": "CoverageWindow"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "INVALID_FILTER",
+              "VALIDATION_ERROR",
+              "RATE_LIMITED",
+              "DEPENDENCY_UNAVAILABLE",
+              "REQUEST_TIMEOUT",
+              "NOT_FOUND",
+              "INTERNAL_ERROR",
+              "HTTP_ERROR"
+            ],
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "retry_after_seconds": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Retry After Seconds"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "error": {
+            "$ref": "#/components/schemas/ErrorDetail"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "ExecutionTrace": {
+        "properties": {
+          "trace_version": {
+            "type": "string",
+            "const": "1.0",
+            "title": "Trace Version",
+            "default": "1.0"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "analytics",
+              "rag",
+              "combined",
+              "unsupported"
+            ],
+            "title": "Route"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "complete",
+              "abstained",
+              "partial"
+            ],
+            "title": "Status"
+          },
+          "steps": {
+            "items": {
+              "$ref": "#/components/schemas/ExecutionTraceStep"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 1,
+            "title": "Steps"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "route",
+          "status",
+          "steps"
+        ],
+        "title": "ExecutionTrace"
+      },
+      "ExecutionTraceStep": {
+        "properties": {
+          "sequence": {
+            "type": "integer",
+            "maximum": 8.0,
+            "minimum": 1.0,
+            "title": "Sequence"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "route_selection",
+              "filter_resolution",
+              "analytics_query",
+              "vector_retrieval",
+              "local_generation",
+              "citation_validation",
+              "abstention"
+            ],
+            "title": "Kind"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "complete",
+              "abstained",
+              "failed"
+            ],
+            "title": "Status"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Label"
+          },
+          "duration_ms": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 300000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duration Ms"
+          },
+          "details": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RouteSelectionDetails"
+              },
+              {
+                "$ref": "#/components/schemas/FilterResolutionDetails"
+              },
+              {
+                "$ref": "#/components/schemas/AnalyticsQueryDetails"
+              },
+              {
+                "$ref": "#/components/schemas/VectorRetrievalDetails"
+              },
+              {
+                "$ref": "#/components/schemas/LocalGenerationDetails"
+              },
+              {
+                "$ref": "#/components/schemas/CitationValidationDetails"
+              },
+              {
+                "$ref": "#/components/schemas/AbstentionDetails"
+              }
+            ],
+            "title": "Details",
+            "discriminator": {
+              "propertyName": "kind",
+              "mapping": {
+                "abstention": "#/components/schemas/AbstentionDetails",
+                "analytics_query": "#/components/schemas/AnalyticsQueryDetails",
+                "citation_validation": "#/components/schemas/CitationValidationDetails",
+                "filter_resolution": "#/components/schemas/FilterResolutionDetails",
+                "local_generation": "#/components/schemas/LocalGenerationDetails",
+                "route_selection": "#/components/schemas/RouteSelectionDetails",
+                "vector_retrieval": "#/components/schemas/VectorRetrievalDetails"
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "sequence",
+          "kind",
+          "status",
+          "label",
+          "details"
+        ],
+        "title": "ExecutionTraceStep"
+      },
+      "FilterResolutionDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "filter_resolution",
+            "title": "Kind",
+            "default": "filter_resolution"
+          },
+          "province_codes": {
+            "items": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.-]+$"
+            },
+            "type": "array",
+            "maxItems": 38,
+            "title": "Province Codes"
+          },
+          "date_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date From"
+          },
+          "date_to": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date To"
+          },
+          "province_source": {
+            "type": "string",
+            "enum": [
+              "message",
+              "ui_context",
+              "absent"
+            ],
+            "title": "Province Source"
+          },
+          "date_from_source": {
+            "type": "string",
+            "enum": [
+              "message",
+              "ui_context",
+              "absent"
+            ],
+            "title": "Date From Source"
+          },
+          "date_to_source": {
+            "type": "string",
+            "enum": [
+              "message",
+              "ui_context",
+              "absent"
+            ],
+            "title": "Date To Source"
+          },
+          "reason_codes": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "missing_province",
+                "missing_date_range",
+                "ambiguous_province",
+                "conflicting_province",
+                "conflicting_date_range",
+                "invalid_date_range"
+              ]
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Reason Codes"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": [
+              "resolved",
+              "needs_clarification",
+              "invalid",
+              "not_applicable"
+            ],
+            "title": "Outcome"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "province_codes",
+          "date_from",
+          "date_to",
+          "province_source",
+          "date_from_source",
+          "date_to_source",
+          "reason_codes",
+          "outcome"
+        ],
+        "title": "FilterResolutionDetails"
+      },
+      "Filters": {
+        "properties": {
+          "province_codes": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Province Codes"
+          },
+          "date_from": {
+            "type": "string",
+            "format": "date",
+            "title": "Date From"
+          },
+          "date_to": {
+            "type": "string",
+            "format": "date",
+            "title": "Date To"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "province_codes",
+          "date_from",
+          "date_to"
+        ],
+        "title": "Filters"
+      },
+      "GeoJsonFeature": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Feature",
+            "title": "Type",
+            "default": "Feature"
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/GeoJsonGeometry"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/GeoJsonProperties"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "geometry",
+          "properties"
+        ],
+        "title": "GeoJsonFeature"
+      },
+      "GeoJsonGeometry": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "Point",
+            "title": "Type",
+            "default": "Point"
+          },
+          "coordinates": {
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 2,
+            "title": "Coordinates"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "coordinates"
+        ],
+        "title": "GeoJsonGeometry"
+      },
+      "GeoJsonMetadata": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "product_id": {
+            "type": "string",
+            "title": "Product Id"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/Filters"
+          },
+          "truncated": {
+            "type": "boolean",
+            "title": "Truncated"
+          },
+          "returned": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Returned"
+          },
+          "limit": {
+            "type": "integer",
+            "maximum": 5000.0,
+            "minimum": 1.0,
+            "title": "Limit"
+          },
+          "is_complete": {
+            "type": "boolean",
+            "title": "Is Complete"
+          },
+          "coverage_issues": {
+            "items": {
+              "$ref": "#/components/schemas/CoverageIssue"
+            },
+            "type": "array",
+            "title": "Coverage Issues"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SourceInfo"
+          },
+          "caveat": {
+            "type": "string",
+            "const": "Hotspot detections are not confirmed wildfires.",
+            "title": "Caveat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "product_id",
+          "filters",
+          "truncated",
+          "returned",
+          "limit",
+          "is_complete",
+          "coverage_issues",
+          "source",
+          "caveat"
+        ],
+        "title": "GeoJsonMetadata"
+      },
+      "GeoJsonProperties": {
+        "properties": {
+          "observation_id": {
+            "type": "string",
+            "title": "Observation Id"
+          },
+          "acquired_at_utc": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Acquired At Utc"
+          },
+          "product_id": {
+            "type": "string",
+            "title": "Product Id"
+          },
+          "province_code": {
+            "type": "string",
+            "title": "Province Code"
+          },
+          "confidence_code": {
+            "type": "string",
+            "enum": [
+              "l",
+              "n",
+              "h"
+            ],
+            "title": "Confidence Code"
+          },
+          "frp_mw": {
+            "type": "number",
+            "minimum": 0.0,
+            "title": "Frp Mw"
+          },
+          "daynight_code": {
+            "type": "string",
+            "enum": [
+              "D",
+              "N"
+            ],
+            "title": "Daynight Code"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "observation_id",
+          "acquired_at_utc",
+          "product_id",
+          "province_code",
+          "confidence_code",
+          "frp_mw",
+          "daynight_code"
+        ],
+        "title": "GeoJsonProperties"
+      },
+      "GeoJsonResponse": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "FeatureCollection",
+            "title": "Type",
+            "default": "FeatureCollection"
+          },
+          "features": {
+            "items": {
+              "$ref": "#/components/schemas/GeoJsonFeature"
+            },
+            "type": "array",
+            "title": "Features"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/GeoJsonMetadata"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "features",
+          "metadata"
+        ],
+        "title": "GeoJsonResponse"
+      },
+      "HealthResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status"
+          },
+          "api_version": {
+            "type": "string",
+            "const": "1.0.0",
+            "title": "Api Version",
+            "default": "1.0.0"
+          }
+        },
+        "type": "object",
+        "required": [
+          "request_id",
+          "status"
+        ],
+        "title": "HealthResponse"
+      },
+      "LocalGenerationDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "local_generation",
+            "title": "Kind",
+            "default": "local_generation"
+          },
+          "provider": {
+            "type": "string",
+            "const": "ollama",
+            "title": "Provider"
+          },
+          "model": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Model"
+          },
+          "input_passage_count": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 0.0,
+            "title": "Input Passage Count"
+          },
+          "model_calls": {
+            "type": "integer",
+            "maximum": 2.0,
+            "minimum": 1.0,
+            "title": "Model Calls"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "model",
+          "input_passage_count",
+          "model_calls"
+        ],
+        "title": "LocalGenerationDetails"
+      },
+      "MetadataResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "api_version": {
+            "type": "string",
+            "const": "1.0.0",
+            "title": "Api Version",
+            "default": "1.0.0"
+          },
+          "products": {
+            "items": {
+              "$ref": "#/components/schemas/ProductMetadata"
+            },
+            "type": "array",
+            "title": "Products"
+          },
+          "provinces": {
+            "items": {
+              "$ref": "#/components/schemas/ProvinceMetadata"
+            },
+            "type": "array",
+            "title": "Provinces"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/CoverageWindow"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SourceInfo"
+          },
+          "data_freshness_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Data Freshness At"
+          },
+          "data_status": {
+            "type": "string",
+            "enum": [
+              "mock",
+              "verified"
+            ],
+            "title": "Data Status",
+            "description": "'mock' until a verified DE data contract is integrated"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "products",
+          "provinces",
+          "coverage",
+          "source",
+          "data_freshness_at",
+          "data_status"
+        ],
+        "title": "MetadataResponse"
+      },
+      "ProductMetadata": {
+        "properties": {
+          "product_id": {
+            "type": "string",
+            "title": "Product Id"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "product_id",
+          "display_name"
+        ],
+        "title": "ProductMetadata"
+      },
+      "ProvinceMetadata": {
+        "properties": {
+          "province_code": {
+            "type": "string",
+            "title": "Province Code"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "province_code",
+          "display_name"
+        ],
+        "title": "ProvinceMetadata"
+      },
+      "RetrievedItem": {
+        "properties": {
+          "chunk_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "title": "Chunk Id"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 500,
+            "pattern": "^https://",
+            "title": "Url"
+          },
+          "rank": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Rank"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "chunk_id",
+          "title",
+          "url",
+          "rank"
+        ],
+        "title": "RetrievedItem"
+      },
+      "RouteSelectionDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "route_selection",
+            "title": "Kind",
+            "default": "route_selection"
+          },
+          "route": {
+            "type": "string",
+            "enum": [
+              "analytics",
+              "rag",
+              "combined",
+              "unsupported"
+            ],
+            "title": "Route"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "route"
+        ],
+        "title": "RouteSelectionDetails"
+      },
+      "SourceInfo": {
+        "properties": {
+          "provider": {
+            "type": "string",
+            "title": "Provider"
+          },
+          "dataset_version": {
+            "type": "string",
+            "title": "Dataset Version"
+          },
+          "data_status": {
+            "type": "string",
+            "enum": [
+              "mock",
+              "verified"
+            ],
+            "title": "Data Status"
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 2083,
+            "minLength": 1,
+            "format": "uri",
+            "title": "Url"
+          },
+          "attribution": {
+            "type": "string",
+            "title": "Attribution"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "dataset_version",
+          "data_status",
+          "url",
+          "attribution"
+        ],
+        "title": "SourceInfo"
+      },
+      "SummaryPoint": {
+        "properties": {
+          "period": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}$",
+            "title": "Period"
+          },
+          "count": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Count"
+          },
+          "is_complete": {
+            "type": "boolean",
+            "title": "Is Complete"
+          },
+          "coverage_issues": {
+            "items": {
+              "$ref": "#/components/schemas/CoverageIssue"
+            },
+            "type": "array",
+            "title": "Coverage Issues"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "period",
+          "is_complete",
+          "coverage_issues"
+        ],
+        "title": "SummaryPoint"
+      },
+      "SummaryRequest": {
+        "properties": {
+          "date_from": {
+            "type": "string",
+            "format": "date",
+            "title": "Date From"
+          },
+          "date_to": {
+            "type": "string",
+            "format": "date",
+            "title": "Date To"
+          },
+          "product_id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Product Id"
+          },
+          "province_codes": {
+            "items": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_.-]+$"
+            },
+            "type": "array",
+            "maxItems": 38,
+            "minItems": 1,
+            "title": "Province Codes"
+          },
+          "group_by": {
+            "type": "string",
+            "const": "month",
+            "title": "Group By"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "date_from",
+          "date_to",
+          "product_id",
+          "province_codes",
+          "group_by"
+        ],
+        "title": "SummaryRequest"
+      },
+      "SummaryResponse": {
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          },
+          "metric": {
+            "type": "string",
+            "const": "satellite_hotspot_detections",
+            "title": "Metric"
+          },
+          "product_id": {
+            "type": "string",
+            "title": "Product Id"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/Filters"
+          },
+          "total": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Total"
+          },
+          "is_complete": {
+            "type": "boolean",
+            "title": "Is Complete"
+          },
+          "coverage_issues": {
+            "items": {
+              "$ref": "#/components/schemas/CoverageIssue"
+            },
+            "type": "array",
+            "title": "Coverage Issues"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "series": {
+            "items": {
+              "$ref": "#/components/schemas/SummaryPoint"
+            },
+            "type": "array",
+            "title": "Series"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SourceInfo"
+          },
+          "caveat": {
+            "type": "string",
+            "const": "Hotspot detections are not confirmed wildfires.",
+            "title": "Caveat"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "request_id",
+          "metric",
+          "product_id",
+          "filters",
+          "is_complete",
+          "coverage_issues",
+          "warnings",
+          "series",
+          "source",
+          "caveat"
+        ],
+        "title": "SummaryResponse"
+      },
+      "Usage": {
+        "properties": {
+          "llm_calls": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Llm Calls"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "llm_calls"
+        ],
+        "title": "Usage"
+      },
+      "VectorRetrievalDetails": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "const": "vector_retrieval",
+            "title": "Kind",
+            "default": "vector_retrieval"
+          },
+          "provider": {
+            "type": "string",
+            "const": "local",
+            "title": "Provider"
+          },
+          "embedding_model": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Embedding Model"
+          },
+          "collection": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Collection"
+          },
+          "top_k": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 1.0,
+            "title": "Top K"
+          },
+          "returned_count": {
+            "type": "integer",
+            "maximum": 5.0,
+            "minimum": 0.0,
+            "title": "Returned Count"
+          },
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/RetrievedItem"
+            },
+            "type": "array",
+            "maxItems": 5,
+            "title": "Items"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "provider",
+          "embedding_model",
+          "collection",
+          "top_k",
+          "returned_count",
+          "items"
+        ],
+        "title": "VectorRetrievalDetails"
+      }
+    }
+  }
+}

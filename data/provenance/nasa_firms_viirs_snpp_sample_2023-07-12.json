@@ -1,0 +1,30 @@
+{
+  "artifact_id": "nasa-firms-viirs-snpp-tutorial-sample-2023-07-12",
+  "access": {
+    "credentials_required": false,
+    "method": "HTTPS GET",
+    "retrieved_at_utc": "2026-10-21T07:00:15Z",
+    "source_url": "https://firms.modaps.eosdis.nasa.gov/content/notebooks/sample_viirs_snpp_071223.csv"
+  },
+  "file": {
+    "bytes": 6077404,
+    "path": "data/raw/nasa_firms/sample_viirs_snpp_2023-07-12.csv",
+    "sha256": "edf79f62b35ba4485d7c85e01be5f6f61d30ab7b4addcf2eea00e2581982c30f"
+  },
+  "identity": {
+    "collection_candidate": "VNP14IMG_NRT.002",
+    "instrument": "VIIRS",
+    "platform": "Suomi National Polar-orbiting Partnership (S-NPP)",
+    "processing": "mixed 2.0NRT and 2.0URT values in this tutorial sample",
+    "provider": "NASA LANCE FIRMS",
+    "spatial_resolution_at_nadir": "375 m"
+  },
+  "official_references": {
+    "archive_download": "https://firms.modaps.eosdis.nasa.gov/download/",
+    "data_use_guidance": "https://www.earthdata.nasa.gov/engage/open-data-services-software/data-use-policy",
+    "doi": "https://doi.org/10.5067/VIIRS/VNP14IMG_NRT.002",
+    "product_catalog": "https://www.earthdata.nasa.gov/data/catalog/lancemodis-vnp14img-nrt-2",
+    "tutorial": "https://firms.modaps.eosdis.nasa.gov/content/academy/data_ingest/firms_data_ingest.html"
+  },
+  "scope_warning": "This is NASA's one-day global tutorial sample, not an authenticated historical Indonesia archive extract. It validates a real FIRMS CSV shape only; it does not validate 2020-2025 archive completeness or province coverage."
+}

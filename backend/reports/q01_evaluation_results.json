@@ -1,0 +1,47 @@
+{
+  "ticket": "Q01",
+  "benchmark_version": "1.0.0",
+  "executed_at": "2026-10-26T12:41:26+00:00",
+  "question_count": 50,
+  "metrics": {
+    "supported_route_accuracy": 1.0,
+    "unsupported_handling": 1.0,
+    "retrieval_recall_at_5": 0.8,
+    "retrieved_support_term_rate": 0.7,
+    "planner_latency_ms_median": 0.04289099888410419,
+    "planner_latency_ms_p95": 0.3229189896956086,
+    "unsafe_query_executions": 0,
+    "analytical_result_accuracy": null,
+    "manual_citation_support": null,
+    "hosted_e2e_p95_seconds": null,
+    "automated_wcag_result": null,
+    "manual_assistive_technology_result": null
+  },
+  "retrieval": {
+    "source_count": 4,
+    "chunk_count": 201,
+    "recall_passes": ["R01", "R02", "R03", "R04", "R06", "R07", "R09", "R10"],
+    "recall_failures": ["R05", "R08"],
+    "support_term_passes": ["R01", "R02", "R03", "R05", "R07", "R08", "R10"],
+    "support_term_failures": ["R04", "R06", "R09"],
+    "source_hashes": {
+      "firms-active-fire-attributes": "ce80e1ebd83374b53593ea176a28680c1a2f4ad6bafcdf2735c26a4a1e32be00",
+      "firms-faq": "8d5851ecfc79a86ea3fd2774fc763fe055b9cdc04c792d54b5741e42f0805332",
+      "firms-overview": "e87ec725f485432193d3e5222bd7fa468da32be92460ef0a6aaca4a493f835ae",
+      "viirs-c2-active-fire-guide": "12d288191b6ad19a6f8b5f948b4412e4d95dbef9b8404404c7e8e311de7ad663"
+    }
+  },
+  "verification": {
+    "backend": "139 passed, 1 live ClickHouse test skipped; Ruff passed",
+    "frontend": "24 passed; TypeScript, ESLint, and production build passed",
+    "data": "61 passed"
+  },
+  "release_recommendation": "NO_GO",
+  "limitations": [
+    "Route accuracy is not analytical numeric-answer accuracy.",
+    "Support-term presence is not a manual citation-claim audit.",
+    "The hashing retriever is deterministic local validation, not an approved production embedding model.",
+    "No hosted browser-to-live-ClickHouse/Qdrant run or production latency measurement was available.",
+    "No axe-equivalent WCAG scan or manual screen-reader/keyboard audit was run."
+  ]
+}

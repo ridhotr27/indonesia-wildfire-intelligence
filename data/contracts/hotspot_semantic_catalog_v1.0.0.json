@@ -1,0 +1,794 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_version": "hotspot-semantic-catalog-v1.0.0",
+  "data_contract_version": "1.0.0",
+  "created_at": "2026-11-15",
+  "metric": {
+    "id": "satellite_hotspot_detections",
+    "labels": {
+      "en": "satellite hotspot detections",
+      "id": "deteksi hotspot satelit"
+    },
+    "aliases": [
+      {
+        "text": "hotspot count",
+        "language": "en"
+      },
+      {
+        "text": "detection count",
+        "language": "en"
+      },
+      {
+        "text": "jumlah hotspot",
+        "language": "id"
+      },
+      {
+        "text": "jumlah deteksi",
+        "language": "id"
+      }
+    ],
+    "definition": "Count of canonical exact-deduplicated NASA FIRMS observations for the approved product, inclusive UTC date range, and explicit geographic scope.",
+    "unit": "detections",
+    "aggregation": "count",
+    "grain": "one canonical exact-deduplicated FIRMS observation",
+    "valid_dimensions": [
+      "product_id",
+      "province_code",
+      "date_utc",
+      "month_utc"
+    ],
+    "valid_operations": [
+      "hotspot_summary_v1",
+      "hotspot_trend_v1",
+      "hotspot_multi_province_summary_v1",
+      "hotspot_province_ranking_v1"
+    ],
+    "unsupported_interpretations": [
+      "confirmed_fires",
+      "unique_fire_incidents",
+      "burned_area",
+      "severity",
+      "cause",
+      "forecast"
+    ]
+  },
+  "product": {
+    "id": "VNP14IMG.002_SNPP_FIRMS_SP",
+    "labels": {
+      "en": "VIIRS S-NPP standard processing",
+      "id": "pemrosesan standar VIIRS S-NPP"
+    },
+    "source_product": "VNP14IMG",
+    "collection_version": "2",
+    "processing_stream": "standard",
+    "satellite": "Suomi NPP",
+    "instrument": "VIIRS",
+    "compatible_product_ids": [
+      "VNP14IMG.002_SNPP_FIRMS_SP"
+    ],
+    "incompatible_product_examples": [
+      "MODIS",
+      "VIIRS_NOAA20_NRT",
+      "VNP14IMG.001"
+    ],
+    "cross_product_aggregation": "prohibited"
+  },
+  "coverage": {
+    "timezone": "UTC",
+    "date_bounds": {
+      "from": "2023-01-01",
+      "to": "2023-12-31",
+      "inclusive": true
+    },
+    "known_unavailable_dates": [
+      "2023-07-26",
+      "2023-07-27"
+    ],
+    "states": {
+      "complete": "Every requested day has observations_present or independently verified zero coverage.",
+      "partial": "At least one day is unavailable; numeric values are subtotals over available days.",
+      "unavailable": "The entire requested range is unavailable; numeric results are null."
+    },
+    "zero_rule": "Zero is numeric only when coverage supports it; gaps and unknown coverage remain null."
+  },
+  "geography": {
+    "universe_size": 38,
+    "assignment_rule": "Exactly one polygon match is assigned; zero or multiple matches retain null province fields.",
+    "not_assigned_rule": "Unassigned and multiple-match observations are excluded from province rows and disclosed once as an Indonesia-wide exclusion count.",
+    "provinces": [
+      {
+        "code": "11",
+        "canonical_name": "Aceh",
+        "canonical_order": 1,
+        "labels": {
+          "id": "Aceh",
+          "en": "Aceh"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "12",
+        "canonical_name": "Sumatera Utara",
+        "canonical_order": 2,
+        "labels": {
+          "id": "Sumatera Utara",
+          "en": "North Sumatra"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "13",
+        "canonical_name": "Sumatera Barat",
+        "canonical_order": 3,
+        "labels": {
+          "id": "Sumatera Barat",
+          "en": "West Sumatra"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "14",
+        "canonical_name": "Riau",
+        "canonical_order": 4,
+        "labels": {
+          "id": "Riau",
+          "en": "Riau"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "15",
+        "canonical_name": "Jambi",
+        "canonical_order": 5,
+        "labels": {
+          "id": "Jambi",
+          "en": "Jambi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "16",
+        "canonical_name": "Sumatera Selatan",
+        "canonical_order": 6,
+        "labels": {
+          "id": "Sumatera Selatan",
+          "en": "South Sumatra"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "17",
+        "canonical_name": "Bengkulu",
+        "canonical_order": 7,
+        "labels": {
+          "id": "Bengkulu",
+          "en": "Bengkulu"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "18",
+        "canonical_name": "Lampung",
+        "canonical_order": 8,
+        "labels": {
+          "id": "Lampung",
+          "en": "Lampung"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "19",
+        "canonical_name": "Kepulauan Bangka Belitung",
+        "canonical_order": 9,
+        "labels": {
+          "id": "Kepulauan Bangka Belitung",
+          "en": "Bangka Belitung Islands"
+        },
+        "aliases": [
+          {
+            "text": "Bangka Belitung",
+            "language": "id",
+            "status": "approved"
+          }
+        ],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "21",
+        "canonical_name": "Kepulauan Riau",
+        "canonical_order": 10,
+        "labels": {
+          "id": "Kepulauan Riau",
+          "en": "Riau Islands"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "31",
+        "canonical_name": "Daerah Khusus Jakarta",
+        "canonical_order": 11,
+        "labels": {
+          "id": "Daerah Khusus Jakarta",
+          "en": "Special Capital Region of Jakarta"
+        },
+        "aliases": [
+          {
+            "text": "DKI Jakarta",
+            "language": "id",
+            "status": "approved"
+          },
+          {
+            "text": "Jakarta",
+            "language": "mixed",
+            "status": "approved"
+          }
+        ],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "32",
+        "canonical_name": "Jawa Barat",
+        "canonical_order": 12,
+        "labels": {
+          "id": "Jawa Barat",
+          "en": "West Java"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "33",
+        "canonical_name": "Jawa Tengah",
+        "canonical_order": 13,
+        "labels": {
+          "id": "Jawa Tengah",
+          "en": "Central Java"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "34",
+        "canonical_name": "Daerah Istimewa Yogyakarta",
+        "canonical_order": 14,
+        "labels": {
+          "id": "Daerah Istimewa Yogyakarta",
+          "en": "Special Region of Yogyakarta"
+        },
+        "aliases": [
+          {
+            "text": "DI Yogyakarta",
+            "language": "id",
+            "status": "approved"
+          },
+          {
+            "text": "Yogyakarta",
+            "language": "mixed",
+            "status": "approved"
+          }
+        ],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "35",
+        "canonical_name": "Jawa Timur",
+        "canonical_order": 15,
+        "labels": {
+          "id": "Jawa Timur",
+          "en": "East Java"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "36",
+        "canonical_name": "Banten",
+        "canonical_order": 16,
+        "labels": {
+          "id": "Banten",
+          "en": "Banten"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "51",
+        "canonical_name": "Bali",
+        "canonical_order": 17,
+        "labels": {
+          "id": "Bali",
+          "en": "Bali"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "52",
+        "canonical_name": "Nusa Tenggara Barat",
+        "canonical_order": 18,
+        "labels": {
+          "id": "Nusa Tenggara Barat",
+          "en": "West Nusa Tenggara"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "53",
+        "canonical_name": "Nusa Tenggara Timur",
+        "canonical_order": 19,
+        "labels": {
+          "id": "Nusa Tenggara Timur",
+          "en": "East Nusa Tenggara"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "61",
+        "canonical_name": "Kalimantan Barat",
+        "canonical_order": 20,
+        "labels": {
+          "id": "Kalimantan Barat",
+          "en": "West Kalimantan"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "62",
+        "canonical_name": "Kalimantan Tengah",
+        "canonical_order": 21,
+        "labels": {
+          "id": "Kalimantan Tengah",
+          "en": "Central Kalimantan"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "63",
+        "canonical_name": "Kalimantan Selatan",
+        "canonical_order": 22,
+        "labels": {
+          "id": "Kalimantan Selatan",
+          "en": "South Kalimantan"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "64",
+        "canonical_name": "Kalimantan Timur",
+        "canonical_order": 23,
+        "labels": {
+          "id": "Kalimantan Timur",
+          "en": "East Kalimantan"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "65",
+        "canonical_name": "Kalimantan Utara",
+        "canonical_order": 24,
+        "labels": {
+          "id": "Kalimantan Utara",
+          "en": "North Kalimantan"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "71",
+        "canonical_name": "Sulawesi Utara",
+        "canonical_order": 25,
+        "labels": {
+          "id": "Sulawesi Utara",
+          "en": "North Sulawesi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "72",
+        "canonical_name": "Sulawesi Tengah",
+        "canonical_order": 26,
+        "labels": {
+          "id": "Sulawesi Tengah",
+          "en": "Central Sulawesi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "73",
+        "canonical_name": "Sulawesi Selatan",
+        "canonical_order": 27,
+        "labels": {
+          "id": "Sulawesi Selatan",
+          "en": "South Sulawesi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "74",
+        "canonical_name": "Sulawesi Tenggara",
+        "canonical_order": 28,
+        "labels": {
+          "id": "Sulawesi Tenggara",
+          "en": "Southeast Sulawesi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "75",
+        "canonical_name": "Gorontalo",
+        "canonical_order": 29,
+        "labels": {
+          "id": "Gorontalo",
+          "en": "Gorontalo"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "76",
+        "canonical_name": "Sulawesi Barat",
+        "canonical_order": 30,
+        "labels": {
+          "id": "Sulawesi Barat",
+          "en": "West Sulawesi"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "81",
+        "canonical_name": "Maluku",
+        "canonical_order": 31,
+        "labels": {
+          "id": "Maluku",
+          "en": "Maluku"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "82",
+        "canonical_name": "Maluku Utara",
+        "canonical_order": 32,
+        "labels": {
+          "id": "Maluku Utara",
+          "en": "North Maluku"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "91",
+        "canonical_name": "Papua",
+        "canonical_order": 33,
+        "labels": {
+          "id": "Papua",
+          "en": "Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "92",
+        "canonical_name": "Papua Barat",
+        "canonical_order": 34,
+        "labels": {
+          "id": "Papua Barat",
+          "en": "West Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "93",
+        "canonical_name": "Papua Selatan",
+        "canonical_order": 35,
+        "labels": {
+          "id": "Papua Selatan",
+          "en": "South Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "94",
+        "canonical_name": "Papua Tengah",
+        "canonical_order": 36,
+        "labels": {
+          "id": "Papua Tengah",
+          "en": "Central Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "95",
+        "canonical_name": "Papua Pegunungan",
+        "canonical_order": 37,
+        "labels": {
+          "id": "Papua Pegunungan",
+          "en": "Highland Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      },
+      {
+        "code": "96",
+        "canonical_name": "Papua Barat Daya",
+        "canonical_order": 38,
+        "labels": {
+          "id": "Papua Barat Daya",
+          "en": "Southwest Papua"
+        },
+        "aliases": [],
+        "administrative_level": 1,
+        "boundary_source_id": "osm-idn-adm1-2026-10-10b"
+      }
+    ],
+    "ambiguous_scopes": [
+      {
+        "text": "Kalimantan",
+        "reason": "island_or_region_not_province"
+      },
+      {
+        "text": "Sumatra",
+        "reason": "island_not_province"
+      },
+      {
+        "text": "Indonesia",
+        "reason": "country_scope_not_province"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "id": "hotspot_summary_v1",
+      "required_slots": [
+        "metric_id",
+        "product_id",
+        "province_codes[1]",
+        "date_from",
+        "date_to"
+      ],
+      "forbidden_slots": [
+        "direction",
+        "ranking_selection",
+        "top_n"
+      ],
+      "result_semantics": "One selected province total over available coverage."
+    },
+    {
+      "id": "hotspot_trend_v1",
+      "required_slots": [
+        "metric_id",
+        "product_id",
+        "province_codes[1]",
+        "date_from",
+        "date_to"
+      ],
+      "forbidden_slots": [
+        "direction",
+        "ranking_selection",
+        "top_n"
+      ],
+      "result_semantics": "UTC calendar-month detection series for one province."
+    },
+    {
+      "id": "hotspot_multi_province_summary_v1",
+      "required_slots": [
+        "metric_id",
+        "product_id",
+        "province_codes[2..38]",
+        "date_from",
+        "date_to"
+      ],
+      "forbidden_slots": [
+        "direction",
+        "ranking_selection",
+        "top_n"
+      ],
+      "result_semantics": "Ordered selected rows, exact row sum, and optional typed comparison."
+    },
+    {
+      "id": "hotspot_province_ranking_v1",
+      "required_slots": [
+        "metric_id",
+        "product_id",
+        "date_from",
+        "date_to",
+        "direction",
+        "ranking_selection"
+      ],
+      "forbidden_slots": [
+        "selected_province_total"
+      ],
+      "result_semantics": "Dense ranking across all 38 canonical provinces."
+    }
+  ],
+  "ranking": {
+    "directions": [
+      "highest",
+      "lowest"
+    ],
+    "selection_kinds": [
+      "top_n",
+      "ordinal",
+      "rank_lookup",
+      "all",
+      "zero_count"
+    ],
+    "top_n_bounds": {
+      "minimum": 1,
+      "maximum": 38
+    },
+    "tie_policy": "dense_rank_include_cutoff_ties",
+    "tie_order": "canonical_order ascending",
+    "zero_count_rule": "Covered zero-count provinces participate; unavailable periods do not fabricate zero rows."
+  },
+  "safe_retrieval_filter_fields": [
+    {
+      "field": "metric_id",
+      "type": "enum",
+      "cardinality": 1,
+      "allowed_values": [
+        "satellite_hotspot_detections"
+      ],
+      "missing": "reject"
+    },
+    {
+      "field": "product_id",
+      "type": "enum",
+      "cardinality": 1,
+      "allowed_values": [
+        "VNP14IMG.002_SNPP_FIRMS_SP"
+      ],
+      "missing": "reject"
+    },
+    {
+      "field": "province_codes",
+      "type": "canonical_code_array",
+      "cardinality": 38,
+      "allowed_values": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "51",
+        "52",
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "81",
+        "82",
+        "91",
+        "92",
+        "93",
+        "94",
+        "95",
+        "96"
+      ],
+      "missing": "operation_specific"
+    },
+    {
+      "field": "date_from",
+      "type": "date",
+      "cardinality": 365,
+      "allowed_values": "2023 inclusive",
+      "missing": "clarify"
+    },
+    {
+      "field": "date_to",
+      "type": "date",
+      "cardinality": 365,
+      "allowed_values": "2023 inclusive",
+      "missing": "clarify"
+    },
+    {
+      "field": "direction",
+      "type": "enum",
+      "cardinality": 2,
+      "allowed_values": [
+        "highest",
+        "lowest"
+      ],
+      "missing": "operation_specific"
+    },
+    {
+      "field": "ranking_selection",
+      "type": "enum",
+      "cardinality": 5,
+      "allowed_values": [
+        "top_n",
+        "ordinal",
+        "rank_lookup",
+        "all",
+        "zero_count"
+      ],
+      "missing": "operation_specific"
+    }
+  ],
+  "deprecations": [],
+  "provenance": {
+    "data_contract": "data/contracts/hotspot_data_contract_v1.0.0.md",
+    "province_crosswalk": "data/provenance/d03b_reusable_boundary.json",
+    "api_contract": "docs/API_CONTRACT.md#10-a03-optional-province-analytics-v120-proposal",
+    "source_snapshot_sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a"
+  }
+}

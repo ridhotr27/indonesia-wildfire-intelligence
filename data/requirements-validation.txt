@@ -1,0 +1,2 @@
+# Optional reproducible topology validation for D03B.
+shapely>=2.1,<3

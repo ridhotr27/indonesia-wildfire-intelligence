@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "calibration_id": "lir07-all-minilm-development-v2.0.0",
+  "taxonomy_version": "wildfire-intents-v1",
+  "embedding_name": "ollama:all-minilm",
+  "corpus_version": "lir01-intent-routing-corpus-v1.0.0",
+  "corpus_hash": "148118c06de8cb9e007bc1767d1fc84a900c56d8cb90c9644fdb91da50ed8102",
+  "thresholds": {
+    "single_province_count": {
+      "score": 0.85,
+      "margin": 0.02,
+      "agreement": 0.2
+    },
+    "multi_province_summary": {
+      "score": 0.95,
+      "margin": 0.15,
+      "agreement": 1.0
+    },
+    "province_comparison": {
+      "score": 0.95,
+      "margin": 0.15,
+      "agreement": 1.0
+    },
+    "province_ranking": {
+      "score": 0.85,
+      "margin": 0.1,
+      "agreement": 0.6
+    },
+    "monthly_trend": {
+      "score": 0.85,
+      "margin": 0.02,
+      "agreement": 0.4
+    },
+    "map_locations": {
+      "score": 0.95,
+      "margin": 0.15,
+      "agreement": 1.0
+    },
+    "documentation_semantics": {
+      "score": 0.95,
+      "margin": 0.15,
+      "agreement": 1.0
+    },
+    "combined_analytics_documentation": {
+      "score": 0.9,
+      "margin": 0.15,
+      "agreement": 1.0
+    }
+  },
+  "measured_at": "2026-11-17T14:28:15.921104Z"
+}

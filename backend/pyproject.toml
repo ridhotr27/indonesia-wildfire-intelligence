@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "indonesia-wildfire-backend"
+version = "0.1.0"
+description = "FastAPI backend foundation for Indonesia Wildfire Intelligence"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1.0",
+  "httpx>=0.27,<1.0",
+  "langgraph>=0.2,<1.0",
+  "pydantic>=2.9,<3.0",
+  "pydantic-settings>=2.5,<3.0",
+  "uvicorn[standard]>=0.30,<1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9.0",
+  "pytest-asyncio>=0.24,<1.0",
+  "ruff>=0.7,<1.0",
+]
+rag = [
+  "langchain-core>=1.2,<2.0",
+  "langchain-qdrant>=1.1,<2.0",
+  "langchain-text-splitters>=1.1,<2.0",
+  "pypdf>=6.4,<7.0",
+  "qdrant-client>=1.16,<2.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wildfire_api"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

@@ -1,0 +1,193 @@
+{
+  "categorical_counts": {
+    "confidence": {
+      "h": 4912,
+      "l": 4792,
+      "n": 64901
+    },
+    "daynight": {
+      "D": 55714,
+      "N": 18891
+    },
+    "instrument": {
+      "VIIRS": 74605
+    },
+    "satellite": {
+      "N": 74605
+    },
+    "version": {
+      "2.0NRT": 69507,
+      "2.0URT": 5098
+    }
+  },
+  "columns": [
+    "latitude",
+    "longitude",
+    "bright_ti4",
+    "scan",
+    "track",
+    "acq_date",
+    "acq_time",
+    "satellite",
+    "instrument",
+    "confidence",
+    "version",
+    "bright_ti5",
+    "frp",
+    "daynight"
+  ],
+  "coverage": {
+    "indonesia_screening_bbox": {
+      "categorical_counts": {
+        "confidence": {
+          "h": 3,
+          "l": 13,
+          "n": 160
+        },
+        "daynight": {
+          "D": 176
+        },
+        "instrument": {
+          "VIIRS": 176
+        },
+        "satellite": {
+          "N": 176
+        },
+        "version": {
+          "2.0NRT": 176
+        }
+      },
+      "east": 141.0,
+      "north": 6.0,
+      "rows": 176,
+      "south": -11.0,
+      "timestamp_utc_max": "2023-07-12T07:44:00+00:00",
+      "timestamp_utc_min": "2023-07-12T04:17:00+00:00",
+      "warning": "Coarse rectangular screen only; includes non-Indonesian areas and is not a boundary join.",
+      "west": 95.0
+    },
+    "latitude_max": 71.09212,
+    "latitude_min": -77.52732,
+    "longitude_max": 178.79655,
+    "longitude_min": -164.05351,
+    "timestamp_utc_max": "2023-07-12T19:50:00+00:00",
+    "timestamp_utc_min": "2023-07-12T00:03:00+00:00"
+  },
+  "file": {
+    "bytes": 6077404,
+    "path": "data/raw/nasa_firms/sample_viirs_snpp_2023-07-12.csv",
+    "sha256": "edf79f62b35ba4485d7c85e01be5f6f61d30ab7b4addcf2eea00e2581982c30f"
+  },
+  "numeric_ranges": {
+    "bright_ti4": {
+      "max": 367.0,
+      "min": 208.0
+    },
+    "bright_ti5": {
+      "max": 385.31,
+      "min": 239.21
+    },
+    "frp": {
+      "max": 584.09,
+      "min": 0.0
+    },
+    "latitude": {
+      "max": 71.09212,
+      "min": -77.52732
+    },
+    "longitude": {
+      "max": 178.79655,
+      "min": -164.05351
+    },
+    "scan": {
+      "max": 0.8,
+      "min": 0.3
+    },
+    "track": {
+      "max": 0.8,
+      "min": 0.36
+    }
+  },
+  "quality": {
+    "blank_counts": {
+      "acq_date": 0,
+      "acq_time": 0,
+      "bright_ti4": 0,
+      "bright_ti5": 0,
+      "confidence": 0,
+      "daynight": 0,
+      "frp": 0,
+      "instrument": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "satellite": 0,
+      "scan": 0,
+      "track": 0,
+      "version": 0
+    },
+    "exact_duplicate_excess_rows": 6,
+    "exact_duplicate_excess_rows_by_version": {
+      "2.0URT": 6
+    },
+    "exact_duplicate_groups": 6,
+    "identity_duplicate_excess_rows": 6,
+    "identity_duplicate_groups": 6,
+    "identity_key": [
+      "latitude",
+      "longitude",
+      "acq_date",
+      "acq_time",
+      "satellite",
+      "instrument"
+    ],
+    "invalid_coordinate_count": 0,
+    "invalid_date_count": 0,
+    "invalid_numeric_counts": {
+      "bright_ti4": 0,
+      "bright_ti5": 0,
+      "frp": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "scan": 0,
+      "track": 0
+    },
+    "invalid_time_count": 0,
+    "invalid_timestamp_count": 0,
+    "negative_frp_count": 0,
+    "nonfinite_numeric_counts": {
+      "bright_ti4": 0,
+      "bright_ti5": 0,
+      "frp": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "scan": 0,
+      "track": 0
+    },
+    "nonpositive_scan_count": 0,
+    "nonpositive_track_count": 0,
+    "zero_frp_by_version": {
+      "2.0URT": 17
+    },
+    "zero_frp_count": 17
+  },
+  "semantic_types": {
+    "acq_date": "UTC date, YYYY-MM-DD",
+    "acq_time": "UTC time, integer encoded HHMM; zero-pad to four digits",
+    "bright_ti4": "kelvin, float",
+    "bright_ti5": "kelvin, float",
+    "confidence": "categorical string",
+    "daynight": "categorical string",
+    "frp": "megawatts, float",
+    "instrument": "categorical string",
+    "latitude": "decimal degrees, float",
+    "longitude": "decimal degrees, float",
+    "satellite": "categorical string",
+    "scan": "kilometres, float",
+    "track": "kilometres, float",
+    "version": "categorical string"
+  },
+  "shape": {
+    "columns": 14,
+    "rows": 74605
+  }
+}

@@ -1,0 +1,12 @@
+SELECT 'published_batches' AS check_name, count() AS actual FROM wildfire.analytics_ingestion_batches_v1;
+SELECT 'observations' AS check_name, count() AS actual FROM wildfire.analytics_hotspot_observations_v1;
+SELECT 'coverage_days' AS check_name, count() AS actual FROM wildfire.analytics_daily_coverage_v1;
+SELECT 'provinces' AS check_name, count() AS actual FROM wildfire.analytics_provinces_v1;
+SELECT coverage_status, count(), sum(observation_count) FROM wildfire.analytics_daily_coverage_v1 GROUP BY coverage_status ORDER BY coverage_status;
+SELECT geo_assignment_status, count() FROM wildfire.analytics_hotspot_observations_v1 GROUP BY geo_assignment_status ORDER BY geo_assignment_status;
+SELECT date_utc, coverage_status, observation_count, evidence_url FROM wildfire.analytics_daily_coverage_v1 WHERE date_utc IN ('2023-07-26', '2023-07-27') ORDER BY date_utc;
+SELECT count() AS gap_observations FROM wildfire.analytics_hotspot_observations_v1 WHERE toDate(acquired_at_utc) IN ('2023-07-26', '2023-07-27');
+SELECT count() AS invalid_null_geography FROM wildfire.analytics_hotspot_observations_v1 WHERE geo_assignment_status != 'assigned' AND (province_code IS NOT NULL OR province_name IS NOT NULL OR boundary_source_id IS NOT NULL);
+SELECT 'unpublished_observation_rows' AS check_name, count() AS actual FROM wildfire.de_hotspot_observations_v1 o LEFT JOIN wildfire.de_ingestion_batches_v1 b USING (ingestion_batch_id) WHERE b.ingestion_batch_id = '';
+SELECT 'unpublished_coverage_rows' AS check_name, count() AS actual FROM wildfire.de_daily_coverage_v1 c LEFT JOIN wildfire.de_ingestion_batches_v1 b ON c.load_batch_id = b.ingestion_batch_id WHERE b.ingestion_batch_id = '';
+SELECT 'unpublished_province_rows' AS check_name, count() AS actual FROM wildfire.de_provinces_v1 p LEFT JOIN wildfire.de_ingestion_batches_v1 b ON p.load_batch_id = b.ingestion_batch_id WHERE b.ingestion_batch_id = '';

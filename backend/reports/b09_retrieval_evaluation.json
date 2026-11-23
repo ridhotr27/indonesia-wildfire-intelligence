@@ -1,0 +1,280 @@
+{
+  "benchmark_version": "1.0.0",
+  "chunk_count": 202,
+  "comparisons": [
+    {
+      "latency_ms_p50": 1.6595490014879033,
+      "latency_ms_p95": 2.7828389866044745,
+      "misses": [
+        "R08"
+      ],
+      "name": "local-hashing-v1",
+      "question_count": 10,
+      "recall_at_5": 0.9,
+      "results": [
+        {
+          "id": "R01",
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-faq",
+            "firms-faq",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "viirs-c2-active-fire-guide",
+            "firms-active-fire-attributes"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "firms-overview",
+            "firms-faq",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "viirs-c2-active-fire-guide",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": false
+        },
+        {
+          "id": "R07",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide",
+            "viirs-c2-active-fire-guide",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": false,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": false
+        },
+        {
+          "id": "R10",
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 0.8
+    },
+    {
+      "latency_ms_p50": 10.05487100337632,
+      "latency_ms_p95": 12.167163993581198,
+      "misses": [
+        "R08"
+      ],
+      "name": "ollama:all-minilm",
+      "question_count": 10,
+      "recall_at_5": 0.9,
+      "results": [
+        {
+          "id": "R01",
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-overview",
+            "firms-faq",
+            "firms-faq",
+            "firms-active-fire-attributes"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R02",
+          "observed_document_ids": [
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R03",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-overview",
+            "firms-faq",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R04",
+          "observed_document_ids": [
+            "firms-overview",
+            "firms-faq",
+            "firms-faq",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R05",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "viirs-c2-active-fire-guide",
+            "viirs-c2-active-fire-guide",
+            "firms-overview"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R06",
+          "observed_document_ids": [
+            "viirs-c2-active-fire-guide",
+            "firms-faq",
+            "firms-faq",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R07",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "firms-overview",
+            "firms-overview",
+            "viirs-c2-active-fire-guide"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R08",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "firms-overview",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": false,
+          "support_terms_present": true
+        },
+        {
+          "id": "R09",
+          "observed_document_ids": [
+            "firms-active-fire-attributes",
+            "firms-faq",
+            "firms-overview",
+            "firms-active-fire-attributes",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        },
+        {
+          "id": "R10",
+          "observed_document_ids": [
+            "firms-faq",
+            "firms-faq",
+            "firms-active-fire-attributes",
+            "firms-overview",
+            "firms-faq"
+          ],
+          "recalled_at_5": true,
+          "support_terms_present": true
+        }
+      ],
+      "support_term_rate": 1.0
+    }
+  ],
+  "executed_at": "2026-11-06T12:47:22+00:00",
+  "limitations": [
+    "Latency is a single local-machine run, not a production capacity result.",
+    "Support-term presence is not a manual citation-claim audit."
+  ],
+  "source_count": 4,
+  "target_recall_at_5": 0.85,
+  "ticket": "B09"
+}

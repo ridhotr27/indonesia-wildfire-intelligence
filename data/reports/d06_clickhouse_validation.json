@@ -1,0 +1,76 @@
+{
+  "ticket": "D06",
+  "technical_status": "in_review_pending_tech_lead_approval",
+  "executed_at_utc": "2026-10-25T19:59:22Z",
+  "runtime": {
+    "clickhouse_version": "25.8.5.17",
+    "mode": "disposable local ClickHouse; no public deployment"
+  },
+  "full_d05_batch": {
+    "ingestion_batch_id": "firms-v1-2dba3b772b5a3a2cc0fe-d05-ingestion-v1",
+    "source_sha256": "2dba3b772b5a3a2cc0feed128af74637810021dd41dc34d584cb99b40411665a",
+    "load_seconds": 9.013,
+    "idempotent_rerun_seconds": 1.205,
+    "observations": 253388,
+    "coverage_days": 365,
+    "provinces": 38,
+    "known_gap_null_days": 2,
+    "unassigned": 796,
+    "multiple_match": 10,
+    "riau_september_2023": 687,
+    "monthly_country_counts": [1781, 1868, 2602, 3808, 5185, 7407, 13684, 42818, 71726, 78784, 19165, 4560]
+  },
+  "representative_local_queries": {
+    "measurement_note": "Single cold clickhouse-local process startup per query is included; these are observations, not targets.",
+    "coverage_count_ms": 690.78,
+    "province_count_ms": 654.461,
+    "monthly_country_aggregate_ms": 707.581,
+    "bounded_map_501_ms": 672.871
+  },
+  "permissions": {
+    "published_view_select": "allowed",
+    "raw_table_select": "ACCESS_DENIED",
+    "raw_table_insert": "ACCESS_DENIED",
+    "create_table": "ACCESS_DENIED",
+    "view_security": "SQL SECURITY DEFINER"
+  },
+  "http_loader": {
+    "synthetic_fixture_first_load": "loaded",
+    "synthetic_fixture_second_load": "already_loaded",
+    "observations": 2,
+    "known_gap_null_days": 2
+  },
+  "b02_exact_query_compatibility": {
+    "monthly_riau_september_detection_count": 687,
+    "monthly_query_engine_elapsed_ms": 23.422,
+    "bounded_observation_query_rows_requested": 2,
+    "bounded_observation_query_engine_elapsed_ms": 31.463
+  },
+  "tests": {
+    "focused_d06": "10 passed in 27.679s",
+    "full_de_suite_final": "51 passed in 40.875s",
+    "d04_validator": "passed",
+    "python_compile": "passed"
+  },
+  "independent_review_fix": {
+    "finding": "contract-null coverage gaps and province rows could be visible before batch commit",
+    "physical_fix": "non-null internal load_batch_id on coverage and province rows; projected out of D04 views",
+    "precommit_public_counts": {
+      "analytics_hotspot_observations_v1": 0,
+      "analytics_daily_coverage_v1": 0,
+      "analytics_provinces_v1": 0,
+      "analytics_ingestion_batches_v1": 0
+    },
+    "partial_retry": "failed closed pending explicit operator cleanup",
+    "clean_reload_coverage_rows": 365,
+    "clean_reload_unique_coverage_dates": 365,
+    "internal_identity_exposed_by_public_views": false,
+    "same_host_single_writer": "fail-fast POSIX lock; contention and release-on-success/failure tested",
+    "distributed_serialization": "not claimed; multi-host writers prohibited"
+  },
+  "limitations": [
+    "Timings are local disposable-instance measurements and are not production latency claims.",
+    "No persistent or public ClickHouse service was deployed.",
+    "I01 must validate backend parity using its deployed reader credentials and configuration."
+  ]
+}

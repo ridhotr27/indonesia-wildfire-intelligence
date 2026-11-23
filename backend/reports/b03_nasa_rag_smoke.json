@@ -1,0 +1,52 @@
+{
+  "ticket": "B03",
+  "run_at_utc": "2026-10-21T13:37:09+00:00",
+  "mode": "in_memory_qdrant_with_deterministic_local_hashing_embeddings",
+  "sources": [
+    {
+      "document_id": "firms-active-fire-attributes",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms/active-fire-data-attributes-modis-viirs",
+      "bytes": 144456,
+      "content_hash": "2d8102f93706824b0e5f375bd30ff86e65e94a40b9b9cfe88a67ed1c5e1657bc"
+    },
+    {
+      "document_id": "firms-faq",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms/faq",
+      "bytes": 521299,
+      "content_hash": "5367e19e09e7d3f2dbe6f726579ca9ac4042941ced7527a352dfafe58664a0de"
+    },
+    {
+      "document_id": "firms-overview",
+      "url": "https://www.earthdata.nasa.gov/data/tools/firms",
+      "bytes": 241319,
+      "content_hash": "77637a799387b5dd3b7c06abd7a1aa43eeba797ad9350630e44833395dcf3935"
+    },
+    {
+      "document_id": "viirs-c2-active-fire-guide",
+      "url": "https://www.earthdata.nasa.gov/s3fs-public/2024-07/VIIRS_C2_AF-375m_User_Guide_1.0.pdf",
+      "bytes": 1598295,
+      "content_hash": "12d288191b6ad19a6f8b5f948b4412e4d95dbef9b8404404c7e8e311de7ad663"
+    }
+  ],
+  "chunks": 201,
+  "smoke_queries": [
+    {
+      "query": "What does fire radiative power mean?",
+      "top_document_id": "firms-active-fire-attributes",
+      "top_chunk_id": "c8890d86bdbd80c8f9a3f18f150190036946f02b78fd8210b62da47096b57e9b",
+      "top_chunk_contains_fire_radiative_power": true
+    },
+    {
+      "query": "What are VIIRS confidence classes?",
+      "top_document_id": "firms-faq",
+      "top_chunk_id": "fd472c59fc7552f65f0f2d28bed4803d148ffd3d0b74abd374d06942c32038db",
+      "top_chunk_contains_confidence_guidance": true
+    }
+  ],
+  "limitations": [
+    "This is a smoke test, not a Recall@5 or release-quality retrieval metric.",
+    "Hashing embeddings are deterministic local validation components, not an approved production embedding model.",
+    "Retrieved text is untrusted evidence and was not supplied to an LLM or executed.",
+    "B03 is not connected to the chat endpoint; that integration belongs to B04 after its dependencies are approved."
+  ]
+}
