@@ -13,9 +13,11 @@ Thumbs.db
 **/.env
 **/.env.*
 !.env.example
+!.env.production.example
 !.env.sample
 !.env.template
 !**/.env.example
+!**/.env.production.example
 !**/.env.sample
 !**/.env.template
 *.pem

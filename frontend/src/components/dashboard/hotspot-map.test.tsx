@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { mockHotspots } from "@/lib/api/mock-data";
 import { HotspotMap } from "./hotspot-map";
@@ -42,7 +42,7 @@ beforeEach(() => {
   addSource.mockClear();
   addLayer.mockClear();
   fitBounds.mockClear();
-  setData.mockClear();
+  setData.mockReset();
   setWorkerUrl.mockClear();
   markerSetLngLat.mockClear();
   markerAddTo.mockClear();
@@ -92,5 +92,25 @@ describe("HotspotMap", () => {
 
     act(() => handlers.get("error")?.({ error: { message: "GeoJSON source failed" }, sourceId: "hotspots" }));
     expect(screen.getByText(/hotspot markers could not be loaded/i)).toBeInTheDocument();
+  });
+
+  it("clears a data update error after a later successful update", async () => {
+    const initial = structuredClone(mockHotspots);
+    const failing = structuredClone(mockHotspots);
+    failing.metadata.returned = 1;
+    const recovered = structuredClone(mockHotspots);
+    recovered.metadata.returned = 2;
+    const view = render(<HotspotMap data={initial} dataStatus="verified" />);
+    act(() => handlers.get("load")?.());
+
+    setData.mockImplementationOnce(() => { throw new Error("GeoJSON update failed"); });
+    view.rerender(<HotspotMap data={failing} dataStatus="verified" />);
+    expect(await screen.findByText(/hotspot markers could not be loaded/i)).toBeInTheDocument();
+
+    view.rerender(<HotspotMap data={recovered} dataStatus="verified" />);
+    await waitFor(() => {
+      expect(screen.queryByText(/hotspot markers could not be loaded/i)).not.toBeInTheDocument();
+    });
+    expect(setData).toHaveBeenLastCalledWith(recovered);
   });
 });

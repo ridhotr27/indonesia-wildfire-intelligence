@@ -1,0 +1,13 @@
+.git
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules
+.next
+coverage
+*.tsbuildinfo
+npm-debug.log*
+reports
+src/**/*.test.ts
+src/**/*.test.tsx

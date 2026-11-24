@@ -1,0 +1,45 @@
+{
+	email {$ACME_EMAIL}
+	admin off
+}
+
+{$WILDFIRE_DOMAIN} {
+	encode zstd gzip
+
+	request_body {
+		max_size 1MB
+	}
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	@api path /api/v1/* /docs* /openapi.json
+	handle @api {
+		reverse_proxy wildfire-backend:8000 {
+			transport http {
+				dial_timeout 5s
+				response_header_timeout 125s
+			}
+		}
+	}
+
+	handle {
+		reverse_proxy wildfire-frontend:3000 {
+			transport http {
+				dial_timeout 5s
+				response_header_timeout 125s
+			}
+		}
+	}
+
+	log {
+		output stdout
+		format json
+	}
+}

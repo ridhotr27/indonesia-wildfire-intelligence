@@ -105,14 +105,21 @@ export function HotspotMap({ data, dataStatus }: { data: HotspotFeatureCollectio
     latestDataRef.current = data;
     const source = mapRef.current?.getSource("hotspots") as GeoJSONSource | undefined;
     if (!source || !mapRef.current) return;
+    let active = true;
+    const reportHotspotError = (value: boolean) => {
+      queueMicrotask(() => {
+        if (active) setHotspotError(value);
+      });
+    };
     try {
       source.setData(data);
       markersRef.current = renderDomMarkers(mapRef.current, data, markersRef.current);
       fitToHotspots(mapRef.current, data);
-      setHotspotError(false);
+      reportHotspotError(false);
     } catch {
-      setHotspotError(true);
+      reportHotspotError(true);
     }
+    return () => { active = false; };
   }, [data]);
 
   return (

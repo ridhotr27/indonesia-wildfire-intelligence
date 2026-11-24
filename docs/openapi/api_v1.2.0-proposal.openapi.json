@@ -113,13 +113,22 @@
             "enum": [
               "hotspot_summary_v1",
               "hotspot_trend_v1",
-              "hotspot_map_v1"
+              "hotspot_map_v1",
+              "hotspot_year_comparison_v1"
             ],
             "title": "Operation Id",
             "type": "string"
           },
           "parameters": {
-            "$ref": "#/components/schemas/AnalyticsParameters"
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/AnalyticsParameters"
+              },
+              {
+                "$ref": "#/components/schemas/YearComparisonParameters"
+              }
+            ],
+            "title": "Parameters"
           },
           "read_only": {
             "const": true,
@@ -404,6 +413,16 @@
           },
           "usage": {
             "$ref": "#/components/schemas/Usage"
+          },
+          "year_comparison": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/YearComparisonResponse"
+              },
+              {
+                "type": "null"
+              }
+            ]
           }
         },
         "required": [
@@ -2355,6 +2374,193 @@
         "title": "VectorRetrievalDetails",
         "type": "object"
       },
+      "YearComparisonParameters": {
+        "additionalProperties": false,
+        "properties": {
+          "province_code": {
+            "maxLength": 50,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Province Code",
+            "type": "string"
+          },
+          "years": {
+            "items": {
+              "enum": [
+                2023,
+                2024,
+                2025
+              ],
+              "type": "integer"
+            },
+            "maxItems": 3,
+            "minItems": 2,
+            "title": "Years",
+            "type": "array"
+          }
+        },
+        "required": [
+          "province_code",
+          "years"
+        ],
+        "title": "YearComparisonParameters",
+        "type": "object"
+      },
+      "YearComparisonPoint": {
+        "additionalProperties": false,
+        "properties": {
+          "count": {
+            "anyOf": [
+              {
+                "minimum": 0.0,
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Count"
+          },
+          "coverage_issues": {
+            "items": {
+              "$ref": "#/components/schemas/CoverageIssue"
+            },
+            "title": "Coverage Issues",
+            "type": "array"
+          },
+          "is_complete": {
+            "title": "Is Complete",
+            "type": "boolean"
+          },
+          "year": {
+            "enum": [
+              2023,
+              2024,
+              2025
+            ],
+            "title": "Year",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "year",
+          "is_complete",
+          "coverage_issues"
+        ],
+        "title": "YearComparisonPoint",
+        "type": "object"
+      },
+      "YearComparisonRequest": {
+        "additionalProperties": false,
+        "properties": {
+          "product_id": {
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Product Id",
+            "type": "string"
+          },
+          "province_code": {
+            "maxLength": 50,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_.-]+$",
+            "title": "Province Code",
+            "type": "string"
+          },
+          "years": {
+            "items": {
+              "enum": [
+                2023,
+                2024,
+                2025
+              ],
+              "type": "integer"
+            },
+            "maxItems": 3,
+            "minItems": 2,
+            "title": "Years",
+            "type": "array"
+          }
+        },
+        "required": [
+          "product_id",
+          "province_code",
+          "years"
+        ],
+        "title": "YearComparisonRequest",
+        "type": "object"
+      },
+      "YearComparisonResponse": {
+        "additionalProperties": false,
+        "properties": {
+          "caveat": {
+            "const": "Hotspot detections are not confirmed wildfires.",
+            "title": "Caveat",
+            "type": "string"
+          },
+          "metric": {
+            "const": "satellite_hotspot_detections",
+            "title": "Metric",
+            "type": "string"
+          },
+          "operation_id": {
+            "const": "hotspot_year_comparison_v1",
+            "default": "hotspot_year_comparison_v1",
+            "title": "Operation Id",
+            "type": "string"
+          },
+          "points": {
+            "items": {
+              "$ref": "#/components/schemas/YearComparisonPoint"
+            },
+            "maxItems": 3,
+            "minItems": 2,
+            "title": "Points",
+            "type": "array"
+          },
+          "product_id": {
+            "title": "Product Id",
+            "type": "string"
+          },
+          "province_code": {
+            "title": "Province Code",
+            "type": "string"
+          },
+          "request_id": {
+            "title": "Request Id",
+            "type": "string"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SourceInfo"
+          },
+          "years": {
+            "items": {
+              "enum": [
+                2023,
+                2024,
+                2025
+              ],
+              "type": "integer"
+            },
+            "maxItems": 3,
+            "minItems": 2,
+            "title": "Years",
+            "type": "array"
+          }
+        },
+        "required": [
+          "request_id",
+          "metric",
+          "product_id",
+          "province_code",
+          "years",
+          "points",
+          "source",
+          "caveat"
+        ],
+        "title": "YearComparisonResponse",
+        "type": "object"
+      },
       "ZeroCountSelection": {
         "additionalProperties": false,
         "properties": {
@@ -2776,6 +2982,97 @@
           }
         },
         "summary": "Summary",
+        "tags": [
+          "hotspots"
+        ]
+      }
+    },
+    "/api/v1/hotspots/year-comparison": {
+      "post": {
+        "operationId": "year_comparison_api_v1_hotspots_year_comparison_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/YearComparisonRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/YearComparisonResponse"
+                }
+              }
+            },
+            "description": "Successful Response"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Invalid filter combination"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "No data or resource not found"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Malformed input"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Request quota reached"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Required dependency unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Bounded processing time exceeded"
+          }
+        },
+        "summary": "Year Comparison",
         "tags": [
           "hotspots"
         ]
