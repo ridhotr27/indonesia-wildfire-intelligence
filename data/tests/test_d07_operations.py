@@ -11,6 +11,7 @@ from typing import BinaryIO
 from unittest import mock
 
 import data.scripts.operate_pipeline_v1 as operations
+import data.scripts.ingest_firms_v1 as ingestion
 from data.scripts.load_clickhouse_v1 import (
     LoadError,
     load_batch,
@@ -31,12 +32,12 @@ from data.tests.test_d06_clickhouse import (
 )
 from data.scripts.ingest_firms_v1 import ingest
 from data.tests.test_d05_ingestion import (
-    BOUNDARY,
     BOUNDARY_PROVENANCE,
     SOURCE_URL,
     VALID_ROW,
     write_csv,
 )
+from data.tests.boundary_fixture import write_synthetic_boundary
 
 QA_SQL = Path("data/clickhouse/qa/d07_operations.sql")
 
@@ -84,14 +85,25 @@ class D07OperationsTests(unittest.TestCase):
             root = Path(temp)
             source = root / "source.csv"
             write_csv(source, [VALID_ROW])
-            manifest = ingest(
-                source_csv=source,
-                boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE,
-                output_root=root / "published",
-                source_url=SOURCE_URL,
-                retrieved_at_utc="2026-10-26T00:00:00Z",
+            boundary = root / "boundary.geojson"
+            boundary_sha = write_synthetic_boundary(boundary)
+            provenance_payload = json.loads(
+                BOUNDARY_PROVENANCE.read_text(encoding="utf-8")
             )
+            provenance_payload["artifacts"]["canonical"]["sha256"] = boundary_sha
+            provenance = root / "boundary-provenance.json"
+            provenance.write_text(json.dumps(provenance_payload), encoding="utf-8")
+            with mock.patch.object(
+                ingestion, "BOUNDARY_CANONICAL_SHA256", boundary_sha
+            ):
+                manifest = ingest(
+                    source_csv=source,
+                    boundary_geojson=boundary,
+                    boundary_provenance=provenance,
+                    output_root=root / "published",
+                    source_url=SOURCE_URL,
+                    retrieved_at_utc="2026-10-26T00:00:00Z",
+                )
             result = preflight(root / "published" / manifest["ingestion_batch_id"])
         self.assertTrue(result["safe_to_load"])
         self.assertFalse(result["database_contacted"])
