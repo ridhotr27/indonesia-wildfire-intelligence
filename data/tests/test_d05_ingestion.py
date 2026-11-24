@@ -4,6 +4,10 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
+
+import data.scripts.ingest_firms_v1 as ingestion
+from data.tests.boundary_fixture import write_synthetic_boundary
 
 from data.scripts.ingest_firms_v1 import (
     EXPECTED_HEADER,
@@ -15,7 +19,6 @@ from data.scripts.ingest_firms_v1 import (
 )
 
 
-BOUNDARY = Path("data/derived/reference/idn_adm1_osm_2026-10-10b_canonical.geojson")
 BOUNDARY_PROVENANCE = Path("data/provenance/d03b_reusable_boundary.json")
 SOURCE_URL = "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp_2023_Indonesia.csv"
 VALID_ROW = [
@@ -39,12 +42,23 @@ class D05IngestionTest(unittest.TestCase):
     def setUp(self) -> None:
         self.temporary = tempfile.TemporaryDirectory()
         self.root = Path(self.temporary.name)
+        self.boundary = self.root / "boundary.geojson"
+        boundary_sha = write_synthetic_boundary(self.boundary)
+        provenance = json.loads(BOUNDARY_PROVENANCE.read_text(encoding="utf-8"))
+        provenance["artifacts"]["canonical"]["sha256"] = boundary_sha
+        self.provenance = self.root / "boundary-provenance.json"
+        self.provenance.write_text(json.dumps(provenance), encoding="utf-8")
+        self.checksum_patch = mock.patch.object(
+            ingestion, "BOUNDARY_CANONICAL_SHA256", boundary_sha
+        )
+        self.checksum_patch.start()
 
     def tearDown(self) -> None:
+        self.checksum_patch.stop()
         self.temporary.cleanup()
 
     def run_ingest(
-        self, rows: list[list[str]], *, provenance: Path = BOUNDARY_PROVENANCE,
+        self, rows: list[list[str]], *, provenance: Path | None = None,
         output_name: str = "published", source_year: int = 2023,
         contract_version: str = "1.0.0",
     ) -> tuple[dict, Path]:
@@ -52,8 +66,8 @@ class D05IngestionTest(unittest.TestCase):
         write_csv(source, rows)
         manifest = ingest(
             source_csv=source,
-            boundary_geojson=BOUNDARY,
-            boundary_provenance=provenance,
+            boundary_geojson=self.boundary,
+            boundary_provenance=provenance or self.provenance,
             output_root=self.root / output_name,
             source_url=SOURCE_URL.replace("_2023_", f"_{source_year}_"),
             retrieved_at_utc="2026-10-21T05:00:00Z",
@@ -149,8 +163,8 @@ class D05IngestionTest(unittest.TestCase):
         source = self.root / "source.csv"
         second = ingest(
             source_csv=source,
-            boundary_geojson=BOUNDARY,
-            boundary_provenance=BOUNDARY_PROVENANCE,
+            boundary_geojson=self.boundary,
+            boundary_provenance=self.provenance,
             output_root=self.root / "published",
             source_url=SOURCE_URL,
             retrieved_at_utc="2026-10-21T05:00:00Z",
@@ -160,8 +174,8 @@ class D05IngestionTest(unittest.TestCase):
         (directory / "observations.ndjson").write_text("tampered\n", encoding="utf-8")
         with self.assertRaisesRegex(IngestionError, "failed verification"):
             ingest(
-                source_csv=source, boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE,
+                source_csv=source, boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance,
                 output_root=self.root / "published", source_url=SOURCE_URL,
                 retrieved_at_utc="2026-10-21T05:00:00Z",
             )
@@ -175,8 +189,8 @@ class D05IngestionTest(unittest.TestCase):
         )
         with self.assertRaisesRegex(IngestionError, "manifest identity"):
             ingest(
-                source_csv=self.root / "source.csv", boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE,
+                source_csv=self.root / "source.csv", boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance,
                 output_root=self.root / "published", source_url=SOURCE_URL,
                 retrieved_at_utc="2026-10-21T05:00:00Z",
             )
@@ -189,8 +203,8 @@ class D05IngestionTest(unittest.TestCase):
         output = self.root / "published"
         with self.assertRaisesRegex(IngestionError, "row 2: latitude must be numeric"):
             ingest(
-                source_csv=source, boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE, output_root=output,
+                source_csv=source, boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance, output_root=output,
                 source_url=SOURCE_URL, retrieved_at_utc="2026-10-21T05:00:00Z",
             )
         self.assertEqual(list(output.iterdir()), [])
@@ -203,14 +217,14 @@ class D05IngestionTest(unittest.TestCase):
         output = self.root / "published"
         with self.assertRaisesRegex(IngestionError, "known satellite gap date"):
             ingest(
-                source_csv=source, boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE, output_root=output,
+                source_csv=source, boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance, output_root=output,
                 source_url=SOURCE_URL, retrieved_at_utc="2026-10-21T05:00:00Z",
             )
         self.assertEqual(list(output.iterdir()), [])
 
     def test_tampered_boundary_provenance_is_rejected_even_when_geometry_is_unchanged(self) -> None:
-        approved = json.loads(BOUNDARY_PROVENANCE.read_text(encoding="utf-8"))
+        approved = json.loads(self.provenance.read_text(encoding="utf-8"))
         cases = []
 
         changed_name = copy.deepcopy(approved)
@@ -244,7 +258,7 @@ class D05IngestionTest(unittest.TestCase):
 
     def test_idempotent_rerun_still_rejects_tampered_boundary_and_request_identity(self) -> None:
         manifest, _directory = self.run_ingest([VALID_ROW])
-        approved = json.loads(BOUNDARY_PROVENANCE.read_text(encoding="utf-8"))
+        approved = json.loads(self.provenance.read_text(encoding="utf-8"))
 
         changed_name = copy.deepcopy(approved)
         changed_name["crosswalk"][0]["canonical_name"] = "Not Aceh"
@@ -253,7 +267,7 @@ class D05IngestionTest(unittest.TestCase):
         with self.assertRaisesRegex(IngestionError, "crosswalk"):
             self.run_ingest([VALID_ROW], provenance=changed_provenance)
 
-        geometry = json.loads(BOUNDARY.read_text(encoding="utf-8"))
+        geometry = json.loads(self.boundary.read_text(encoding="utf-8"))
         position = geometry["features"][0]["geometry"]["coordinates"][0][0][0]
         position[0] += 0.000001
         changed_geometry = self.root / "changed-boundary.geojson"
@@ -262,15 +276,15 @@ class D05IngestionTest(unittest.TestCase):
             ingest(
                 source_csv=self.root / "source.csv",
                 boundary_geojson=changed_geometry,
-                boundary_provenance=BOUNDARY_PROVENANCE,
+                boundary_provenance=self.provenance,
                 output_root=self.root / "published", source_url=SOURCE_URL,
                 retrieved_at_utc="2026-10-21T05:00:00Z",
             )
 
         with self.assertRaisesRegex(IngestionError, "request identity"):
             ingest(
-                source_csv=self.root / "source.csv", boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE,
+                source_csv=self.root / "source.csv", boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance,
                 output_root=self.root / "published",
                 source_url="https://example.test/different-source.csv",
                 retrieved_at_utc="2026-10-21T05:00:00Z",
@@ -287,8 +301,8 @@ class D05IngestionTest(unittest.TestCase):
         write_csv(source, [VALID_ROW])
         with self.assertRaisesRegex(IngestionError, "query parameters"):
             ingest(
-                source_csv=source, boundary_geojson=BOUNDARY,
-                boundary_provenance=BOUNDARY_PROVENANCE,
+                source_csv=source, boundary_geojson=self.boundary,
+                boundary_provenance=self.provenance,
                 output_root=self.root / "other",
                 source_url=f"{SOURCE_URL}?MAP_KEY=secret",
                 retrieved_at_utc="2026-10-21T05:00:00Z",

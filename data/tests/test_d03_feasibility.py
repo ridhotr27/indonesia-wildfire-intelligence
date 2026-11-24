@@ -2,7 +2,10 @@ import io
 import json
 from datetime import date
 from pathlib import Path
+import tempfile
 import unittest
+
+from data.tests.boundary_fixture import write_synthetic_boundary
 
 from data.scripts.review_big_boundary_points import (
     build_point_query_url,
@@ -25,9 +28,6 @@ D03_BOUNDARY_REVIEW = Path("data/reports/d03_big_full_resolution_point_review.js
 D03_SCHEMA = Path(
     "data/contracts/hotspot_observation_contract_v0.1.0-proposal.schema.json"
 )
-BOUNDARIES = Path("data/raw/reference/idn_adm1_big_2026_generalized.geojson")
-
-
 class D03FeasibilityTest(unittest.TestCase):
     def test_date_validation_distinguishes_gap_from_zero(self) -> None:
         self.assertEqual(
@@ -43,7 +43,10 @@ class D03FeasibilityTest(unittest.TestCase):
         )
 
     def test_scanline_index_matches_reference_geometry_function(self) -> None:
-        boundaries = {item.code: item for item in load_boundaries(BOUNDARIES)}
+        with tempfile.TemporaryDirectory() as temporary:
+            fixture = Path(temporary) / "boundary.geojson"
+            write_synthetic_boundary(fixture)
+            boundaries = {item.code: item for item in load_boundaries(fixture)}
         cases = {
             "14": [(101.45, 0.5), (105.0, 0.5), (100.0, -5.0)],
             "62": [(113.9, -2.2), (117.0, -2.2), (110.0, -8.0)],
