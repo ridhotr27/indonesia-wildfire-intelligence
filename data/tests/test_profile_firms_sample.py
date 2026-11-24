@@ -8,6 +8,7 @@ SAMPLE = Path("data/raw/nasa_firms/sample_viirs_snpp_2023-07-12.csv")
 
 
 class FirmsSampleProfileTest(unittest.TestCase):
+    @unittest.skipUnless(SAMPLE.is_file(), "pinned local FIRMS sample is unavailable")
     def test_pinned_sample_profile_matches_recorded_evidence(self) -> None:
         result = profile(SAMPLE)
 

@@ -35,6 +35,7 @@ class ReusableBoundaryTest(unittest.TestCase):
                 [[100.0, 0.0], [math.inf, 0.0], [101.0, 1.0], [100.0, 0.0]]
             )
 
+    @unittest.skipUnless(SOURCE.is_file(), "pinned local boundary source is unavailable")
     def test_pinned_candidate_canonicalizes_to_expected_manifest_count(self) -> None:
         source = json.loads(SOURCE.read_text(encoding="utf-8"))
         canonical, crosswalk, profile = canonicalize(source)
@@ -46,6 +47,9 @@ class ReusableBoundaryTest(unittest.TestCase):
             sum(coordinate_count(item["geometry"]["coordinates"]) for item in source["features"]),
         )
 
+    @unittest.skipUnless(
+        CANONICAL.is_file(), "generated local canonical boundary is unavailable"
+    )
     def test_generated_canonical_and_report_preserve_null_assignment_policy(self) -> None:
         boundaries = load_boundaries(CANONICAL)
         self.assertEqual(len(boundaries), 38)

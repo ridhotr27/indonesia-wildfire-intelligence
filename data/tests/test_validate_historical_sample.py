@@ -59,6 +59,9 @@ class HistoricalGeometryTest(unittest.TestCase):
         self.assertEqual(enriched[2]["join_status"], "unassigned")
         self.assertEqual(profile["status_counts"], {"assigned": 2, "unassigned": 1})
 
+    @unittest.skipUnless(
+        BOUNDARIES.is_file(), "pinned local BIG boundary is unavailable"
+    )
     def test_pinned_big_boundary_has_current_38_province_codes(self) -> None:
         boundaries = load_boundaries(BOUNDARIES)
         self.assertEqual(len(boundaries), 38)
