@@ -1,6 +1,12 @@
 # Wildfire private deployment operations
 
-This procedure uses one Wildfire Compose project on the existing VPS. R01 remains `BACKLOG`, Q01 retains a no-go recommendation, and public release requires separate Tech Lead approval. Keep Wildfire private; do not alter DNS, shared Caddy, or portfolio services.
+This procedure uses one Wildfire Compose project on the existing VPS. The owner authorized a public portfolio demo on 2026-11-25 despite Q01's recorded no-go recommendation. The earlier private-only instructions below describe the original experiment; the observed public-route state is recorded next. Q01's failed and unmeasured results remain unchanged, and R01 is not marked `DONE`.
+
+## Owner-authorized public demo state — 2026-11-25
+
+The shared Caddy container was attached to `wildfire_edge`, and the validated site block in `infrastructure/caddy/shared-edge-wildfire.Caddyfile` was appended to `/opt/shared-edge/deploy/Caddyfile`. Its prior content is backed up at `/opt/shared-edge/deploy/Caddyfile.r01-prewildfire`. Caddy v2.11.9 reloaded the file with `SIGUSR1` without restarting the portfolio; the portfolio remained HTTPS 200. The protected Wildfire environment was backed up at `/opt/indonesia-wildfire-intelligence/.env.production.r01-prepublic` before setting the browser API origin to `https://wildfire.ridhotrivo.com/api/v1` and the matching CORS origin. Wildfire frontend/backend/ClickHouse/Ollama remained healthy and private on their Docker networks.
+
+Public HTTPS was **not verified** at this point: NeoDNS returned NXDOMAIN for `wildfire.ridhotrivo.com`, and Let's Encrypt could not issue its certificate. The DNS owner must create A record `wildfire` → `139.190.108.107`; no AAAA record is needed. After DNS resolves, verify HTTPS dashboard, API, map, and chatbot journeys, headers, portfolio health, host memory/swap, and Caddy certificate issuance before reporting a working public URL. To undo this route, copy the Caddy backup content over the active bind-mounted Caddyfile, validate it, send `SIGUSR1` to shared Caddy, and disconnect only shared Caddy from `wildfire_edge`. To restore private browser settings, copy the protected prepublic environment backup over `.env.production` and recreate only Wildfire frontend/backend. Do not delete persistent volumes.
 
 ## Experimental low-memory profile
 
