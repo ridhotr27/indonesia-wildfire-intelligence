@@ -44,3 +44,22 @@ def test_internal_ollama_service_is_opt_in_and_keeps_model_pin() -> None:
             agent_model_provider="ollama",
             agent_model_name="qwen3:0.6b-q4_K_M",
         )
+
+
+def test_private_hashing_ollama_profile_is_explicit_and_bounded() -> None:
+    profile = {
+        "assistant_profile": "private_hashing_ollama",
+        "rag_backend": "local",
+        "embedding_provider": "hashing",
+        "agent_model_provider": "ollama",
+        "agent_model_name": "qwen2.5:0.5b",
+        "ollama_internal_service": True,
+        "ollama_base_url": "http://ollama:11434",
+        "semantic_routing_mode": "disabled",
+        "intent_planning_mode": "disabled",
+        "agent_max_model_tokens": 192,
+    }
+    settings = Settings(**profile)
+    assert settings.assistant_profile == "private_hashing_ollama"
+    with pytest.raises(ValidationError, match="private_hashing_ollama requires"):
+        Settings(**(profile | {"agent_model_name": "qwen2.5:1.5b"}))
