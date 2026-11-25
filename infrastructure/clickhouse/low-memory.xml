@@ -1,0 +1,8 @@
+<clickhouse>
+    <!-- Experimental 1 GiB container budget; validate on real data before deployment. -->
+    <max_server_memory_usage>805306368</max_server_memory_usage>
+    <mark_cache_size>67108864</mark_cache_size>
+    <uncompressed_cache_size>33554432</uncompressed_cache_size>
+    <max_concurrent_queries>4</max_concurrent_queries>
+    <background_pool_size>8</background_pool_size>
+</clickhouse>

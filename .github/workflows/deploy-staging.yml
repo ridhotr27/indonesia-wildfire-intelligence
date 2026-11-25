@@ -1,0 +1,51 @@
+name: Deploy Wildfire staging
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_sha:
+        description: Successful main CI commit SHA to deploy
+        required: true
+
+permissions:
+  contents: read
+  checks: read
+
+concurrency:
+  group: wildfire-staging-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    environment: wildfire-staging
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate immutable reference and reviewed CI result
+        env:
+          IMAGE_SHA: ${{ inputs.image_sha }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [[ "$IMAGE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git fetch --no-tags origin main
+          git merge-base --is-ancestor "$IMAGE_SHA" origin/main
+          gh api "repos/${GITHUB_REPOSITORY}/commits/${IMAGE_SHA}/check-runs" --jq '.check_runs | map(select(.name == "Backend tests and lint" or .name == "Data contract and pipeline tests" or .name == "Frontend tests and build" or .name == "Compose validation" or .name == "Build backend image" or .name == "Build frontend image")) as $checks | ($checks | length == 6) and all($checks[]; .conclusion == "success")' | grep -x true
+      - name: Configure pinned SSH host key
+        env:
+          HOST_KEY: ${{ secrets.STAGING_SSH_HOST_KEY }}
+          SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$HOST_KEY" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+      - name: Deploy on staging host
+        env:
+          IMAGE_SHA: ${{ inputs.image_sha }}
+          STAGING_HOST: ${{ vars.STAGING_HOST }}
+          STAGING_USER: ${{ vars.STAGING_USER }}
+        run: |
+          ssh -o StrictHostKeyChecking=yes "$STAGING_USER@$STAGING_HOST" \
+            bash /opt/indonesia-wildfire-intelligence/infrastructure/scripts/deploy-release.sh "$IMAGE_SHA"

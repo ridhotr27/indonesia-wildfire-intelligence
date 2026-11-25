@@ -2,7 +2,15 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import AnyHttpUrl, Field, SecretStr, TypeAdapter, field_validator, model_validator
+from pydantic import (
+    AnyHttpUrl,
+    Field,
+    SecretStr,
+    TypeAdapter,
+    ValidationInfo,
+    field_validator,
+    model_validator,
+)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from wildfire_api.llm.ollama import validate_loopback_url
@@ -42,6 +50,7 @@ class Settings(BaseSettings):
     assistant_profile: Literal["degraded", "local_grounded"] = "degraded"
     agent_model_provider: Literal["disabled", "extractive", "ollama"] = "disabled"
     agent_model_name: str = "qwen2.5:1.5b"
+    ollama_internal_service: bool = False
     ollama_base_url: str = "http://127.0.0.1:11434"
     ollama_timeout_seconds: float = Field(default=60.0, gt=0, le=120)
     agent_max_graph_steps: int = Field(default=6, ge=3, le=12)
@@ -74,8 +83,10 @@ class Settings(BaseSettings):
 
     @field_validator("ollama_base_url")
     @classmethod
-    def validate_ollama_base_url(cls, value: str) -> str:
-        return validate_loopback_url(value)
+    def validate_ollama_base_url(cls, value: str, info: ValidationInfo) -> str:
+        return validate_loopback_url(
+            value, allow_internal_service=bool(info.data.get("ollama_internal_service"))
+        )
 
     @model_validator(mode="after")
     def clickhouse_credentials_are_explicit(self) -> "Settings":

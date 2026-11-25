@@ -10,7 +10,7 @@ from wildfire_api.rag.index import build_index, load_manifest
 from wildfire_api.rag.persistence import build_persistent_index
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Index allowlisted NASA documents in Qdrant")
     parser.add_argument("--manifest", type=Path, default=None)
     parser.add_argument("--location", default=":memory:")
@@ -19,6 +19,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--embedding-provider", choices=("hashing", "ollama"), default="hashing")
     parser.add_argument("--embedding-model", default="all-minilm")
     parser.add_argument("--ollama-url", default="http://127.0.0.1:11434")
+    parser.add_argument(
+        "--allow-internal-ollama", dest="allow_internal_ollama", action="store_true"
+    )
+    parser.add_argument("--no-internal-ollama", dest="allow_internal_ollama", action="store_false")
+    parser.set_defaults(allow_internal_ollama=False)
     parser.add_argument(
         "--chunking-profile",
         choices=("recursive-character-1400-200-v1", "structure-title-1400-200-v1"),
@@ -29,7 +34,7 @@ def parse_args() -> argparse.Namespace:
         choices=("dense", "dense_guarded", "hybrid_rrf"),
         default="dense_guarded",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
 def main() -> None:
@@ -38,7 +43,11 @@ def main() -> None:
     fetched = [fetch_source(source) for source in sources]
     embeddings = (
         OllamaEmbeddings(
-            client=OllamaHttpClient(args.ollama_url, timeout_seconds=120),
+            client=OllamaHttpClient(
+                args.ollama_url,
+                timeout_seconds=120,
+                allow_internal_service=args.allow_internal_ollama,
+            ),
             model=args.embedding_model,
         )
         if args.embedding_provider == "ollama"
