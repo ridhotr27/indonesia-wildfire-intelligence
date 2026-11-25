@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import io
 import json
 import shutil
 import subprocess
@@ -10,11 +11,23 @@ from pathlib import Path
 from typing import BinaryIO
 
 from data.scripts.load_clickhouse_v1 import (
+    HttpClickHouse,
     LoadError,
     load_batch,
     single_writer_lock,
     verify_batch,
 )
+
+
+def test_http_insert_splits_on_ndjson_boundaries() -> None:
+    client = HttpClickHouse("http://localhost:8123", "wildfire", "user", "password", 5)
+    requests: list[bytes] = []
+    client._request = lambda query, body, size: requests.append(body.read()) or b""  # type: ignore[method-assign]
+    payload = (b'{"id":1}\n' * 600_000)
+    client.insert_file("de_hotspot_observations_v1", io.BytesIO(payload), len(payload))
+    assert len(requests) > 1
+    assert all(chunk.endswith(b"\n") and len(chunk) <= 4 * 1024 * 1024 + 8 for chunk in requests)
+    assert b"".join(requests) == payload
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURE = ROOT / "data/contracts/fixtures/hotspot_data_contract_v1.0.0.fixture.json"

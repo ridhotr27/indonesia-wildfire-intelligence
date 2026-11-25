@@ -8,6 +8,7 @@ import base64
 import contextlib
 import fcntl
 import hashlib
+import io
 import json
 import os
 import tempfile
@@ -208,11 +209,22 @@ class HttpClickHouse:
     def insert_file(self, table: str, handle: BinaryIO, size: int) -> None:
         if table not in ALLOWED_TABLES:
             raise LoadError("target table is not allowlisted")
-        self._request(
-            f"INSERT INTO {table} SETTINGS date_time_input_format='best_effort' FORMAT JSONEachRow",
-            handle,
-            size,
-        )
+        query = f"INSERT INTO {table} SETTINGS date_time_input_format='best_effort' FORMAT JSONEachRow"
+        # Each request is a complete set of NDJSON rows. Keep ClickHouse's
+        # parser allocation bounded while the published marker stays last.
+        chunk_limit = 4 * 1024 * 1024
+        consumed = 0
+        while consumed < size:
+            chunk = bytearray()
+            while consumed < size and len(chunk) < chunk_limit:
+                line = handle.readline()
+                if not line or not line.endswith(b"\n"):
+                    raise LoadError("truncated NDJSON artifact")
+                chunk.extend(line)
+                consumed += len(line)
+                if consumed > size:
+                    raise LoadError("NDJSON artifact exceeds verified size")
+            self._request(query, io.BytesIO(chunk), len(chunk))
 
 
 def load_batch(batch: VerifiedBatch, client: ClickHouse) -> dict[str, Any]:

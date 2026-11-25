@@ -4,5 +4,7 @@
     <mark_cache_size>67108864</mark_cache_size>
     <uncompressed_cache_size>33554432</uncompressed_cache_size>
     <max_concurrent_queries>4</max_concurrent_queries>
-    <background_pool_size>8</background_pool_size>
+    <!-- ClickHouse 25.8 requires at least 20 free mutation slots; with the
+         default ratio of 2, 8 workers failed startup (16 slots). -->
+    <background_pool_size>16</background_pool_size>
 </clickhouse>

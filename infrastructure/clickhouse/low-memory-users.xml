@@ -1,9 +1,12 @@
 <clickhouse>
     <profiles>
         <default>
-            <max_memory_usage>134217728</max_memory_usage>
+            <!-- The verified 2023 NDJSON load exceeded 128 MiB at 131.45 MiB.
+                 Keep this under the 768 MiB server cap and 1 GiB container cap. -->
+            <max_memory_usage>268435456</max_memory_usage>
             <max_threads>2</max_threads>
             <max_insert_threads>1</max_insert_threads>
+            <input_format_parallel_parsing>0</input_format_parallel_parsing>
             <max_bytes_before_external_group_by>67108864</max_bytes_before_external_group_by>
             <max_bytes_before_external_sort>67108864</max_bytes_before_external_sort>
         </default>
