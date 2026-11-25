@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Run only on an approved private staging host after CI and host backup checks.
+# Run only for an approved private Wildfire update after CI and host backup checks.
 sha="${1:?usage: deploy-release.sh <40-character commit SHA>}"
 [[ "$sha" =~ ^[0-9a-f]{40}$ ]] || { echo 'Invalid commit SHA' >&2; exit 2; }
 cd /opt/indonesia-wildfire-intelligence
 [[ "$(git rev-parse HEAD)" == "$sha" ]] || { echo 'Host checkout does not match the approved image SHA' >&2; exit 2; }
 [[ -f .env.production ]] || { echo 'Missing host-managed environment' >&2; exit 2; }
 [[ -f .last-good-image-sha ]] && previous="$(cat .last-good-image-sha)" || previous=''
-compose=(docker compose --env-file .env.production -f docker-compose.prod.yml)
+compose=(docker compose --env-file .env.production -f docker-compose.prod.yml -f docker-compose.low-memory.yml)
 
 export IMAGE_TAG="$sha"
 "${compose[@]}" config --quiet
@@ -37,4 +37,4 @@ if [[ "$healthy" != 1 ]]; then
 fi
 
 printf '%s\n' "$sha" > .last-good-image-sha
-echo "Staging application containers healthy at $sha"
+echo "Private Wildfire application containers healthy at $sha"

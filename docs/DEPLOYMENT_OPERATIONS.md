@@ -1,6 +1,6 @@
-# Wildfire staging deployment operations
+# Wildfire private deployment operations
 
-This is a repository-local staging procedure. R01 remains `BACKLOG`, Q01 retains a no-go recommendation, and public production release requires separate Tech Lead approval. The workflow does not alter DNS or shared Caddy.
+This procedure uses one Wildfire Compose project on the existing VPS. R01 remains `BACKLOG`, Q01 retains a no-go recommendation, and public release requires separate Tech Lead approval. Keep Wildfire private; do not alter DNS, shared Caddy, or portfolio services.
 
 ## Experimental low-memory profile
 
@@ -19,9 +19,9 @@ Rollback the experiment by recreating Wildfire services with **only** `docker-co
 
 ## Prerequisites
 
-The `wildfire-staging` GitHub Environment must be protected by required reviewers before use. Configure `STAGING_HOST` and `STAGING_USER` as environment variables, and `STAGING_SSH_KEY` plus the exact pinned `STAGING_SSH_HOST_KEY` as environment secrets. Use a restricted deploy identity. The host must already have this checkout at `/opt/indonesia-wildfire-intelligence`, a mode-0600 `.env.production`, private Compose networks, and an off-host backup/restore record. Ensure the checkout contains the intended SHA before dispatch; the workflow verifies the SHA is on main and its CI checks succeeded. Do not copy `.env.production` into GitHub.
+The host must have the reviewed checkout at `/opt/indonesia-wildfire-intelligence`, a mode-0600 `.env.production` supplied through the approved secret path, private Compose networks, and an off-host backup/restore record. Keep deployment credentials and `.env.production` out of GitHub and logs. Verify the checkout SHA, passing CI, and immutable GHCR image digests before any pull. The existing CI publishes images only after successful checks on `main`; a branch build is not a deployable image.
 
-Dispatch **Deploy Wildfire staging** with a full commit SHA from a successful main CI run only after private host approval. It validates the SHA, pulls immutable SHA-tagged backend/frontend images, recreates those containers without dependencies or volumes, waits for container health, and restores the previous SHA on failure. The first deployment has no previous SHA; its failure requires operator intervention. Keep `.last-good-image-sha` outside Git; it is a local rollback pointer, not evidence of data compatibility. Never use `docker compose down --volumes`.
+For an approved update to the single private Wildfire project, run `infrastructure/scripts/deploy-release.sh <full-approved-main-SHA>` on the host after the preflight checks. It validates the checkout SHA, uses the low-memory overlay, pulls immutable SHA-tagged backend/frontend images, recreates those containers without dependencies or volumes, waits for container health, and restores the previous SHA on failure. The first deployment has no previous SHA; its failure requires operator intervention. Keep `.last-good-image-sha` outside Git; it is a local rollback pointer, not evidence of data compatibility. Never use `docker compose down --volumes`.
 
 Before each dispatch, verify backup freshness and a restore test, image digests, free memory/disk, current portfolio status, ClickHouse release and grants, and schema compatibility. Do not run destructive migrations in the deploy job. After health succeeds, run private metadata, analytics, NASA citation, and frontend browser smokes, plus portfolio checks. A container health pass alone is insufficient for release acceptance. If any check fails, restore the prior SHA and use the DE append-only data rollback procedure if a separately approved data release changed.
 
