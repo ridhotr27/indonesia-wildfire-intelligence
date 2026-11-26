@@ -1,0 +1,7 @@
+# CD overrides only the two application images. All other services retain the
+# host-managed production and low-memory Compose configuration.
+services:
+  backend:
+    image: ${BACKEND_IMAGE_REF:?set digest-pinned backend image}
+  frontend:
+    image: ${FRONTEND_IMAGE_REF:?set digest-pinned frontend image}
