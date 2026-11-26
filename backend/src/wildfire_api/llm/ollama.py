@@ -46,18 +46,33 @@ def _grounding_terms(text: str) -> set[str]:
     }
 
 
-def validate_loopback_url(value: str) -> str:
+def validate_loopback_url(value: str, *, allow_internal_service: bool = False) -> str:
     parsed = urlparse(value)
-    if parsed.scheme != "http" or parsed.hostname not in {"127.0.0.1", "localhost", "::1"}:
-        raise ValueError("Ollama URL must be an HTTP loopback address")
-    if parsed.username or parsed.password or parsed.query or parsed.fragment:
-        raise ValueError("Ollama URL must not contain credentials, query, or fragment")
+    allowed_hosts = {"127.0.0.1", "localhost", "::1"}
+    if allow_internal_service:
+        allowed_hosts.add("ollama")
+    if parsed.scheme != "http" or parsed.hostname not in allowed_hosts:
+        raise ValueError("Ollama URL must be an HTTP loopback or approved internal service address")
+    if (
+        parsed.username
+        or parsed.password
+        or parsed.query
+        or parsed.fragment
+        or parsed.path not in {"", "/"}
+    ):
+        raise ValueError("Ollama URL must not contain credentials, path, query, or fragment")
+    if parsed.hostname == "ollama" and parsed.port != 11434:
+        raise ValueError("internal Ollama service must use port 11434")
     return value.rstrip("/")
 
 
 class OllamaHttpClient:
-    def __init__(self, base_url: str, timeout_seconds: float = 30.0) -> None:
-        self.base_url = validate_loopback_url(base_url)
+    def __init__(
+        self, base_url: str, timeout_seconds: float = 30.0, *, allow_internal_service: bool = False
+    ) -> None:
+        self.base_url = validate_loopback_url(
+            base_url, allow_internal_service=allow_internal_service
+        )
         self.timeout_seconds = timeout_seconds
 
     def post(self, path: str, payload: dict[str, Any]) -> dict[str, Any]:

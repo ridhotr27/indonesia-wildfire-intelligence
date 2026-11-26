@@ -62,7 +62,8 @@ Each review must record two distinct facts:
 
 - One ticket has one accountable owner role and one active agent/session at a time. Joint-owner tickets must name the handoff owner when claimed; joint ownership does not authorize concurrent edits to the same files.
 - DE owns `data/`; BE owns `backend/`; FE owns `frontend/`. Credentials and ClickHouse write access remain DE-only; BE serving access is read-only; FE never accesses ClickHouse, Qdrant, NASA APIs, or LLM credentials directly.
-- Each implementation agent uses a separate branch and Git worktree (for example `agent/data-engineer`, `agent/backend`, `agent/frontend`). Before work begins, record the ticket ID in the branch/PR title and confirm the worktree is clean enough to distinguish pre-existing changes.
+- Lead DevOps Engineer prepares infrastructure, CI/CD, deployment, backups, monitoring, and rollback evidence for Tech Lead review. Tech Lead remains accountable for R01, shared-file decisions, production authorization, and release approval; this role does not inherit DE/BE/FE application or data-write ownership.
+- Each implementation agent uses a separate branch and Git worktree (for example `agent/data-engineer`, `agent/backend`, `agent/frontend`, `agent/lead-devops-engineer`). Before work begins, record the ticket ID in the branch/PR title and confirm the worktree is clean enough to distinguish pre-existing changes.
 - `docs/`, `infrastructure/`, root configuration, schemas, fixtures used across roles, and public contracts are shared. Only one coordinated editor may modify a shared file at a time. Shared changes require a dedicated review; agents must not copy divergent versions between worktrees.
 - Contract proposals are versioned and immutable once approved. Breaking changes require a new version and coordinated DE/BE/FE review. Draft/mock implementations must remain visibly labeled and must not be represented as real NASA analytics.
 - A claim must include dependencies checked, intended files, and verification plan. A handoff/review must include changed files, exact commands/results, limitations, security/data claims, and next dependency.
@@ -120,7 +121,7 @@ git worktree add ../wildfire-fe -b agent/frontend
 | I04 | Explain ClickHouse answer construction in the execution-trace UI | FE + BE | P0 | DONE | Complete | Approved by the user/Tech Lead on 2026-11-15; deferred manual checks remain Q01 evidence |
 | I05 | Present multi-province comparisons and province rankings | FE + BE | P0 | DONE | Complete | Approved 2026-11-16; live/manual checks remain release evidence |
 | Q01 | Accuracy, retrieval, accessibility, E2E, and security evaluation | DE + BE + FE | P0 | DONE | Complete | Approved 2026-11-16 with the recorded no-go recommendation; release remains unapproved |
-| R01 | Deploy, monitor, document, and demo | Lead | P0 | BACKLOG | No | Q01 and release approval |
+| R01 | Deploy, monitor, document, and demo | Lead (DevOps implementation handoff) | P0 | BACKLOG | No | Q01 no-go disposition and explicit release approval |
 
 Current actionable queues:
 
@@ -791,7 +792,7 @@ The dependency reconciliation itself did not approve a gate. G0 and G1 were subs
 
 ### R01 — Deploy, monitor, document, and demo
 
-- **Owner / priority / status:** Tech Lead / P0 / `BACKLOG`.
+- **Owner / priority / status:** Tech Lead accountable; Lead DevOps Engineer prepares implementation and operations evidence / P0 / `BACKLOG`.
 - **Dependencies:** Q01 `DONE` and explicit release approval.
 - **Objective:** Publish a reproducible, bounded public demo with operational safeguards and known limitations.
 - **Scope:** Approved Docker Compose/VPS path, TLS/reverse proxy, health/readiness, resource caps, secrets, quotas, backup/recovery, monitoring, README/architecture/demo documentation, and rollback.
@@ -890,6 +891,8 @@ The commands above were run during backlog reconciliation. They do not establish
 | 2026-11-16 | User acting as Tech Lead | Reviewed all LIR tickets in review independently. LIR-01 through LIR-04 moved to `DONE`; B12, B13, B14, I05, and Q01 retain their separately approved `DONE` status. | LIR-05 remains `IN_REVIEW` pending its required live benchmark and model evidence. LIR-06 remains `IN_REVIEW` because LIR-05 is not `DONE`. Q01 retains its no-go recommendation; B14 remains disabled/no-adoption; R01, deployment, guarded semantic routing, and release are not approved. |
 | 2026-11-21 | User acting as Tech Lead | Accepted the 20 no-row dates in the 2024 FIRMS artifact as `unknown` with null counts and approved D08 `DONE`. | 2025 remains metadata/bounded-schema-only. No new data contract, ClickHouse ingestion/migration, runtime change, deployment, or release is approved. |
 | 2026-11-21 | User acting as Tech Lead | Corrected the prior accidental D08 completion after end-to-end review; D08 returned to `IN_PROGRESS`. | The 2024 unknown-date policy remains accepted. Full 2025 validation, multi-year contract approval/publication, local ClickHouse data, and live API/UI/chat year-over-year verification remain open. |
+| 2026-11-25 | User acting as Tech Lead | Accepted the known qwen2.5:0.5b latency and factual limitations for a proposed portfolio demo and authorized work toward public deployment. | This does not record the still-unmeasured Q01 criteria as passed or waive R01's public smoke, security/quota, monitoring, backup/restore, and explicit release-decision requirements. Q01 retains its no-go recommendation; R01 remains `BACKLOG`. No DNS, shared Caddy, or public traffic change is recorded. |
+| 2026-11-25 | Owner decision for R01 portfolio demo | Explicitly authorized public deployment now and overrode the earlier Q01/R01 prerequisites for this portfolio demo, accepting the known qwen2.5:0.5b latency and factual limitations. | Prior failed and unmeasured Q01 results remain recorded; this decision does not turn them into passes or mark Q01/R01 acceptance criteria satisfied. Public smoke, security, monitoring, and rollback still require observed results. |
 
 ## 7. Decisions still requiring Tech Lead approval
 

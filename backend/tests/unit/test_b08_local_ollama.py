@@ -150,3 +150,14 @@ async def test_generator_rejects_incomplete_answer() -> None:
 def test_ollama_url_must_be_loopback(url: str) -> None:
     with pytest.raises(ValueError):
         validate_loopback_url(url)
+
+
+def test_internal_ollama_service_requires_explicit_opt_in() -> None:
+    url = "http://ollama:11434"
+    with pytest.raises(ValueError):
+        OllamaHttpClient(url)
+    client = OllamaHttpClient(url, allow_internal_service=True)
+    assert client.base_url == url
+    for unsafe in ("http://ollama:8080", "http://ollama:11434/path", "http://other:11434"):
+        with pytest.raises(ValueError):
+            OllamaHttpClient(unsafe, allow_internal_service=True)

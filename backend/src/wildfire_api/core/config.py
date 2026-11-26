@@ -2,7 +2,15 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import AnyHttpUrl, Field, SecretStr, TypeAdapter, field_validator, model_validator
+from pydantic import (
+    AnyHttpUrl,
+    Field,
+    SecretStr,
+    TypeAdapter,
+    ValidationInfo,
+    field_validator,
+    model_validator,
+)
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from wildfire_api.llm.ollama import validate_loopback_url
@@ -39,9 +47,10 @@ class Settings(BaseSettings):
     intent_planner_model_name: Literal["qwen2.5:1.5b"] = "qwen2.5:1.5b"
     intent_planner_timeout_seconds: float = Field(default=8.0, gt=0, le=30)
     intent_planner_max_tokens: int = Field(default=512, ge=128, le=1_024)
-    assistant_profile: Literal["degraded", "local_grounded"] = "degraded"
+    assistant_profile: Literal["degraded", "local_grounded", "private_hashing_ollama"] = "degraded"
     agent_model_provider: Literal["disabled", "extractive", "ollama"] = "disabled"
     agent_model_name: str = "qwen2.5:1.5b"
+    ollama_internal_service: bool = False
     ollama_base_url: str = "http://127.0.0.1:11434"
     ollama_timeout_seconds: float = Field(default=60.0, gt=0, le=120)
     agent_max_graph_steps: int = Field(default=6, ge=3, le=12)
@@ -74,8 +83,10 @@ class Settings(BaseSettings):
 
     @field_validator("ollama_base_url")
     @classmethod
-    def validate_ollama_base_url(cls, value: str) -> str:
-        return validate_loopback_url(value)
+    def validate_ollama_base_url(cls, value: str, info: ValidationInfo) -> str:
+        return validate_loopback_url(
+            value, allow_internal_service=bool(info.data.get("ollama_internal_service"))
+        )
 
     @model_validator(mode="after")
     def clickhouse_credentials_are_explicit(self) -> "Settings":
@@ -110,6 +121,21 @@ class Settings(BaseSettings):
             raise ValueError(
                 "local_grounded requires local RAG, ollama:all-minilm embeddings, "
                 "and ollama:qwen2.5:1.5b generation"
+            )
+        if self.assistant_profile == "private_hashing_ollama" and (
+            self.rag_backend != "local"
+            or self.embedding_provider != "hashing"
+            or self.agent_model_provider != "ollama"
+            or self.agent_model_name != "qwen2.5:0.5b"
+            or not self.ollama_internal_service
+            or self.ollama_base_url != "http://ollama:11434"
+            or self.semantic_routing_mode != "disabled"
+            or self.intent_planning_mode != "disabled"
+            or self.agent_max_model_tokens > 192
+        ):
+            raise ValueError(
+                "private_hashing_ollama requires hashing RAG, internal qwen2.5:0.5b, "
+                "deterministic routing, and at most 192 output tokens"
             )
         return self
 

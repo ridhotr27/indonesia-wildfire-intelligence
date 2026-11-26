@@ -95,7 +95,11 @@ def create_app(
         max_date_range_days=settings.max_date_range_days,
         max_features=settings.max_geojson_features,
     )
-    ollama_client = OllamaHttpClient(settings.ollama_base_url, settings.ollama_timeout_seconds)
+    ollama_client = OllamaHttpClient(
+        settings.ollama_base_url,
+        settings.ollama_timeout_seconds,
+        allow_internal_service=settings.ollama_internal_service,
+    )
     answer_generator = (
         ExtractiveAnswerGenerator()
         if settings.agent_model_provider == "extractive"

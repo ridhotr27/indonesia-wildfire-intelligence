@@ -77,18 +77,21 @@ services:
       WILDFIRE_PER_CLIENT_REQUESTS_PER_MINUTE: ${WILDFIRE_PER_CLIENT_REQUESTS_PER_MINUTE:-30}
       WILDFIRE_GLOBAL_REQUESTS_PER_MINUTE: ${WILDFIRE_GLOBAL_REQUESTS_PER_MINUTE:-300}
       WILDFIRE_MAX_CONCURRENT_REQUESTS: ${WILDFIRE_MAX_CONCURRENT_REQUESTS:-20}
-      WILDFIRE_ASSISTANT_PROFILE: degraded
+      WILDFIRE_ASSISTANT_PROFILE: ${WILDFIRE_ASSISTANT_PROFILE:-degraded}
       WILDFIRE_AGENT_PLANNER_BACKEND: deterministic
       WILDFIRE_INTENT_PLANNING_MODE: disabled
       WILDFIRE_SEMANTIC_ROUTING_MODE: disabled
       WILDFIRE_RAG_BACKEND: local
-      WILDFIRE_QDRANT_PATH: /app/backend/data/qdrant-local-hashing
+      WILDFIRE_QDRANT_PATH: /app/backend/data/${WILDFIRE_RAG_INDEX_DIR:-qdrant-local-hashing}
       WILDFIRE_QDRANT_COLLECTION: nasa_firms_documents_v1
       WILDFIRE_RAG_RETRIEVAL_PROFILE: hybrid_rrf
       WILDFIRE_RAG_CHUNKING_PROFILE: recursive-character-1400-200-v1
-      WILDFIRE_EMBEDDING_PROVIDER: hashing
+      WILDFIRE_EMBEDDING_PROVIDER: ${WILDFIRE_EMBEDDING_PROVIDER:-hashing}
       WILDFIRE_EMBEDDING_MODEL_NAME: all-minilm
-      WILDFIRE_AGENT_MODEL_PROVIDER: extractive
+      WILDFIRE_AGENT_MODEL_PROVIDER: ${WILDFIRE_AGENT_MODEL_PROVIDER:-extractive}
+      WILDFIRE_AGENT_MODEL_NAME: ${WILDFIRE_AGENT_MODEL_NAME:-qwen2.5:1.5b}
+      WILDFIRE_OLLAMA_BASE_URL: ${WILDFIRE_OLLAMA_BASE_URL:-http://127.0.0.1:11434}
+      WILDFIRE_OLLAMA_INTERNAL_SERVICE: ${WILDFIRE_OLLAMA_INTERNAL_SERVICE:-false}
       WILDFIRE_AGENT_MAX_GRAPH_STEPS: ${WILDFIRE_AGENT_MAX_GRAPH_STEPS:-6}
       WILDFIRE_AGENT_MAX_TOOL_CALLS: ${WILDFIRE_AGENT_MAX_TOOL_CALLS:-2}
       WILDFIRE_AGENT_TIMEOUT_SECONDS: ${WILDFIRE_AGENT_TIMEOUT_SECONDS:-120}
@@ -146,6 +149,37 @@ services:
     pids_limit: 256
     logging: *default-logging
 
+  # Optional private experiment only. Do not enable on the shared 4 GiB VPS
+  # until host measurements and the backend's Ollama boundary are approved.
+  ollama:
+    image: ollama/ollama:${OLLAMA_IMAGE_TAG:-0.12.10}
+    profiles: ["local-llm"]
+    restart: unless-stopped
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+      OLLAMA_MAX_LOADED_MODELS: "1"
+      OLLAMA_NUM_PARALLEL: "1"
+      OLLAMA_MAX_QUEUE: "1"
+      OLLAMA_KEEP_ALIVE: "0"
+    volumes:
+      - ollama_models:/root/.ollama
+    networks:
+      - data_plane
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 20s
+      timeout: 10s
+      retries: 6
+      start_period: 30s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    mem_limit: ${OLLAMA_MEMORY_LIMIT:-1g}
+    cpus: ${OLLAMA_CPU_LIMIT:-1.0}
+    pids_limit: 256
+    logging: *default-logging
+
   caddy:
     image: caddy:2.10.2-alpine
     profiles: ["edge"]
@@ -191,9 +225,12 @@ services:
       - -m
       - wildfire_api.rag.cli
       - --location
-      - /app/backend/data/qdrant-local-hashing
+      - /app/backend/data/${WILDFIRE_RAG_INDEX_DIR:-qdrant-local-hashing}
       - --embedding-provider
-      - hashing
+      - ${WILDFIRE_EMBEDDING_PROVIDER:-hashing}
+      - --ollama-url
+      - ${WILDFIRE_OLLAMA_BASE_URL:-http://127.0.0.1:11434}
+      - ${RAG_INIT_INTERNAL_OLLAMA_FLAG:---no-internal-ollama}
       - --chunking-profile
       - recursive-character-1400-200-v1
       - --retrieval-profile
@@ -202,6 +239,7 @@ services:
       - rag_indexes:/app/backend/data
     networks:
       - edge
+      - data_plane
     security_opt:
       - no-new-privileges:true
     cap_drop:
@@ -265,6 +303,8 @@ volumes:
     name: ${CLICKHOUSE_LOG_VOLUME:-wildfire_clickhouse_logs}
   rag_indexes:
     name: ${RAG_INDEX_VOLUME:-wildfire_rag_indexes}
+  ollama_models:
+    name: ${OLLAMA_MODEL_VOLUME:-wildfire_ollama_models}
   caddy_data:
     name: ${CADDY_DATA_VOLUME:-wildfire_caddy_data}
   caddy_config:

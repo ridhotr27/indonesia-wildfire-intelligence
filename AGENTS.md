@@ -1,6 +1,6 @@
 # Codex Repository Instructions
 
-This repository implements **Indonesia Wildfire Intelligence Agent v1.0**. The three Codex coding agents (Data Engineering, Backend, Frontend) are **development roles**; the deployed application uses **one bounded LangGraph runtime agent**.
+This repository implements **Indonesia Wildfire Intelligence Agent v1.0**. The Data Engineering, Backend, and Frontend Codex coding agents and the Lead DevOps Engineer operations agent are **development roles**; the deployed application uses **one bounded LangGraph runtime agent**.
 
 ## Read first
 1. `docs/PRD.md` — product scope and acceptance criteria.
@@ -23,8 +23,9 @@ This repository implements **Indonesia Wildfire Intelligence Agent v1.0**. The t
 - **Data Engineer Codex:** `data/`, NASA data feasibility, ingestion, transformations, geospatial joins, ClickHouse data modeling, data quality, and data tests. Follow `.agents/skills/data-engineer/SKILL.md`.
 - **Backend Codex:** `backend/`, API services, read-only analytics interfaces, RAG, LangGraph, and backend tests. Follow `.agents/skills/backend-engineer/SKILL.md`.
 - **Frontend Codex:** `frontend/`, typed client, UI, maps/charts and frontend tests. Follow `.agents/skills/frontend-engineer/SKILL.md`.
+- **Lead DevOps Engineer Codex:** infrastructure preparation, Docker/Compose, CI/GHCR, shared Caddy/VPS integration, persistence/backups, security, monitoring, rollback, and release-readiness evidence. Follow `.agents/skills/lead-devops-engineer/SKILL.md`; the native subagent is `.codex/agents/lead-devops-engineer.toml`. Do not change production without explicit user/Tech Lead approval.
 - **Shared:** `docs/`, `infrastructure/`, root configuration and contract changes require lead review. Never concurrently edit shared files in multiple worktrees.
-- DE, BE, and FE work on separate branches/worktrees. DE publishes versioned data contracts and sample fixtures for BE; FE uses API contract fixtures until endpoints are available. Data ingestion credentials and database write access belong only to DE. BE gets read-only analytics access.
+- DE, BE, FE, and DevOps work on separate branches/worktrees when implementing assigned tickets. DE publishes versioned data contracts and sample fixtures for BE; FE uses API contract fixtures until endpoints are available. Data ingestion credentials and database write access belong only to DE. BE gets read-only analytics access.
 
 ## Workflow
 1. Read the ticket and lifecycle rules in `docs/TASKS.md`; do not restart implemented or completed tickets.
@@ -35,4 +36,4 @@ This repository implements **Indonesia Wildfire Intelligence Agent v1.0**. The t
 6. Move implementation only to `IN_REVIEW` and report changed files, exact test results, limitations, and next dependency. Only the Tech Lead may record `DONE` or approve a gate/shared contract.
 
 ## Skills
-Project skill definitions live in `.agents/skills/`. They provide specialized workflows; they **do not automatically spawn separate Codex sessions**. Load the relevant skill in each session or use Codex's supported skill discovery behavior.
+Project skill definitions live in `.agents/skills/`. They provide specialized workflows; they **do not automatically spawn separate Codex sessions**. Load the relevant skill in each session or use Codex's supported skill discovery behavior. The Lead DevOps Engineer additionally has a project-scoped native Codex subagent definition; ask Codex to spawn `lead-devops-engineer` for an assigned infrastructure task.
